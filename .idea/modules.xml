@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/KotlinComponents.iml" filepath="$PROJECT_DIR$/KotlinComponents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-android-activity-access/lk-android-activity-access.iml" filepath="$PROJECT_DIR$/lk-android-activity-access/lk-android-activity-access.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-android-animations/lk-android-animations.iml" filepath="$PROJECT_DIR$/lk-android-animations/lk-android-animations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-android-animations-observable/lk-android-animations-observable.iml" filepath="$PROJECT_DIR$/lk-android-animations-observable/lk-android-animations-observable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-android-design-extensions/lk-android-design-extensions.iml" filepath="$PROJECT_DIR$/lk-android-design-extensions/lk-android-design-extensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-android-dialogs/lk-android-dialogs.iml" filepath="$PROJECT_DIR$/lk-android-dialogs/lk-android-dialogs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-android-extensions/lk-android-extensions.iml" filepath="$PROJECT_DIR$/lk-android-extensions/lk-android-extensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-android-image-loading/lk-android-image-loading.iml" filepath="$PROJECT_DIR$/lk-android-image-loading/lk-android-image-loading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-android-image-loading-observable/lk-android-image-loading-observable.iml" filepath="$PROJECT_DIR$/lk-android-image-loading-observable/lk-android-image-loading-observable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-android-lifecycle/lk-android-lifecycle.iml" filepath="$PROJECT_DIR$/lk-android-lifecycle/lk-android-lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-android-observable/lk-android-observable.iml" filepath="$PROJECT_DIR$/lk-android-observable/lk-android-observable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-android-observable-validation/lk-android-observable-validation.iml" filepath="$PROJECT_DIR$/lk-android-observable-validation/lk-android-observable-validation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-android-ui-thread/lk-android-ui-thread.iml" filepath="$PROJECT_DIR$/lk-android-ui-thread/lk-android-ui-thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-anko-adapters/lk-anko-adapters.iml" filepath="$PROJECT_DIR$/lk-anko-adapters/lk-anko-adapters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-anko-adapters-observable/lk-anko-adapters.iml" filepath="$PROJECT_DIR$/lk-anko-adapters-observable/lk-anko-adapters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-anko-animations/lk-android-animations-anko.iml" filepath="$PROJECT_DIR$/lk-anko-animations/lk-android-animations-anko.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-anko-animations-observable/lk-anko-animations-observable.iml" filepath="$PROJECT_DIR$/lk-anko-animations-observable/lk-anko-animations-observable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-anko-deprection/lk-anko-deprection.iml" filepath="$PROJECT_DIR$/lk-anko-deprection/lk-anko-deprection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-anko-extensions/lk-anko-extensions.iml" filepath="$PROJECT_DIR$/lk-anko-extensions/lk-anko-extensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-everything-deprecated/lk-everything-deprecated.iml" filepath="$PROJECT_DIR$/lk-everything-deprecated/lk-everything-deprecated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-kotlin-jackson/lib.iml" filepath="$PROJECT_DIR$/lk-kotlin-jackson/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils.iml" filepath="$PROJECT_DIR$/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-kotlin-lifecycle/lk-kotlin-lifecycle.iml" filepath="$PROJECT_DIR$/lk-kotlin-lifecycle/lk-kotlin-lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-kotlin-observable-list/lk-kotlin-observable-list.iml" filepath="$PROJECT_DIR$/lk-kotlin-observable-list/lk-kotlin-observable-list.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-kotlin-observable-list-lifecycle/lk-kotlin-observable-list-lifecycle.iml" filepath="$PROJECT_DIR$/lk-kotlin-observable-list-lifecycle/lk-kotlin-observable-list-lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-kotlin-observable-property/lk-kotlin-observable-property.iml" filepath="$PROJECT_DIR$/lk-kotlin-observable-property/lk-kotlin-observable-property.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-kotlin-observable-property-jvm/lk-kotlin-observable-property-jvm.iml" filepath="$PROJECT_DIR$/lk-kotlin-observable-property-jvm/lk-kotlin-observable-property-jvm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-kotlin-observable-property-lifecycle/lk-kotlin-observable-property-lifecycle.iml" filepath="$PROJECT_DIR$/lk-kotlin-observable-property-lifecycle/lk-kotlin-observable-property-lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-kotlin-okhttp/lk-kotlin-okhttp.iml" filepath="$PROJECT_DIR$/lk-kotlin-okhttp/lk-kotlin-okhttp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-kotlin-okhttp-jackson/lk-kotlin-okhttp-jackson.iml" filepath="$PROJECT_DIR$/lk-kotlin-okhttp-jackson/lk-kotlin-okhttp-jackson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-kotlin-utils/lk-kotlin-utils.iml" filepath="$PROJECT_DIR$/lk-kotlin-utils/lk-kotlin-utils.iml" />
+    </modules>
+  </component>
+</project>

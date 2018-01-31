@@ -1,0 +1,90 @@
+//noinspection GradleCompatible
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+group = "com.github.lightningkite"
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.2"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        warning('InvalidPackage', 'NewApi')
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jitpack.io"
+    }
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
+    jcenter()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    
+    ext.ankoVersion = '0.10.0'
+    compile "org.jetbrains.anko:anko-sdk15:$ankoVersion"
+
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    compile "org.jetbrains.anko:anko-appcompat-v7:$ankoVersion"
+
+    compile 'com.android.support:cardview-v7:27.0.2'
+    compile "org.jetbrains.anko:anko-cardview-v7:$ankoVersion"
+
+    compile 'com.android.support:gridlayout-v7:27.0.2'
+    compile "org.jetbrains.anko:anko-gridlayout-v7:$ankoVersion"
+
+    compile 'com.android.support:recyclerview-v7:27.0.2'
+    compile "org.jetbrains.anko:anko-recyclerview-v7:$ankoVersion"
+
+    compile 'com.android.support:design:27.0.2'
+    compile "org.jetbrains.anko:anko-design:$ankoVersion"
+
+    compile project(':lk-android-extensions')
+}
+
+// build a jar with source files
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+artifacts {
+    archives sourcesJar
+}
+
+buildscript {
+    ext.kotlin_version = '1.2.21'
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
