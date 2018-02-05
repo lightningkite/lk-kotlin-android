@@ -1,10 +1,10 @@
 buildscript {
-    ext.kotlin_version = '1.2.21'
+
     repositories {
         mavenCentral()
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.kotlinVersion}"
     }
 }
 
@@ -17,9 +17,55 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:${rootProject.kotlinVersion}"
     testCompile 'junit:junit:4.12'
-    testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+    testCompile "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
 
     compile project(':lk-kotlin-utils')
+}
+
+
+
+//Bintray
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+    }
+}
+def bintrayPropertiesFile = rootProject.file("bintray.properties")
+def bintrayProperties = new Properties()
+bintrayProperties.load(new FileInputStream(bintrayPropertiesFile))
+
+
+apply plugin: 'maven-publish'
+publishing {
+    publications {
+        mavenJava(MavenPublication){
+            from components.java
+            groupId bintrayProperties['bintrayRepository']
+            artifactId project.name
+            version rootProject.libraryVersion
+        }
+    }
+}
+
+
+apply plugin: 'com.jfrog.bintray'
+bintray {
+    user = bintrayProperties['bintrayUser']
+    key = bintrayProperties['bintrayKey']
+    pkg {
+        repo = bintrayProperties['bintrayRepository']
+        name = project.name
+        userOrg = bintrayProperties['bintrayOrganization']
+        licenses = [bintrayProperties['bintrayLicense']]
+        vcsUrl = bintrayProperties['bintrayVcs']
+        version {
+            name = rootProject.libraryVersion
+            released  = new Date()
+        }
+    }
 }

@@ -35,43 +35,74 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:${rootProject.kotlinVersion}"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     compile 'com.android.support:multidex:1.0.0'
 
-    compile project(':lk-android-design-extensions')
-    compile project(':lk-anko-deprection')
-    compile project(':lk-android-observable')
-    compile project(':lk-android-animations-observable')
-    compile project(':lk-anko-animations-observable')
-    compile project(':lk-android-observable-validation')
-    compile project(':lk-anko-adapters-observable')
-    compile project(':lk-anko-adapters')
-    compile project(':lk-android-image-loading')
-    compile project(':lk-kotlin-observable-property-jvm')
-    compile project(':lk-android-image-loading-observable')
-    compile project(':lk-kotlin-jackson')
-    compile project(':lk-kotlin-okhttp')
-    compile project(':lk-kotlin-okhttp-jackson')
-    compile project(':lk-kotlin-jvm-utils')
-    compile project(':lk-kotlin-utils')
-    compile project(':lk-kotlin-lifecycle')
-    compile project(':lk-kotlin-observable-property')
-    compile project(':lk-kotlin-observable-property-lifecycle')
-    compile project(':lk-kotlin-observable-list')
-    compile project(':lk-kotlin-observable-list-lifecycle')
-    compile project(':lk-android-lifecycle')
-    compile project(':lk-android-activity-access')
-    compile project(':lk-android-dialogs')
-    compile project(':lk-android-animations')
-    compile project(':lk-anko-animations')
-    compile project(':lk-android-ui-thread')
-    compile project(':lk-anko-extensions')
-    compile project(':lk-android-extensions')
-    compile project(':lk-everything-deprecated')
+    compile 'lk-kotlin:lk-android-design-extensions:0.0.1'
+    compile 'lk-kotlin:lk-anko-deprection:0.0.1'
+    compile 'lk-kotlin:lk-android-observable:0.0.1'
+    compile 'lk-kotlin:lk-android-animations-observable:0.0.1'
+    compile 'lk-kotlin:lk-anko-animations-observable:0.0.1'
+    compile 'lk-kotlin:lk-android-observable-validation:0.0.1'
+    compile 'lk-kotlin:lk-anko-adapters-observable:0.0.1'
+    compile 'lk-kotlin:lk-anko-adapters:0.0.1'
+    compile 'lk-kotlin:lk-android-image-loading:0.0.1'
+    compile 'lk-kotlin:lk-kotlin-observable-property-jvm:0.0.1'
+    compile 'lk-kotlin:lk-android-image-loading-observable:0.0.1'
+    compile 'lk-kotlin:lk-kotlin-jackson:0.0.1'
+    compile 'lk-kotlin:lk-kotlin-okhttp:0.0.1'
+    compile 'lk-kotlin:lk-kotlin-okhttp-jackson:0.0.1'
+    compile 'lk-kotlin:lk-kotlin-jvm-utils:0.0.1'
+    compile 'lk-kotlin:lk-kotlin-utils:0.0.1'
+    compile 'lk-kotlin:lk-kotlin-lifecycle:0.0.1'
+    compile 'lk-kotlin:lk-kotlin-observable-property:0.0.1'
+    compile 'lk-kotlin:lk-kotlin-observable-property-lifecycle:0.0.1'
+    compile 'lk-kotlin:lk-kotlin-observable-list:0.0.1'
+    compile 'lk-kotlin:lk-kotlin-observable-list-lifecycle:0.0.1'
+    compile 'lk-kotlin:lk-android-lifecycle:0.0.1'
+    compile 'lk-kotlin:lk-android-activity-access:0.0.1'
+    compile 'lk-kotlin:lk-android-dialogs:0.0.1'
+    compile 'lk-kotlin:lk-android-animations:0.0.1'
+    compile 'lk-kotlin:lk-anko-animations:0.0.1'
+    compile 'lk-kotlin:lk-android-ui-thread:0.0.1'
+    compile 'lk-kotlin:lk-anko-extensions:0.0.1'
+    compile 'lk-kotlin:lk-android-extensions:0.0.1'
+    compile 'lk-kotlin:lk-everything-deprecated:0.0.1'
+
+//    compile project(':lk-android-design-extensions')
+//    compile project(':lk-anko-deprection')
+//    compile project(':lk-android-observable')
+//    compile project(':lk-android-animations-observable')
+//    compile project(':lk-anko-animations-observable')
+//    compile project(':lk-android-observable-validation')
+//    compile project(':lk-anko-adapters-observable')
+//    compile project(':lk-anko-adapters')
+//    compile project(':lk-android-image-loading')
+//    compile project(':lk-kotlin-observable-property-jvm')
+//    compile project(':lk-android-image-loading-observable')
+//    compile project(':lk-kotlin-jackson')
+//    compile project(':lk-kotlin-okhttp')
+//    compile project(':lk-kotlin-okhttp-jackson')
+//    compile project(':lk-kotlin-jvm-utils')
+//    compile project(':lk-kotlin-utils')
+//    compile project(':lk-kotlin-lifecycle')
+//    compile project(':lk-kotlin-observable-property')
+//    compile project(':lk-kotlin-observable-property-lifecycle')
+//    compile project(':lk-kotlin-observable-list')
+//    compile project(':lk-kotlin-observable-list-lifecycle')
+//    compile project(':lk-android-lifecycle')
+//    compile project(':lk-android-activity-access')
+//    compile project(':lk-android-dialogs')
+//    compile project(':lk-android-animations')
+//    compile project(':lk-anko-animations')
+//    compile project(':lk-android-ui-thread')
+//    compile project(':lk-anko-extensions')
+//    compile project(':lk-android-extensions')
+//    compile project(':lk-everything-deprecated')
 }
 
 apply plugin: 'com.getkeepsafe.dexcount'

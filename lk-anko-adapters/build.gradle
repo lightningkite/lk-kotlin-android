@@ -44,7 +44,7 @@ repositories {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
 
     compile project(':lk-anko-extensions')
 }
@@ -59,14 +59,49 @@ artifacts {
     archives sourcesJar
 }
 
+
+//Bintray
 buildscript {
-    ext.kotlin_version = '1.2.21'
     repositories {
         mavenCentral()
         jcenter()
     }
     dependencies {
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'digital.wup:android-maven-publish:3.0.0'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.kotlinVersion}"
+    }
+}
+def bintrayPropertiesFile = rootProject.file("bintray.properties")
+def bintrayProperties = new Properties()
+bintrayProperties.load(new FileInputStream(bintrayPropertiesFile))
+
+apply plugin: 'digital.wup.android-maven-publish'
+publishing {
+    publications {
+        mavenAar(MavenPublication){
+            from components.android
+            groupId bintrayProperties['bintrayRepository']
+            artifactId project.name
+            version rootProject.libraryVersion
+        }
+    }
+}
+
+
+apply plugin: 'com.jfrog.bintray'
+bintray {
+    user = bintrayProperties['bintrayUser']
+    key = bintrayProperties['bintrayKey']
+    pkg {
+        repo = bintrayProperties['bintrayRepository']
+        name = project.name
+        userOrg = bintrayProperties['bintrayOrganization']
+        licenses = [bintrayProperties['bintrayLicense']]
+        vcsUrl = bintrayProperties['bintrayVcs']
+        version {
+            name = rootProject.libraryVersion
+            released  = new Date()
+        }
     }
 }
