@@ -32,7 +32,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
     }
 }
 def bintrayPropertiesFile = rootProject.file("bintray.properties")
@@ -57,6 +57,8 @@ apply plugin: 'com.jfrog.bintray'
 bintray {
     user = bintrayProperties['bintrayUser']
     key = bintrayProperties['bintrayKey']
+    publications = ['mavenJava']
+    publish = bintrayProperties['bintrayPublish']
     pkg {
         repo = bintrayProperties['bintrayRepository']
         name = project.name

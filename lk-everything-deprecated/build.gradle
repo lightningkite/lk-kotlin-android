@@ -46,6 +46,17 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
 
+    compile project(':lk-android-design-extensions')
+    compile project(':lk-anko-deprection')
+    compile project(':lk-android-observable')
+    compile project(':lk-android-animations-observable')
+    compile project(':lk-anko-animations-observable')
+    compile project(':lk-android-observable-validation')
+    compile project(':lk-anko-adapters-observable')
+    compile project(':lk-anko-adapters')
+    compile project(':lk-android-image-loading')
+    compile project(':lk-kotlin-observable-property-jvm')
+    compile project(':lk-android-image-loading-observable')
     compile project(':lk-kotlin-jackson')
     compile project(':lk-kotlin-okhttp')
     compile project(':lk-kotlin-okhttp-jackson')
@@ -57,6 +68,7 @@ dependencies {
     compile project(':lk-kotlin-observable-list')
     compile project(':lk-kotlin-observable-list-lifecycle')
     compile project(':lk-android-lifecycle')
+    compile project(':lk-anko-activity-access')
     compile project(':lk-android-activity-access')
     compile project(':lk-android-dialogs')
     compile project(':lk-android-animations')
@@ -66,17 +78,6 @@ dependencies {
     compile project(':lk-android-extensions')
 }
 
-// build a jar with source files
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-artifacts {
-    archives sourcesJar
-}
-
-
 //Bintray
 buildscript {
     repositories {
@@ -85,7 +86,7 @@ buildscript {
     }
     dependencies {
         classpath 'digital.wup:android-maven-publish:3.0.0'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.kotlinVersion}"
     }
 }
@@ -110,6 +111,8 @@ apply plugin: 'com.jfrog.bintray'
 bintray {
     user = bintrayProperties['bintrayUser']
     key = bintrayProperties['bintrayKey']
+    publications = ['mavenAar']
+    publish = bintrayProperties['bintrayPublish']
     pkg {
         repo = bintrayProperties['bintrayRepository']
         name = project.name

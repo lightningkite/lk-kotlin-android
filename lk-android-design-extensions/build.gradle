@@ -54,15 +54,6 @@ dependencies {
 //    compile 'com.android.support:gridlayout-v7:27.0.2'
 }
 
-// build a jar with source files
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-artifacts {
-    archives sourcesJar
-}
 
 
 //Bintray
@@ -73,7 +64,7 @@ buildscript {
     }
     dependencies {
         classpath 'digital.wup:android-maven-publish:3.0.0'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.kotlinVersion}"
     }
 }
@@ -98,6 +89,8 @@ apply plugin: 'com.jfrog.bintray'
 bintray {
     user = bintrayProperties['bintrayUser']
     key = bintrayProperties['bintrayKey']
+    publications = ['mavenAar']
+    publish = bintrayProperties['bintrayPublish']
     pkg {
         repo = bintrayProperties['bintrayRepository']
         name = project.name

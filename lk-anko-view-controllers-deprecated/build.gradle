@@ -1,0 +1,115 @@
+//noinspection GradleCompatible
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+group = "com.github.lightningkite"
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.2"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        warning('InvalidPackage', 'NewApi')
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jitpack.io"
+    }
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
+    jcenter()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
+
+    compile project(':lk-android-design-extensions')
+    compile project(':lk-anko-deprection')
+    compile project(':lk-android-observable')
+    compile project(':lk-anko-animations-observable')
+    compile project(':lk-android-image-loading')
+    compile project(':lk-kotlin-observable-property-jvm')
+    compile project(':lk-kotlin-jvm-utils')
+    compile project(':lk-kotlin-utils')
+    compile project(':lk-kotlin-lifecycle')
+    compile project(':lk-android-lifecycle')
+    compile project(':lk-anko-activity-access')
+    compile project(':lk-android-activity-access')
+    compile project(':lk-android-dialogs')
+    compile project(':lk-android-animations')
+    compile project(':lk-anko-animations')
+    compile project(':lk-android-ui-thread')
+    compile project(':lk-anko-extensions')
+    compile project(':lk-android-extensions')
+}
+
+//Bintray
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'digital.wup:android-maven-publish:3.0.0'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.kotlinVersion}"
+    }
+}
+def bintrayPropertiesFile = rootProject.file("bintray.properties")
+def bintrayProperties = new Properties()
+bintrayProperties.load(new FileInputStream(bintrayPropertiesFile))
+
+apply plugin: 'digital.wup.android-maven-publish'
+publishing {
+    publications {
+        mavenAar(MavenPublication){
+            from components.android
+            groupId bintrayProperties['bintrayRepository']
+            artifactId project.name
+            version rootProject.libraryVersion
+        }
+    }
+}
+
+
+apply plugin: 'com.jfrog.bintray'
+bintray {
+    user = bintrayProperties['bintrayUser']
+    key = bintrayProperties['bintrayKey']
+    publications = ['mavenAar']
+    publish = bintrayProperties['bintrayPublish']
+    pkg {
+        repo = bintrayProperties['bintrayRepository']
+        name = project.name
+        userOrg = bintrayProperties['bintrayOrganization']
+        licenses = [bintrayProperties['bintrayLicense']]
+        vcsUrl = bintrayProperties['bintrayVcs']
+        version {
+            name = rootProject.libraryVersion
+            released  = new Date()
+        }
+    }
+}

@@ -7,7 +7,6 @@ import android.view.Gravity
 import android.view.View
 import android.view.ViewManager
 import android.widget.FrameLayout
-import com.lightningkite.kotlin.anko.animation.TransitionView
 import com.lightningkite.kotlin.anko.animation._TransitionView
 import com.lightningkite.kotlin.anko.animation.transitionView
 import com.lightningkite.kotlin.anko.lifecycle
