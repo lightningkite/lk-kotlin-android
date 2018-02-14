@@ -2,14 +2,14 @@ package com.lightningkite.kotlincomponents
 
 import android.view.Gravity
 import android.view.View
-import com.lightningkite.kotlin.anko.activity.ActivityAccess
-import com.lightningkite.kotlin.anko.activity.ViewGenerator
-import com.lightningkite.kotlin.anko.activity.anko
-import com.lightningkite.kotlin.anko.lifecycle
-import com.lightningkite.kotlin.anko.observable.adapter.listAdapter
-import com.lightningkite.kotlin.anko.selectableItemBackgroundResource
-import com.lightningkite.kotlin.anko.verticalRecyclerView
-import com.lightningkite.kotlin.observable.property.bind
+import lk.android.activity.access.ActivityAccess
+import lk.android.activity.access.ViewGenerator
+import lk.android.extensions.selectableItemBackgroundResource
+import lk.android.lifecycle.lifecycle
+import lk.anko.activity.access.anko
+import lk.anko.adapters.observable.listAdapter
+import lk.anko.extensions.verticalRecyclerView
+import lk.kotlin.observable.property.lifecycle.bind
 import org.jetbrains.anko.*
 import java.util.*
 

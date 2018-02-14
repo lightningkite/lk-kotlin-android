@@ -2,19 +2,19 @@ package com.lightningkite.kotlincomponents
 
 import android.graphics.Color
 import android.view.View
-import com.lightningkite.kotlin.anko.activity.ActivityAccess
-import com.lightningkite.kotlin.anko.activity.ViewGenerator
-import com.lightningkite.kotlin.anko.activity.anko
-import com.lightningkite.kotlin.anko.async.UIThread
-import com.lightningkite.kotlin.anko.lifecycle
-import com.lightningkite.kotlin.anko.observable.adapter.listAdapter
-import com.lightningkite.kotlin.anko.observable.progressLayout
-import com.lightningkite.kotlin.anko.verticalRecyclerView
-import com.lightningkite.kotlin.async.Async
-import com.lightningkite.kotlin.async.invokeOn
-import com.lightningkite.kotlin.async.thenOn
-import com.lightningkite.kotlin.observable.list.observableListOf
-import com.lightningkite.kotlin.observable.property.bind
+import lk.android.activity.access.ActivityAccess
+import lk.android.activity.access.ViewGenerator
+import lk.android.lifecycle.lifecycle
+import lk.android.ui.thread.UIThread
+import lk.anko.activity.access.anko
+import lk.anko.adapters.observable.listAdapter
+import lk.anko.animations.observable.progressLayout
+import lk.anko.extensions.verticalRecyclerView
+import lk.kotlin.jvm.utils.async.Async
+import lk.kotlin.jvm.utils.async.invokeOn
+import lk.kotlin.jvm.utils.async.thenOn
+import lk.kotlin.observable.list.observableListOf
+import lk.kotlin.observable.property.lifecycle.bind
 import org.jetbrains.anko.*
 import org.jetbrains.anko.cardview.v7.cardView
 

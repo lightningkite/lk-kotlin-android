@@ -1,7 +1,7 @@
 package com.lightningkite.kotlincomponents
 
 import android.os.Bundle
-import com.lightningkite.kotlin.anko.activity.AccessibleActivity
+import lk.android.activity.access.AccessibleActivity
 
 /**
  * The main activity is mostly empty when using [ViewController]s.

@@ -4,14 +4,19 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.Gravity
 import android.view.View
-import com.lightningkite.kotlin.anko.*
-import com.lightningkite.kotlin.anko.activity.ActivityAccess
-import com.lightningkite.kotlin.anko.activity.ViewGenerator
-import com.lightningkite.kotlin.anko.activity.anko
-import com.lightningkite.kotlin.anko.adapter.swipeToDismiss
-import com.lightningkite.kotlin.anko.observable.adapter.listAdapter
-import com.lightningkite.kotlin.observable.list.ObservableListWrapper
-import com.lightningkite.kotlin.observable.property.bind
+import lk.android.activity.access.ActivityAccess
+import lk.android.activity.access.ViewGenerator
+import lk.android.extensions.getColorCompat
+import lk.android.extensions.horizontalDivider
+import lk.android.extensions.selectableItemBackgroundResource
+import lk.android.lifecycle.lifecycle
+import lk.anko.activity.access.anko
+import lk.anko.adapters.observable.listAdapter
+import lk.anko.adapters.swipeToDismiss
+import lk.anko.extensions.stickyHeaders
+import lk.anko.extensions.verticalRecyclerView
+import lk.kotlin.observable.list.ObservableListWrapper
+import lk.kotlin.observable.property.lifecycle.bind
 import org.jetbrains.anko.*
 
 /**

@@ -2,10 +2,10 @@ package com.lightningkite.kotlincomponents
 
 import android.view.Gravity
 import android.view.View
-import com.lightningkite.kotlin.anko.activity.ActivityAccess
-import com.lightningkite.kotlin.anko.activity.ViewGenerator
-import com.lightningkite.kotlin.anko.activity.anko
-import com.lightningkite.kotlin.observable.property.StackObservableProperty
+import lk.android.activity.access.ActivityAccess
+import lk.android.activity.access.ViewGenerator
+import lk.anko.activity.access.anko
+import lk.kotlin.observable.property.StackObservableProperty
 import org.jetbrains.anko.button
 import org.jetbrains.anko.textView
 import org.jetbrains.anko.verticalLayout

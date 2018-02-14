@@ -1,13 +1,13 @@
 package com.lightningkite.kotlin.anko.observable
 
 import android.view.View
-import com.lightningkite.kotlin.anko.activity.ActivityAccess
-import com.lightningkite.kotlin.anko.animation.AnimationSet
-import com.lightningkite.kotlin.anko.animation.SwapView
-import com.lightningkite.kotlin.anko.lifecycle
-import com.lightningkite.kotlin.observable.property.ObservableProperty
-import com.lightningkite.kotlin.observable.property.StackObservableProperty
-import com.lightningkite.kotlin.observable.property.bind
+import lk.android.activity.access.ActivityAccess
+import lk.android.animations.AnimationSet
+import lk.android.animations.SwapView
+import lk.android.lifecycle.lifecycle
+import lk.kotlin.observable.property.ObservableProperty
+import lk.kotlin.observable.property.StackObservableProperty
+import lk.kotlin.observable.property.lifecycle.bind
 
 fun <T : (ActivityAccess) -> View> SwapView.bind(
         access: ActivityAccess,

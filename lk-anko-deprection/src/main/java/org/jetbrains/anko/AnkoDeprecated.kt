@@ -7,6 +7,7 @@
  */
 package org.jetbrains.anko
 
+
 import android.view.View
 
 @Deprecated("This has been deprecated in favor of calling the function directly.", ReplaceWith("isEnabled"))

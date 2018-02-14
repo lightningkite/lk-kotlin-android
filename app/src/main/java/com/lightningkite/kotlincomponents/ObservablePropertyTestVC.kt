@@ -1,13 +1,13 @@
 package com.lightningkite.kotlincomponents
 
 import android.view.View
-import com.lightningkite.kotlin.anko.activity.ActivityAccess
-import com.lightningkite.kotlin.anko.activity.ViewGenerator
-import com.lightningkite.kotlin.anko.activity.anko
-import com.lightningkite.kotlin.anko.lifecycle
-import com.lightningkite.kotlin.anko.observable.bindString
-import com.lightningkite.kotlin.observable.property.StandardObservableProperty
-import com.lightningkite.kotlin.observable.property.bind
+import lk.android.activity.access.ActivityAccess
+import lk.android.activity.access.ViewGenerator
+import lk.android.lifecycle.lifecycle
+import lk.android.observable.bindString
+import lk.anko.activity.access.anko
+import lk.kotlin.observable.property.StandardObservableProperty
+import lk.kotlin.observable.property.lifecycle.bind
 import org.jetbrains.anko.*
 
 /**

@@ -2,16 +2,16 @@ package com.lightningkite.kotlincomponents
 
 import android.view.Gravity
 import android.view.View
-import com.lightningkite.kotlin.anko.activity.ActivityAccess
-import com.lightningkite.kotlin.anko.activity.ViewGenerator
-import com.lightningkite.kotlin.anko.activity.anko
-import com.lightningkite.kotlin.anko.animation.swapView
-import com.lightningkite.kotlin.anko.elevationCompat
-import com.lightningkite.kotlin.anko.lifecycle
 import com.lightningkite.kotlin.anko.observable.bind
-import com.lightningkite.kotlin.lifecycle.listen
-import com.lightningkite.kotlin.observable.property.StackObservableProperty
-import com.lightningkite.kotlin.observable.property.bind
+import lk.android.activity.access.ActivityAccess
+import lk.android.activity.access.ViewGenerator
+import lk.android.extensions.elevationCompat
+import lk.android.lifecycle.lifecycle
+import lk.anko.activity.access.anko
+import lk.anko.animations.swapView
+import lk.kotlin.lifecycle.listen
+import lk.kotlin.observable.property.StackObservableProperty
+import lk.kotlin.observable.property.lifecycle.bind
 import org.jetbrains.anko.appcompat.v7.actionMenuView
 import org.jetbrains.anko.appcompat.v7.toolbar
 import org.jetbrains.anko.design.coordinatorLayout

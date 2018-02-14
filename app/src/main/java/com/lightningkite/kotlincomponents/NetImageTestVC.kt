@@ -2,20 +2,20 @@ package com.lightningkite.kotlincomponents
 
 import android.view.Gravity
 import android.view.View
-import com.lightningkite.kotlin.anko.activity.ActivityAccess
-import com.lightningkite.kotlin.anko.activity.ViewGenerator
-import com.lightningkite.kotlin.anko.activity.anko
-import com.lightningkite.kotlin.anko.activity.dialog.inputDialog
-import com.lightningkite.kotlin.anko.animation.transitionView
-import com.lightningkite.kotlin.anko.async.UIThread
-import com.lightningkite.kotlin.anko.lifecycle
-import com.lightningkite.kotlin.anko.networking.image.lambdaBitmapExif
-import com.lightningkite.kotlin.async.Async
-import com.lightningkite.kotlin.async.invokeOn
-import com.lightningkite.kotlin.async.thenOn
-import com.lightningkite.kotlin.observable.property.StandardObservableProperty
-import com.lightningkite.kotlin.observable.property.bind
-import com.lightningkite.kotlin.range.random
+import lk.android.activity.access.ActivityAccess
+import lk.android.activity.access.ViewGenerator
+import lk.android.dialogs.inputDialog
+import lk.android.image.loading.image.lambdaBitmapExif
+import lk.android.lifecycle.lifecycle
+import lk.android.ui.thread.UIThread
+import lk.anko.activity.access.anko
+import lk.anko.animations.transitionView
+import lk.kotlin.jvm.utils.async.Async
+import lk.kotlin.jvm.utils.async.invokeOn
+import lk.kotlin.jvm.utils.async.thenOn
+import lk.kotlin.jvm.utils.range.random
+import lk.kotlin.observable.property.StandardObservableProperty
+import lk.kotlin.observable.property.lifecycle.bind
 import okhttp3.Request
 import org.jetbrains.anko.*
 

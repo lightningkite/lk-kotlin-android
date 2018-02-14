@@ -1,9 +1,9 @@
 package com.lightningkite.kotlincomponents
 
-import com.lightningkite.kotlin.networking.OkHttpApi
-import com.lightningkite.kotlin.networking.TypedResponse
-import com.lightningkite.kotlin.networking.jackson.jacksonObject
-import com.lightningkite.kotlin.networking.jackson.lambdaJackson
+import lk.kotlin.jackson.jacksonObject
+import lk.kotlin.okhttp.OkHttpApi
+import lk.kotlin.okhttp.TypedResponse
+import lk.kotlin.okhttp.jackson.lambdaJackson
 
 /**
  * An example API.
