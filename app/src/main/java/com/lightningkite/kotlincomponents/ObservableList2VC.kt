@@ -5,7 +5,7 @@ import android.graphics.drawable.ColorDrawable
 import android.view.Gravity
 import android.view.View
 import lk.android.activity.access.ActivityAccess
-import lk.android.activity.access.ViewGenerator
+import lk.android.mighty.view.ViewGenerator
 import lk.android.extensions.horizontalDivider
 import lk.android.extensions.selectableItemBackgroundResource
 import lk.android.lifecycle.lifecycle

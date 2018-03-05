@@ -2141,7 +2141,7 @@ plainRep = [
     ),
     (
         "import com.lightningkite.kotlin.anko.activity.ViewGenerator",
-        "import lk.android.activity.access.ViewGenerator"
+        "import lk.android.mighty.view.ViewGenerator"
     ),
     (
         "import com.lightningkite.kotlin.anko.activity.startIntent",

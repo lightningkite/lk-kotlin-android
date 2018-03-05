@@ -2,7 +2,7 @@ package com.lightningkite.kotlincomponents
 
 import android.view.View
 import lk.android.activity.access.ActivityAccess
-import lk.android.activity.access.ViewGenerator
+import lk.android.mighty.view.ViewGenerator
 import lk.android.lifecycle.lifecycle
 import lk.android.observable.bindString
 import lk.anko.activity.access.anko

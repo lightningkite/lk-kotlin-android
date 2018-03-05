@@ -3,7 +3,7 @@ package com.lightningkite.kotlincomponents
 import android.view.Gravity
 import android.view.View
 import lk.android.activity.access.ActivityAccess
-import lk.android.activity.access.ViewGenerator
+import lk.android.mighty.view.ViewGenerator
 import lk.android.extensions.selectableItemBackgroundResource
 import lk.android.lifecycle.lifecycle
 import lk.anko.activity.access.anko
@@ -27,6 +27,7 @@ class SelectorScreen(val main: MainScreen) : ViewGenerator {
             },
             "Observable List" to { ObservableListVC() },
             "Observable List 2" to { ObservableList2VC() },
+            "Observable List 3" to { ObservableList3VC() },
             "Network Image" to { NetImageTestVC() },
             "Observable Property" to { ObservablePropertyTestVC() },
             "View Controller Stacks" to { StackDemoVC(main.stack) },

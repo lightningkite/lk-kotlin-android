@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/lk-android-image-loading/lk-android-image-loading.iml" filepath="$PROJECT_DIR$/lk-android-image-loading/lk-android-image-loading.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-android-image-loading-observable/lk-android-image-loading-observable.iml" filepath="$PROJECT_DIR$/lk-android-image-loading-observable/lk-android-image-loading-observable.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-android-lifecycle/lk-android-lifecycle.iml" filepath="$PROJECT_DIR$/lk-android-lifecycle/lk-android-lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-android-mighty-view/lk-android-mighty-view.iml" filepath="$PROJECT_DIR$/lk-android-mighty-view/lk-android-mighty-view.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-android-observable/lk-android-observable.iml" filepath="$PROJECT_DIR$/lk-android-observable/lk-android-observable.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-android-observable-validation/lk-android-observable-validation.iml" filepath="$PROJECT_DIR$/lk-android-observable-validation/lk-android-observable-validation.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-android-ui-thread/lk-android-ui-thread.iml" filepath="$PROJECT_DIR$/lk-android-ui-thread/lk-android-ui-thread.iml" />

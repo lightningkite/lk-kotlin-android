@@ -43,27 +43,58 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
+    androidTestCompile 'com.android.support:support-annotations:27.0.2'
+    androidTestCompile 'com.android.support.test:runner:1.0.1'
+    testImplementation 'junit:junit:4.12'
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
 
-    compile project(':lk-android-design-extensions')
-    compile project(':lk-anko-deprection')
-    compile project(':lk-android-observable')
-    compile project(':lk-anko-animations-observable')
-    compile project(':lk-android-image-loading')
-    compile project(':lk-kotlin-observable-property-jvm')
-    compile project(':lk-kotlin-jvm-utils')
-    compile project(':lk-kotlin-utils')
-    compile project(':lk-kotlin-lifecycle')
-    compile project(':lk-android-lifecycle')
-    compile project(':lk-anko-activity-access')
-    compile project(':lk-android-activity-access')
-    compile project(':lk-android-dialogs')
-    compile project(':lk-android-animations')
-    compile project(':lk-anko-animations')
-    compile project(':lk-android-ui-thread')
-    compile project(':lk-anko-extensions')
-    compile project(':lk-android-extensions')
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
+
+    implementation project(':lk-anko-extensions')
+    implementation project(':lk-anko-animations')
+    implementation project(':lk-kotlin-observable-list-lifecycle')
+    implementation project(':lk-kotlin-okhttp')
+    implementation project(':lk-anko-animations-observable')
+    implementation project(':lk-android-image-loading')
+    implementation project(':lk-android-animations')
+    implementation project(':lk-android-animations-observable')
+    implementation project(':lk-android-dialogs')
+    implementation project(':lk-kotlin-observable-property')
+    implementation project(':lk-android-activity-access')
+    implementation project(':lk-android-observable')
+    implementation project(':lk-kotlin-utils')
+    implementation project(':lk-kotlin-observable-property-jvm')
+    implementation project(':lk-kotlin-observable-property-lifecycle')
+    implementation project(':lk-kotlin-observable-list')
+    implementation project(':lk-android-design-extensions')
+    implementation project(':lk-kotlin-lifecycle')
+    implementation project(':lk-android-lifecycle')
+    implementation project(':lk-anko-activity-access')
+    implementation project(':lk-android-extensions')
+    implementation project(':lk-anko-deprection')
+    implementation project(':lk-android-mighty-view')
+    implementation project(':lk-android-ui-thread')
+    implementation project(':lk-kotlin-jvm-utils')
+
+    ext.ankoVersion = rootProject.ankoVersion
+    implementation "org.jetbrains.anko:anko-sdk15:$ankoVersion"
+
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation "org.jetbrains.anko:anko-appcompat-v7:$ankoVersion"
+
+    implementation 'com.android.support:cardview-v7:27.0.2'
+    implementation "org.jetbrains.anko:anko-cardview-v7:$ankoVersion"
+
+    implementation 'com.android.support:gridlayout-v7:27.0.2'
+    implementation "org.jetbrains.anko:anko-gridlayout-v7:$ankoVersion"
+
+    implementation 'com.android.support:recyclerview-v7:27.0.2'
+    implementation "org.jetbrains.anko:anko-recyclerview-v7:$ankoVersion"
+
+    implementation 'com.android.support:design:27.0.2'
+    implementation "org.jetbrains.anko:anko-design:$ankoVersion"
 }
 
 //Bintray
@@ -82,11 +113,17 @@ def bintrayPropertiesFile = rootProject.file("bintray.properties")
 def bintrayProperties = new Properties()
 bintrayProperties.load(new FileInputStream(bintrayPropertiesFile))
 
+task sourceJar(type: Jar) {
+    classifier 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
 apply plugin: 'digital.wup.android-maven-publish'
 publishing {
     publications {
         mavenAar(MavenPublication){
             from components.android
+            artifact tasks.sourceJar
             groupId bintrayProperties['bintrayRepository']
             artifactId project.name
             version rootProject.libraryVersion

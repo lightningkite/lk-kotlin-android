@@ -3,7 +3,7 @@ package com.lightningkite.kotlincomponents
 import android.view.Gravity
 import android.view.View
 import lk.android.activity.access.ActivityAccess
-import lk.android.activity.access.ViewGenerator
+import lk.android.mighty.view.ViewGenerator
 import lk.anko.activity.access.anko
 import lk.kotlin.observable.property.StackObservableProperty
 import org.jetbrains.anko.button

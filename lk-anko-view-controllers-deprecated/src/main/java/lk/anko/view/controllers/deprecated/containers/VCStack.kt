@@ -1,7 +1,7 @@
 package lk.anko.view.controllers.deprecated.containers
 
 
-import lk.android.activity.access.ViewGenerator
+import lk.android.mighty.view.ViewGenerator
 import lk.anko.view.controllers.deprecated.ViewController
 import lk.kotlin.observable.property.StackObservableProperty
 

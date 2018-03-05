@@ -14,8 +14,9 @@ abstract class BaseObservableProperty<T>() : MutableObservableProperty<T> {
     override fun add(element: (T) -> Unit): Boolean = list.add(element)
 
     open fun update() {
+        val valueCached = value
         for (listener in list) {
-            listener(value)
+            listener(valueCached)
         }
     }
 }

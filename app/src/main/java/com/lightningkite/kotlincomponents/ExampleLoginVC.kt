@@ -3,7 +3,7 @@ package com.lightningkite.kotlincomponents
 import android.view.View
 import android.widget.Button
 import lk.android.activity.access.ActivityAccess
-import lk.android.activity.access.ViewGenerator
+import lk.android.mighty.view.ViewGenerator
 import lk.android.dialogs.infoDialog
 import lk.android.extensions.FullInputType
 import lk.android.extensions.onDone
@@ -58,56 +58,54 @@ class ExampleLoginVC(val onLogin: (LoginData) -> Unit) : ViewGenerator {
 
     //Views
 
-    override fun invoke(access: ActivityAccess): View = access.anko {
-        scrollView {
-            isFillViewport = true
+    override fun invoke(access: ActivityAccess): View = access.anko().scrollView {
+        isFillViewport = true
 
-            verticalLayout {
-                padding = dip(8)
+        verticalLayout {
+            padding = dip(8)
 
-                var loginButton: Button? = null
+            var loginButton: Button? = null
 
-                textInputLayout {
-                    hint = context.getString(R.string.email)
-                    textInputEditText {
-                        inputType = FullInputType.EMAIL
-                        bindString(emailObs)
-                        bindError(emailObs)
+            textInputLayout {
+                hint = context.getString(R.string.email)
+                textInputEditText {
+                    inputType = FullInputType.EMAIL
+                    bindString(emailObs)
+                    bindError(emailObs)
+                }
+            }.lparams(matchParent, wrapContent) { margin = dip(8) }
+
+            textInputLayout {
+                hint = context.getString(R.string.password)
+                textInputEditText {
+                    inputType = FullInputType.PASSWORD
+                    bindString(passwordObs)
+                    bindError(passwordObs)
+                    onDone {
+                        loginButton!!.performClick()
                     }
-                }.lparams(matchParent, wrapContent) { margin = dip(8) }
+                }
+            }.lparams(matchParent, wrapContent) { margin = dip(8) }
 
-                textInputLayout {
-                    hint = context.getString(R.string.password)
-                    textInputEditText {
-                        inputType = FullInputType.PASSWORD
-                        bindString(passwordObs)
-                        bindError(passwordObs)
-                        onDone {
-                            loginButton!!.performClick()
+            progressLayout { runningObs: MutableObservableProperty<Boolean> ->
+                button {
+                    loginButton = this
+                    text = context.getString(R.string.log_in)
+                    setOnClickListener {
+                        if (isValid()) {
+                            attemptLogin()
+                                    .captureProgress(runningObs, UIThread) //sets the observable to true when task is started, false when complete
+                                    .thenOnSuccess(UIThread) { loginData: LoginData ->
+                                        onLogin.invoke(loginData)
+                                    }
+                                    .thenOnFailure(UIThread) { response: TypedResponse<LoginData> ->
+                                        context.infoDialog(message = "You failed to log in.  Response from server: \n${response.errorString}")
+                                    }
+                                    .invokeOn(Async)
                         }
                     }
                 }.lparams(matchParent, wrapContent) { margin = dip(8) }
-
-                progressLayout { runningObs: MutableObservableProperty<Boolean> ->
-                    button {
-                        loginButton = this
-                        text = context.getString(R.string.log_in)
-                        setOnClickListener {
-                            if (isValid()) {
-                                attemptLogin()
-                                        .captureProgress(runningObs, UIThread) //sets the observable to true when task is started, false when complete
-                                        .thenOnSuccess(UIThread) { loginData: LoginData ->
-                                            onLogin.invoke(loginData)
-                                        }
-                                        .thenOnFailure(UIThread) { response: TypedResponse<LoginData> ->
-                                            context.infoDialog(message = "You failed to log in.  Response from server: \n${response.errorString}")
-                                        }
-                                        .invokeOn(Async)
-                            }
-                        }
-                    }.lparams(matchParent, wrapContent) { margin = dip(8) }
-                }.lparams(matchParent, wrapContent)
             }.lparams(matchParent, wrapContent)
-        }
+        }.lparams(matchParent, wrapContent)
     }
 }

@@ -16,7 +16,11 @@ import java.io.Closeable
  * Loads images with a cache.
  * Created by joseph on 8/3/17.
  */
-class ImageLoader(val baseRequest: Request.Builder, val imageMaxWidth: Int, val imageMaxHeight: Int) : Closeable {
+class ImageLoader(
+        val baseRequest: Request.Builder = Request.Builder(),
+        val imageMaxWidth: Int = 2048,
+        val imageMaxHeight: Int = 2048
+) : Closeable {
     val requests = HashSet<String>()
     val callbacks = HashMap<String, ArrayList<(TypedResponse<Bitmap>) -> Unit>>()
     val results = HashMap<String, Bitmap>()

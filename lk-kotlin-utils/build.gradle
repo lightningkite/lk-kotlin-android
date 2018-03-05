@@ -17,9 +17,9 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:${rootProject.kotlinVersion}"
-    testCompile 'junit:junit:4.12'
-    testCompile "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:${rootProject.kotlinVersion}"
+    testImplementation 'junit:junit:4.12'
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
 }
 
 
@@ -37,15 +37,20 @@ def bintrayPropertiesFile = rootProject.file("bintray.properties")
 def bintrayProperties = new Properties()
 bintrayProperties.load(new FileInputStream(bintrayPropertiesFile))
 
+task sourceJar(type: Jar) {
+    classifier 'sources'
+    from sourceSets.main.allJava
+}
 
 apply plugin: 'maven-publish'
 publishing {
     publications {
         mavenJava(MavenPublication){
             from components.java
+            artifact tasks.sourceJar
             groupId bintrayProperties['bintrayRepository']
             artifactId project.name
-            version project.version
+            version rootProject.libraryVersion
         }
     }
 }

@@ -3,7 +3,7 @@ package com.lightningkite.kotlincomponents
 import android.graphics.Color
 import android.view.View
 import lk.android.activity.access.ActivityAccess
-import lk.android.activity.access.ViewGenerator
+import lk.android.mighty.view.ViewGenerator
 import lk.android.lifecycle.lifecycle
 import lk.android.ui.thread.UIThread
 import lk.anko.activity.access.anko

@@ -26,6 +26,7 @@ object MyJackson {
             .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
             .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
             .enable(SerializationFeature.WRITE_DATES_WITH_ZONE_ID)
+            .setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE)
             .registerModule(object : SimpleModule() {
                 init {
                     addSerializer(object : StdSerializer<Unit>(Unit::class.java) {

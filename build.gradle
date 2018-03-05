@@ -3,7 +3,8 @@
 
 buildscript {
     ext.kotlinVersion = '1.2.21'
-    ext.libraryVersion = '0.0.1'
+    ext.libraryVersion = '0.0.2'
+    ext.ankoVersion = '0.10.0'
     repositories {
         google()
         jcenter()

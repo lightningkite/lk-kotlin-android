@@ -8,3 +8,4 @@ import lk.anko.extensions.anko
 import org.jetbrains.anko.AnkoContextImpl
 
 inline fun ActivityAccess.anko(setup: AnkoContextImpl<ActivityAccess>.() -> Unit) = context.anko(this, setup)
+inline fun ActivityAccess.anko() = context.anko(this)

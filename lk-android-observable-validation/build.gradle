@@ -43,13 +43,21 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
+    androidTestCompile 'com.android.support:support-annotations:27.0.2'
+    androidTestCompile 'com.android.support.test:runner:1.0.1'
+    testImplementation 'junit:junit:4.12'
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
 
-    compile project(':lk-kotlin-observable-property-lifecycle')
-    compile project(':lk-kotlin-lifecycle')
-    compile project(':lk-android-lifecycle')
-    compile 'com.android.support:design:27.0.2'
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
+
+    implementation project(':lk-kotlin-lifecycle')
+    implementation project(':lk-android-lifecycle')
+    implementation project(':lk-kotlin-utils')
+    implementation project(':lk-kotlin-observable-property')
+    implementation project(':lk-kotlin-observable-property-lifecycle')
+    implementation 'com.android.support:design:27.0.2'
 }
 
 
@@ -69,11 +77,17 @@ def bintrayPropertiesFile = rootProject.file("bintray.properties")
 def bintrayProperties = new Properties()
 bintrayProperties.load(new FileInputStream(bintrayPropertiesFile))
 
+task sourceJar(type: Jar) {
+    classifier 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
 apply plugin: 'digital.wup.android-maven-publish'
 publishing {
     publications {
         mavenAar(MavenPublication){
             from components.android
+            artifact tasks.sourceJar
             groupId bintrayProperties['bintrayRepository']
             artifactId project.name
             version rootProject.libraryVersion

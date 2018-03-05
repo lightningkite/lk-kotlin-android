@@ -7,13 +7,30 @@ package lk.kotlin.observable.property
  * Notifies listeners of the current state.
  * Created by joseph on 1/19/18.
  */
-class StackObservableProperty<T> : MutableObservableProperty<T> {
+class StackObservableProperty<T>() : MutableObservableProperty<T> {
     private val internalStack = ArrayList<T>()
     private val listeners = ArrayList<(T) -> Unit>()
     val stack: List<T> get() = internalStack
 
+    /**
+     * Creates a [StackObservableProperty] with a starting state.
+     */
+    constructor(firstItem:T):this(){
+        internalStack.add(firstItem)
+    }
+
+    /**
+     * Creates a [StackObservableProperty] with a starting state.
+     */
+    constructor(firstItemGenerator:(StackObservableProperty<T>)->T):this(){
+        internalStack.add(firstItemGenerator(this))
+    }
+
     override var value: T
-        get() = internalStack.last()
+        get() {
+            if(stack.isEmpty()) throw NoStatesLeftException()
+            return internalStack.last()
+        }
         set(value) {
             if (internalStack.isEmpty()) internalStack.add(value)
             else internalStack[internalStack.lastIndex] = value
@@ -22,6 +39,13 @@ class StackObservableProperty<T> : MutableObservableProperty<T> {
 
     override fun add(element: (T) -> Unit): Boolean = listeners.add(element)
     override fun remove(element: (T) -> Unit): Boolean = listeners.remove(element)
+
+    /**
+     * Adds a state to the bottom of the stack silently.
+     */
+    fun prepend(element:T){
+        internalStack.add(0, element)
+    }
 
     /**
      * Pushes a new state onto the stack and notifies the listeners.
@@ -40,11 +64,18 @@ class StackObservableProperty<T> : MutableObservableProperty<T> {
     }
 
     /**
+     * An exception indicating that there are no states available.
+     */
+    class NoStatesLeftException:IllegalStateException()
+
+    /**
      * Pops a state off the stack and notifies the listeners.
      */
     fun pop() {
         internalStack.removeAt(internalStack.lastIndex)
-        listeners.forEach { it.invoke(internalStack.last()) }
+        if(internalStack.isEmpty()) throw NoStatesLeftException()
+        val previous = internalStack.last()
+        listeners.forEach { it.invoke(previous) }
     }
 
     /**

@@ -1,4 +1,4 @@
-include ':app',
+include ':app', ':lk-android-mighty-view',
 
         ':lk-android-activity-access',
         ':lk-android-animations',

@@ -1,4 +1,4 @@
-package com.lightningkite.kotlin.anko.observable
+package lk.android.mighty.view
 
 import android.view.View
 import lk.android.activity.access.ActivityAccess

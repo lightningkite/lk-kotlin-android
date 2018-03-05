@@ -5,7 +5,7 @@ package lk.anko.view.controllers.deprecated
 import android.content.res.Resources
 import android.view.View
 import lk.android.activity.access.ActivityAccess
-import lk.android.activity.access.ViewGenerator
+import lk.android.mighty.view.ViewGenerator
 import lk.android.lifecycle.lifecycle
 import lk.kotlin.lifecycle.LifecycleListener
 import java.io.Closeable

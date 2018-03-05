@@ -39,6 +39,8 @@ open class TransitionView(context: Context) : FrameLayout(context) {
     override fun generateDefaultLayoutParams(): LayoutParams? {
         val params = super.generateDefaultLayoutParams()
         params.gravity = Gravity.CENTER
+        params.width = ViewGroup.LayoutParams.MATCH_PARENT
+        params.height = ViewGroup.LayoutParams.MATCH_PARENT
         return params
     }
 

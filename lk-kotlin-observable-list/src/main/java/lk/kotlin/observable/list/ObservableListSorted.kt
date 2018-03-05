@@ -1,10 +1,6 @@
-@file:JvmName("LkKotlinObservableList")
-@file:JvmMultifileClass
-
 package lk.kotlin.observable.list
 
-
-import lk.kotlin.observable.property.MutableObservableProperty
+import lk.kotlin.observable.property.ObservableProperty
 import lk.kotlin.observable.property.ObservablePropertyReference
 import lk.kotlin.utils.collection.mapping
 import lk.kotlin.utils.lambda.invokeAll
@@ -12,7 +8,6 @@ import java.io.Closeable
 import java.util.*
 
 /**
- *
  * Created by jivie on 5/23/16.
  */
 class ObservableListSorted<E>(val source: ObservableList<E>, val sorter: (E, E) -> Boolean) : ObservableList<E>, Closeable {
@@ -28,7 +23,6 @@ class ObservableListSorted<E>(val source: ObservableList<E>, val sorter: (E, E) 
         }
         return indexList.size
     }
-
     var listenerSet: ObservableListListenerSet<E> = ObservableListListenerSet(
             onAddListener = { item, index ->
                 for (i in indexList.indices) {
@@ -38,7 +32,7 @@ class ObservableListSorted<E>(val source: ObservableList<E>, val sorter: (E, E) 
                 val sortedIndex = indexGetInsertionIndex(item)
                 indexList.add(sortedIndex, index)
                 onAdd.invokeAll(item, sortedIndex)
-                onUpdate.value = this
+                onUpdate.update()
             },
             onRemoveListener = { item, index ->
                 val sortedIndex = indexList.indexOf(index)
@@ -49,7 +43,7 @@ class ObservableListSorted<E>(val source: ObservableList<E>, val sorter: (E, E) 
                             indexList[i]--
                     }
                     onRemove.invokeAll(item, sortedIndex)
-                    onUpdate.value = this
+                    onUpdate.update()
                 }
             },
             onMoveListener = { item, oldIndex, index ->
@@ -64,11 +58,11 @@ class ObservableListSorted<E>(val source: ObservableList<E>, val sorter: (E, E) 
                     onRemove.invokeAll(old, removeSortedIndex)
                     indexList.add(sortedIndex, index)
                     onAdd.invokeAll(item, sortedIndex)
-                    onUpdate.value = this
+                    onUpdate.update()
                 } else {
                     indexList.add(sortedIndex, index)
                     onChange.invokeAll(old, item, removeSortedIndex)
-                    onUpdate.value = this
+                    onUpdate.update()
                 }
             },
             onReplaceListener = {
@@ -78,7 +72,7 @@ class ObservableListSorted<E>(val source: ObservableList<E>, val sorter: (E, E) 
                     indexList.add(sortedIndex, index)
                 }
                 onReplace.invokeAll(this)
-                onUpdate.value = this
+                onUpdate.update()
             }
     )
 
@@ -141,7 +135,7 @@ class ObservableListSorted<E>(val source: ObservableList<E>, val sorter: (E, E) 
     override val onAdd = HashSet<(E, Int) -> Unit>()
     override val onChange = HashSet<(E, E, Int) -> Unit>()
     override val onMove = HashSet<(E, Int, Int) -> Unit>()
-    override val onUpdate: MutableObservableProperty<ObservableList<E>> = ObservablePropertyReference<ObservableList<E>>({ this@ObservableListSorted }, { replace(it) })
+    override val onUpdate = ObservablePropertyReference<ObservableList<E>>({ this@ObservableListSorted }, { replace(it) })
     override val onReplace = HashSet<(ObservableList<E>) -> Unit>()
     override val onRemove = HashSet<(E, Int) -> Unit>()
 
@@ -153,5 +147,6 @@ class ObservableListSorted<E>(val source: ObservableList<E>, val sorter: (E, E) 
 //    override val onReplace: MutableSet<(KObservableListInterface<E>) -> Unit> get() = source.onReplace.map({ input -> { input(this) } })
 
 }
+
 
 fun <E> ObservableList<E>.sorting(sorter: (E, E) -> Boolean): ObservableListSorted<E> = ObservableListSorted(this, sorter)

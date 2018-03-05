@@ -43,12 +43,26 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
+    androidTestCompile 'com.android.support:support-annotations:27.0.2'
+    androidTestCompile 'com.android.support.test:runner:1.0.1'
+    testImplementation 'junit:junit:4.12'
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
 
-    compile project(':lk-kotlin-observable-property-lifecycle')
-    compile project(':lk-android-image-loading')
-    compile project(':lk-android-lifecycle')
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
+
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    implementation project(':lk-kotlin-lifecycle')
+    implementation project(':lk-android-lifecycle')
+    implementation project(':lk-kotlin-utils')
+    implementation project(':lk-kotlin-observable-property')
+    implementation project(':lk-android-extensions')
+    implementation project(':lk-android-ui-thread')
+    implementation project(':lk-kotlin-jvm-utils')
+    implementation project(':lk-kotlin-observable-property-lifecycle')
+    implementation project(':lk-kotlin-okhttp')
+    implementation project(':lk-android-image-loading')
 }
 
 
@@ -68,11 +82,17 @@ def bintrayPropertiesFile = rootProject.file("bintray.properties")
 def bintrayProperties = new Properties()
 bintrayProperties.load(new FileInputStream(bintrayPropertiesFile))
 
+task sourceJar(type: Jar) {
+    classifier 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
 apply plugin: 'digital.wup.android-maven-publish'
 publishing {
     publications {
         mavenAar(MavenPublication){
             from components.android
+            artifact tasks.sourceJar
             groupId bintrayProperties['bintrayRepository']
             artifactId project.name
             version rootProject.libraryVersion

@@ -4,7 +4,7 @@ package lk.anko.view.controllers.deprecated.implementations
 
 import android.view.View
 import android.view.ViewGroup
-import lk.android.activity.access.ViewGenerator
+import lk.android.mighty.view.ViewGenerator
 import lk.android.animations.AnimationSet
 import lk.anko.view.controllers.deprecated.VCContext
 import lk.anko.view.controllers.deprecated.containers.VCContainer

@@ -95,97 +95,16 @@ fun <T> doAsync(action: () -> T, uiThread: (T) -> Unit) {
 fun doUiThread(action: () -> Unit) = UIThread.execute(action)
 
 @Deprecated("Place in your program, not the library.  Not used frequently enough for library status.")
-fun <A, B> parallel(a: () -> A, b: () -> B): () -> Pair<A, B> {
-    return {
-        val futureA = FutureTask {
-            a.invoke()
-        }
-        val futureB = FutureTask {
-            b.invoke()
-        }
-        Thread(futureA).start()
-        Thread(futureB).start()
-        futureA.get() to futureB.get()
-    }
-}
-
-@Deprecated("Place in your program, not the library.  Not used frequently enough for library status.")
-fun <A, B, C> parallel(a: () -> A, b: () -> B, c: () -> C): () -> Triple<A, B, C> {
-    return {
-        val futureA = FutureTask {
-            a.invoke()
-        }
-        val futureB = FutureTask {
-            b.invoke()
-        }
-        val futureC = FutureTask {
-            c.invoke()
-        }
-        Thread(futureA).start()
-        Thread(futureB).start()
-        Thread(futureC).start()
-        Triple(futureA.get(), futureB.get(), futureC.get())
-    }
-}
-
-@Deprecated("Place in your program, not the library.  Not used frequently enough for library status.")
 fun <T> parallelNonblocking(tasks: List<() -> T>, onAllComplete: (List<T>) -> Unit) {
     if (tasks.isEmpty()) onAllComplete(listOf())
     val items = ArrayList<T>()
     for (task in tasks) {
-        task.invokeAsync {
+        task.thenOn(UIThread) {
             items.add(it)
             if (items.size == tasks.size) {
                 onAllComplete(items)
             }
-        }
-    }
-}
-
-@JvmName("parallelBlockingShorthand")
-@Deprecated("Place in your program, not the library.  Not used frequently enough for library status.")
-fun <T> List<() -> T>.parallel(): () -> List<T> = parallel(this)
-
-@Deprecated("Place in your program, not the library.  Not used frequently enough for library status.")
-fun <T> parallel(tasks: List<() -> T>): () -> List<T> {
-    val numCores = Runtime.getRuntime().availableProcessors()
-    if (tasks.isEmpty()) return { listOf() }
-    else if (tasks.size < numCores) {
-        return {
-            try {
-                val results = tasks.subList(0, tasks.size - 1).map {
-                    val future = FutureTask {
-                        it.invoke()
-                    }
-                    Thread(future) to future
-                }.map { it.first.start(); it.second }.map { it.get() }.toMutableList()
-                results += tasks.last().invoke()
-                results
-            } catch (e: Exception) {
-                e.printStackTrace()
-                tasks.map { it() }
-            }
-        }
-    } else {
-        return {
-            val pool = ThreadPoolExecutor(
-                    Runtime.getRuntime().availableProcessors(),
-                    Runtime.getRuntime().availableProcessors(),
-                    1,
-                    TimeUnit.SECONDS,
-                    LinkedBlockingQueue<Runnable>()
-            )
-            try {
-                val results = tasks.subList(0, tasks.size - 1).map {
-                    pool.submit(it)
-                }.map { it.get() }.toMutableList()
-                results += tasks.last().invoke()
-                results
-            } catch (e: Exception) {
-                e.printStackTrace()
-                tasks.map { it() }
-            }
-        }
+        }.invokeOn(Async)
     }
 }
 

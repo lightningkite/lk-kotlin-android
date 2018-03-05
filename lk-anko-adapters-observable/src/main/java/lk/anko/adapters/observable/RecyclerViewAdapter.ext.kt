@@ -44,7 +44,7 @@ fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.attachAnimatio
     list.addListenerSet(newSet.second)
 }
 
-@Suppress("UNCHECKED_CASt")
+@Suppress("UNCHECKED_CAST")
 fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.detatchAnimations() {
     val prev = previousListenerSet[this]
     if (prev != null) {
@@ -56,6 +56,7 @@ fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.detatchAnimati
 fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.attachAnimations(lifecycle: LifecycleConnectable, list: ObservableList<ITEM>) {
     lifecycle.connect(object : LifecycleListener {
         override fun onStart() {
+            notifyDataSetChanged()
             attachAnimations<ITEM, VH>(list)
         }
 

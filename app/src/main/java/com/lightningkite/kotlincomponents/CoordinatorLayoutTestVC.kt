@@ -8,7 +8,7 @@ import android.view.Gravity
 import android.view.View
 import android.widget.ImageView
 import lk.android.activity.access.ActivityAccess
-import lk.android.activity.access.ViewGenerator
+import lk.android.mighty.view.ViewGenerator
 import lk.android.extensions.selectableItemBackgroundResource
 import lk.android.observable.bindAny
 import lk.anko.activity.access.anko

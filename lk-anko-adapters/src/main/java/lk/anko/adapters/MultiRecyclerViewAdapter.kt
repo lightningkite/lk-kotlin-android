@@ -77,6 +77,10 @@ class MultiRecyclerViewAdapter(
         super.unregisterAdapterDataObserver(observer)
     }
 
+    override fun getItemId(position: Int): Long = getChildInfo(position).let {
+        it.first.getItemId(it.second)
+    }
+
     override fun getItemCount(): Int = adapters.sumBy { it.itemCount }
 
     fun getIndexInChild(position: Int): Int {
