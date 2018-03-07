@@ -6,7 +6,7 @@ group = "com.github.lightningkite"
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27.0.2"
+    //buildToolsVersion "27.0.2"
 
     defaultConfig {
         minSdkVersion 16
@@ -67,9 +67,6 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.kotlinVersion}"
     }
 }
-def bintrayPropertiesFile = rootProject.file("bintray.properties")
-def bintrayProperties = new Properties()
-bintrayProperties.load(new FileInputStream(bintrayPropertiesFile))
 
 task sourceJar(type: Jar) {
     classifier 'sources'
@@ -82,7 +79,7 @@ publishing {
         mavenAar(MavenPublication){
             from components.android
             artifact tasks.sourceJar
-            groupId bintrayProperties['bintrayRepository']
+            groupId rootProject.repositoryGroupName
             artifactId project.name
             version rootProject.libraryVersion
         }
@@ -90,21 +87,26 @@ publishing {
 }
 
 
-apply plugin: 'com.jfrog.bintray'
-bintray {
-    user = bintrayProperties['bintrayUser']
-    key = bintrayProperties['bintrayKey']
-    publications = ['mavenAar']
-    publish = bintrayProperties['bintrayPublish']
-    pkg {
-        repo = bintrayProperties['bintrayRepository']
-        name = project.name
-        userOrg = bintrayProperties['bintrayOrganization']
-        licenses = [bintrayProperties['bintrayLicense']]
-        vcsUrl = bintrayProperties['bintrayVcs']
-        version {
-            name = rootProject.libraryVersion
-            released  = new Date()
+def bintrayPropertiesFile = rootProject.file("bintray.properties")
+if(bintrayPropertiesFile.exists()) {
+    def bintrayProperties = new Properties()
+    bintrayProperties.load(new FileInputStream(bintrayPropertiesFile))
+    apply plugin: 'com.jfrog.bintray'
+    bintray {
+        user = bintrayProperties['bintrayUser']
+        key = bintrayProperties['bintrayKey']
+        publications = ['mavenAar']
+        publish = bintrayProperties['bintrayPublish']
+        pkg {
+            repo = rootProject.repositoryGroupName
+            name = project.name
+            userOrg = bintrayProperties['bintrayOrganization']
+            licenses = [bintrayProperties['bintrayLicense']]
+            vcsUrl = bintrayProperties['bintrayVcs']
+            version {
+                name = rootProject.libraryVersion
+                released = new Date()
+            }
         }
     }
 }

@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/KotlinComponents.iml" filepath="$PROJECT_DIR$/KotlinComponents.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-kotlin-jackson/lib.iml" filepath="$PROJECT_DIR$/lk-kotlin-jackson/lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-android-activity-access/lk-android-activity-access.iml" filepath="$PROJECT_DIR$/lk-android-activity-access/lk-android-activity-access.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-android-animations/lk-android-animations.iml" filepath="$PROJECT_DIR$/lk-android-animations/lk-android-animations.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-anko-animations/lk-android-animations-anko.iml" filepath="$PROJECT_DIR$/lk-anko-animations/lk-android-animations-anko.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-android-animations-observable/lk-android-animations-observable.iml" filepath="$PROJECT_DIR$/lk-android-animations-observable/lk-android-animations-observable.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-android-design-extensions/lk-android-design-extensions.iml" filepath="$PROJECT_DIR$/lk-android-design-extensions/lk-android-design-extensions.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-android-dialogs/lk-android-dialogs.iml" filepath="$PROJECT_DIR$/lk-android-dialogs/lk-android-dialogs.iml" />
@@ -21,7 +18,6 @@
       <module fileurl="file://$PROJECT_DIR$/lk-android-ui-thread/lk-android-ui-thread.iml" filepath="$PROJECT_DIR$/lk-android-ui-thread/lk-android-ui-thread.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-anko-activity-access/lk-anko-activity-access.iml" filepath="$PROJECT_DIR$/lk-anko-activity-access/lk-anko-activity-access.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-anko-adapters/lk-anko-adapters.iml" filepath="$PROJECT_DIR$/lk-anko-adapters/lk-anko-adapters.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-anko-adapters-observable/lk-anko-adapters.iml" filepath="$PROJECT_DIR$/lk-anko-adapters-observable/lk-anko-adapters.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-anko-adapters-observable/lk-anko-adapters-observable.iml" filepath="$PROJECT_DIR$/lk-anko-adapters-observable/lk-anko-adapters-observable.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-anko-animations/lk-anko-animations.iml" filepath="$PROJECT_DIR$/lk-anko-animations/lk-anko-animations.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-anko-animations-observable/lk-anko-animations-observable.iml" filepath="$PROJECT_DIR$/lk-anko-animations-observable/lk-anko-animations-observable.iml" />
@@ -29,6 +25,7 @@
       <module fileurl="file://$PROJECT_DIR$/lk-anko-extensions/lk-anko-extensions.iml" filepath="$PROJECT_DIR$/lk-anko-extensions/lk-anko-extensions.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-anko-view-controllers-deprecated/lk-anko-view-controllers-deprecated.iml" filepath="$PROJECT_DIR$/lk-anko-view-controllers-deprecated/lk-anko-view-controllers-deprecated.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-everything-deprecated/lk-everything-deprecated.iml" filepath="$PROJECT_DIR$/lk-everything-deprecated/lk-everything-deprecated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lk-kotlin.iml" filepath="$PROJECT_DIR$/lk-kotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-kotlin-jackson/lk-kotlin-jackson.iml" filepath="$PROJECT_DIR$/lk-kotlin-jackson/lk-kotlin-jackson.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils.iml" filepath="$PROJECT_DIR$/lk-kotlin-jvm-utils/lk-kotlin-jvm-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-kotlin-lifecycle/lk-kotlin-lifecycle.iml" filepath="$PROJECT_DIR$/lk-kotlin-lifecycle/lk-kotlin-lifecycle.iml" />

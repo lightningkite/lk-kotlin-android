@@ -34,44 +34,46 @@ buildscript {
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
     }
 }
-def bintrayPropertiesFile = rootProject.file("bintray.properties")
-def bintrayProperties = new Properties()
-bintrayProperties.load(new FileInputStream(bintrayPropertiesFile))
-
 task sourceJar(type: Jar) {
     classifier 'sources'
     from sourceSets.main.allJava
 }
+
 
 apply plugin: 'maven-publish'
 publishing {
     publications {
         mavenJava(MavenPublication){
             from components.java
-            artifact tasks.sourceJar
-            groupId bintrayProperties['bintrayRepository']
+            groupId rootProject.repositoryGroupName
             artifactId project.name
             version rootProject.libraryVersion
         }
     }
 }
 
+def bintrayPropertiesFile = rootProject.file("bintray.properties")
+if(bintrayPropertiesFile.exists()){
+    def bintrayProperties = new Properties()
+    bintrayProperties.load(new FileInputStream(bintrayPropertiesFile))
 
-apply plugin: 'com.jfrog.bintray'
-bintray {
-    user = bintrayProperties['bintrayUser']
-    key = bintrayProperties['bintrayKey']
-    publications = ['mavenJava']
-    publish = bintrayProperties['bintrayPublish']
-    pkg {
-        repo = bintrayProperties['bintrayRepository']
-        name = project.name
-        userOrg = bintrayProperties['bintrayOrganization']
-        licenses = [bintrayProperties['bintrayLicense']]
-        vcsUrl = bintrayProperties['bintrayVcs']
-        version {
-            name = rootProject.libraryVersion
-            released  = new Date()
+    apply plugin: 'com.jfrog.bintray'
+    bintray {
+        user = bintrayProperties['bintrayUser']
+        key = bintrayProperties['bintrayKey']
+        publications = ['mavenJava']
+        publish = bintrayProperties['bintrayPublish']
+        pkg {
+            repo = rootProject.repositoryGroupName
+            name = project.name
+            userOrg = bintrayProperties['bintrayOrganization']
+            licenses = [bintrayProperties['bintrayLicense']]
+            vcsUrl = bintrayProperties['bintrayVcs']
+            version {
+                name = rootProject.libraryVersion
+                released = new Date()
+            }
         }
     }
+
 }
