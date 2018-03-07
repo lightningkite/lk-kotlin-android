@@ -1,6 +1,3 @@
-@file:JvmName("LkAndroidUiThread")
-@file:JvmMultifileClass
-
 package lk.android.ui.thread
 
 

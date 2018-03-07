@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/KotlinComponents.iml" filepath="$PROJECT_DIR$/KotlinComponents.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-android-activity-access/lk-android-activity-access.iml" filepath="$PROJECT_DIR$/lk-android-activity-access/lk-android-activity-access.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-android-animations/lk-android-animations.iml" filepath="$PROJECT_DIR$/lk-android-animations/lk-android-animations.iml" />
