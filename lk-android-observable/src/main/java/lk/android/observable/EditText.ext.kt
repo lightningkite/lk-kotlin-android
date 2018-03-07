@@ -152,6 +152,88 @@ inline fun EditText.bindNullableInt(bond: MutableObservableProperty<Int?>, forma
 /**
  * Binds this [EditText] two way to the bond.
  * When the user edits this, the value of the bond will change.
+ * When the value of the bond changes, the integer here will be updated.
+ */
+@Suppress("NOTHING_TO_INLINE")
+inline fun EditText.bindLong(bond: MutableObservableProperty<Long>, format: NumberFormat = NumberFormat.getNumberInstance()) {
+    inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
+    val originalTextColor = this.textColors.defaultColor
+    var value: Long? = null
+    addTextChangedListener(object : TextWatcherAdapter() {
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            value = null
+
+            try {
+                value = format.parse(s.toString()).toLong()
+            } catch (e: ParseException) {
+                //do nothing.
+            }
+
+            try {
+                value = s.toString().toLong()
+            } catch (e: NumberFormatException) {
+                //do nothing.
+            }
+
+            if (value == null) {
+                setTextColor(0xFFFF0000.toInt())
+            } else {
+                setTextColor(originalTextColor)
+                if (bond.value != value) {
+                    bond.value = (value!!)
+                }
+            }
+        }
+    })
+    lifecycle.bind(bond) {
+        if (bond.value != value) {
+            this.setText(format.format(bond.value))
+        }
+    }
+}
+
+/**
+ * Binds this [EditText] two way to the bond.
+ * When the user edits this, the value of the bond will change.
+ * When the value of the bond changes, the integer here will be updated.
+ */
+inline fun EditText.bindNullableLong(bond: MutableObservableProperty<Long?>, format: NumberFormat = NumberFormat.getNumberInstance()) {
+    inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
+    var value: Long? = null
+    addTextChangedListener(object : TextWatcherAdapter() {
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            value = null
+            if (!s.isNullOrBlank()) {
+                try {
+                    value = format.parse(s.toString()).toLong()
+                } catch (e: ParseException) {
+                    //do nothing.
+                }
+
+                try {
+                    value = s.toString().toLong()
+                } catch (e: NumberFormatException) {
+                    //do nothing.
+                }
+
+            }
+
+            if (bond.value != value) {
+                bond.value = (value)
+            }
+        }
+    })
+    lifecycle.bind(bond) {
+        if (bond.value != value) {
+            if (bond.value == null) this.setText("")
+            else this.setText(format.format(bond.value!!))
+        }
+    }
+}
+
+/**
+ * Binds this [EditText] two way to the bond.
+ * When the user edits this, the value of the bond will change.
  * When the value of the bond changes, the number here will be updated.
  */
 @Suppress("NOTHING_TO_INLINE")
