@@ -7,6 +7,8 @@ buildscript {
     ext.libraryVersion = '0.0.4'
     ext.ankoVersion = '0.10.0'
     ext.compatVersion = '27.1.0'
+    ext.androidMavenPublishPluginVersion = '3.1.1'
+    ext.dokkaVersion = '0.9.16'
     repositories {
         google()
         jcenter()

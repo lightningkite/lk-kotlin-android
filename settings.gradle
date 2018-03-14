@@ -23,17 +23,5 @@ include ':app',
         ':lk-anko-deprection',
         ':lk-anko-extensions',
 
-        ':lk-kotlin-utils',
-        ':lk-kotlin-jvm-utils',
-        ':lk-kotlin-jackson',
-        ':lk-kotlin-okhttp',
-        ':lk-kotlin-okhttp-jackson',
-        ':lk-kotlin-lifecycle',
-        ':lk-kotlin-observable-property',
-        ':lk-kotlin-observable-property-jvm',
-        ':lk-kotlin-observable-property-lifecycle',
-        ':lk-kotlin-observable-list',
-        ':lk-kotlin-observable-list-lifecycle',
-
         ':lk-anko-view-controllers-deprecated',
         ':lk-everything-deprecated'

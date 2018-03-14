@@ -96,17 +96,17 @@ dependencies {
     implementation project(":lk-anko-animations")
     implementation project(":lk-anko-deprection")
     implementation project(":lk-anko-extensions")
-    implementation project(":lk-kotlin-utils")
-    implementation project(":lk-kotlin-jvm-utils")
-    implementation project(":lk-kotlin-jackson")
-    implementation project(":lk-kotlin-okhttp")
-    implementation project(":lk-kotlin-okhttp-jackson")
-    implementation project(":lk-kotlin-lifecycle")
-    implementation project(":lk-kotlin-observable-property")
-    implementation project(":lk-kotlin-observable-property-jvm")
-    implementation project(":lk-kotlin-observable-property-lifecycle")
-    implementation project(":lk-kotlin-observable-list")
-    implementation project(":lk-kotlin-observable-list-lifecycle")
+    implementation "lk-kotlin:lk-kotlin-utils:${rootProject.libraryVersion}"
+    implementation "lk-kotlin:lk-kotlin-jvm-utils:${rootProject.libraryVersion}"
+    implementation "lk-kotlin:lk-kotlin-jackson:${rootProject.libraryVersion}"
+    implementation "lk-kotlin:lk-kotlin-okhttp:${rootProject.libraryVersion}"
+    implementation "lk-kotlin:lk-kotlin-okhttp-jackson:${rootProject.libraryVersion}"
+    implementation "lk-kotlin:lk-kotlin-lifecycle:${rootProject.libraryVersion}"
+    implementation "lk-kotlin:lk-kotlin-observable-property:${rootProject.libraryVersion}"
+    implementation "lk-kotlin:lk-kotlin-observable-property-jvm:${rootProject.libraryVersion}"
+    implementation "lk-kotlin:lk-kotlin-observable-property-lifecycle:${rootProject.libraryVersion}"
+    implementation "lk-kotlin:lk-kotlin-observable-list:${rootProject.libraryVersion}"
+    implementation "lk-kotlin:lk-kotlin-observable-list-lifecycle:${rootProject.libraryVersion}"
     implementation project(":lk-anko-view-controllers-deprecated")
     implementation project(":lk-everything-deprecated")
 
