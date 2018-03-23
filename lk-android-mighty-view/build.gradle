@@ -7,7 +7,7 @@ buildscript {
         classpath "digital.wup:android-maven-publish:${rootProject.androidMavenPublishPluginVersion}"
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.kotlinVersion}"
-        classpath "org.jetbrains.dokka:dokka-gradle-plugin:${rootProject.dokkaVersion}"
+        classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:${rootProject.dokkaVersion}"
     }
 }
 
@@ -36,14 +36,14 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
 
     implementation project(':lk-android-animations')
-    implementation "lk-kotlin:lk-kotlin-observable-list:${rootProject.libraryVersion}"
-    implementation "lk-kotlin:lk-kotlin-lifecycle:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-lifecycle:${rootProject.libraryVersion}"
     implementation project(':lk-android-lifecycle')
     implementation project(':lk-android-animations-observable')
-    implementation "lk-kotlin:lk-kotlin-utils:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-utils:${rootProject.libraryVersion}"
     implementation project(':lk-android-dialogs')
-    implementation "lk-kotlin:lk-kotlin-observable-property:${rootProject.libraryVersion}"
-    implementation "lk-kotlin:lk-kotlin-observable-list-lifecycle:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list-lifecycle:${rootProject.libraryVersion}"
     implementation project(':lk-android-activity-access')
-    implementation "lk-kotlin:lk-kotlin-observable-property-lifecycle:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property-lifecycle:${rootProject.libraryVersion}"
 }

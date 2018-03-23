@@ -15,13 +15,11 @@ include ':app',
         ':lk-android-observable-validation',
         ':lk-android-ui-thread',
 
-        ':lk-anko-activity-access',
         ':lk-anko-adapters-observable',
         ':lk-anko-adapters',
         ':lk-anko-animations-observable',
         ':lk-anko-animations',
-        ':lk-anko-deprection',
-        ':lk-anko-extensions',
+        ':lk-anko-extensions'
 
-        ':lk-anko-view-controllers-deprecated',
-        ':lk-everything-deprecated'
+
+

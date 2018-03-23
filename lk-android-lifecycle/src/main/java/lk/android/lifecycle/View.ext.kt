@@ -17,6 +17,9 @@ import java.util.*
 
 private val View_lifecycleListener = WeakHashMap<View, ViewLifecycleListener>()
 
+/**
+ * A lifecycle for a view, that starts when the view is attached and ends when it is detatched.
+ */
 class ViewLifecycleListener(val view: View) : View.OnAttachStateChangeListener, LifecycleConnectable {
 
     var attached = ViewCompat.isAttachedToWindow(view)
@@ -64,7 +67,7 @@ class ViewLifecycleListener(val view: View) : View.OnAttachStateChangeListener, 
     }
 }
 
-fun View.forThisAndAllChildrenRecursive(action: (View) -> Unit) {
+private fun View.forThisAndAllChildrenRecursive(action: (View) -> Unit) {
     action.invoke(this)
     if (this is ViewGroup) {
         for (i in 0..this.childCount - 1) {
@@ -74,7 +77,7 @@ fun View.forThisAndAllChildrenRecursive(action: (View) -> Unit) {
 }
 
 /**
- * Gets a lifecycle object for events to connect with.
+ * Gets this view's lifecycle object for events to connect with.
  */
 val View.lifecycle: ViewLifecycleListener
     get() = View_lifecycleListener.getOrPut(this) {

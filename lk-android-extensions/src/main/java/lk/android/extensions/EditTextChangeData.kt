@@ -9,6 +9,9 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
 
+/**
+ * Data about how text has changed in an edit text.
+ */
 data class EditTextChangeData(
         var before: String = "",
         var insertionPoint: Int = 0,
@@ -31,6 +34,11 @@ data class EditTextChangeData(
             beforeSelectionEnd + replacement.length
 }
 
+/**
+ * Actively prevents text being input.
+ * @param listener Given the change data, returns what text should be in the EditText paired with
+ * the range that should be selected.
+ */
 fun EditText.textChanger(listener: (change: EditTextChangeData) -> Pair<String, IntRange>) {
     addTextChangedListener(object : TextWatcher {
 
@@ -65,6 +73,9 @@ fun EditText.textChanger(listener: (change: EditTextChangeData) -> Pair<String, 
     })
 }
 
+/**
+ * Listens to changes in the edit text, but with the extra detail that [EditTextChangeData] provides.
+ */
 fun EditText.textListener(listener: (change: EditTextChangeData) -> Unit) {
     addTextChangedListener(object : TextWatcher {
 

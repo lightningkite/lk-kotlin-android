@@ -14,6 +14,8 @@ import android.os.Bundle
 import android.os.Looper
 
 /**
+ * Gets a single location update, returning the current location when found through a callback.
+ *
  * This function does assume we have permission already.
  */
 @SuppressLint("MissingPermission")

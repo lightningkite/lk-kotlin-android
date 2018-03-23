@@ -9,8 +9,7 @@ import android.content.ContentResolver
 import android.net.Uri
 
 /**
- * Functions for ContentResolver.
- * Created by jivie on 4/12/16.
+ * Attempts to find and return the size of the file at the given [uri].
  */
 fun ContentResolver.fileSize(uri: Uri): Long? {
     return openFileDescriptor(uri, "r")?.statSize

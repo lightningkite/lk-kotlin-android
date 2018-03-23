@@ -81,7 +81,7 @@ class MultiTypeListRecyclerViewAdapter<T : Any>(
     }
 
 
-    val itemObservables = ArrayList<ItemObservable<T>>()
+    private val itemObservables = ArrayList<ItemObservable<T>>()
 
     class ItemObservable<T : Any>(val parent: MultiTypeListRecyclerViewAdapter<T>) : BaseObservableProperty<T>() {
         var viewHolder: MultiTypeListRecyclerViewAdapter.ViewHolder<T>? = null

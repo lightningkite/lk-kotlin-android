@@ -12,14 +12,25 @@ import android.graphics.Color
  * Created by jivie on 5/23/16.
  */
 
-fun Int.alpha(alpha: Int): Int {
+/**
+ * Returns the color with the new alpha value.
+ */
+fun Int.colorAlpha(alpha: Int): Int {
     return (this and 0x00FFFFFF) or (alpha shl 24)
 }
 
-fun Int.alpha(alpha: Float): Int {
+/**
+ * Returns the color with the new alpha value.
+ * @param alpha How transparent the color is, from 0 (totally transparent) to 1 (totally opaque).
+ */
+fun Int.colorAlpha(alpha: Float): Int {
     return (this and 0x00FFFFFF) or ((alpha.coerceIn(0f, 1f) * 0xFF).toInt() shl 24)
 }
 
+/**
+ * Multiplies the color components (besides alpha), darkening it.
+ * @param value A value between 0 (white becomes black) and 1 (no effect).
+ */
 fun Int.colorMultiply(value: Double): Int {
     return Color.argb(
             Color.alpha(this),
@@ -29,6 +40,10 @@ fun Int.colorMultiply(value: Double): Int {
     )
 }
 
+/**
+ * Multiplies the color components (besides alpha), darkening it.
+ * @param value A value between 0 (white becomes black) and 1 (no effect).
+ */
 fun Int.colorMultiply(value: Float): Int {
     return Color.argb(
             Color.alpha(this),
@@ -38,6 +53,10 @@ fun Int.colorMultiply(value: Float): Int {
     )
 }
 
+/**
+ * Adds to the color components (besides alpha), lightening it.
+ * @param value A value between 0 (no effect) and 1 (black becomes white).
+ */
 fun Int.colorAdd(value: Double): Int {
     return Color.argb(
             Color.alpha(this),
@@ -47,6 +66,10 @@ fun Int.colorAdd(value: Double): Int {
     )
 }
 
+/**
+ * Adds to the color components (besides alpha), lightening it.
+ * @param value A value between 0 (no effect) and 1 (black becomes white).
+ */
 fun Int.colorAdd(value: Float): Int {
     return Color.argb(
             Color.alpha(this),

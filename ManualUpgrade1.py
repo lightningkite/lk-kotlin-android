@@ -140,7 +140,7 @@ plainRep = [
 
     (
         "import com.lightningkite.kotlin.anko.activity.AnkoViewController",
-        "import lk.android.mighty.view.ViewGenerator\nimport lk.anko.activity.access.anko"
+        "import lk.android.mighty.view.ViewGenerator"
     ),
     (
         ": AnkoViewController()",

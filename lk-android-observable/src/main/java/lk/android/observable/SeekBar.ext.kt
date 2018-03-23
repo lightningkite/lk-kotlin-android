@@ -4,8 +4,6 @@
 package lk.android.observable
 
 
-
-import android.support.annotation.FloatRange
 import android.widget.SeekBar
 import lk.android.lifecycle.lifecycle
 import lk.kotlin.observable.property.MutableObservableProperty
@@ -19,7 +17,7 @@ import lk.kotlin.observable.property.lifecycle.bind
  * When the value of the observable property changes, the seek bar will be adjusted accordingly.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun SeekBar.bindInt(range: IntRange, obs: MutableObservableProperty<Int>) {
+inline fun SeekBar.bindInt(range: ClosedRange<Int>, obs: MutableObservableProperty<Int>) {
     max = range.endInclusive - range.start + 1
     lifecycle.bind(obs) {
         val newProg = it - range.start
@@ -27,7 +25,9 @@ inline fun SeekBar.bindInt(range: IntRange, obs: MutableObservableProperty<Int>)
             this.progress = newProg
         }
     }
-    setOnSeekBarChangeListener(object : SeekBarChangeAdapter() {
+    setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        override fun onStartTrackingTouch(seekBar: SeekBar?) = Unit
+        override fun onStopTrackingTouch(seekBar: SeekBar?) = Unit
         override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
             if (fromUser) {
                 val newValue = progress + range.start
@@ -39,13 +39,6 @@ inline fun SeekBar.bindInt(range: IntRange, obs: MutableObservableProperty<Int>)
     })
 }
 
-abstract class SeekBarChangeAdapter : SeekBar.OnSeekBarChangeListener {
-    override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {}
-
-    override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-
-    override fun onStopTrackingTouch(seekBar: SeekBar?) {}
-}
 
 /**
  * Binds this [SeekBar] two way to the observable property.
@@ -53,18 +46,20 @@ abstract class SeekBarChangeAdapter : SeekBar.OnSeekBarChangeListener {
  * When the value of the observable property changes, the seek bar will be adjusted accordingly.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun SeekBar.bindFloat(range: FloatRange, steps: Int = 1000, obs: MutableObservableProperty<Float>) {
+inline fun SeekBar.bindFloat(range: ClosedRange<Float>, steps: Int = 1000, obs: MutableObservableProperty<Float>) {
     max = steps
     lifecycle.bind(obs) {
-        val newProg = ((it - range.from) / (range.to - range.from) * steps).toInt()
+        val newProg = ((it - range.start) / (range.endInclusive - range.start) * steps).toInt()
         if (this.progress != newProg) {
             this.progress = newProg
         }
     }
-    setOnSeekBarChangeListener(object : SeekBarChangeAdapter() {
+    setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        override fun onStartTrackingTouch(seekBar: SeekBar?) = Unit
+        override fun onStopTrackingTouch(seekBar: SeekBar?) = Unit
         override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
             if (fromUser) {
-                val newValue = ((progress.toDouble() / steps) * (range.to - range.from) + range.from).toFloat()
+                val newValue = ((progress.toDouble() / steps) * (range.endInclusive - range.start) + range.start).toFloat()
                 if (obs.value != newValue) {
                     obs.value = newValue
                 }
@@ -79,18 +74,20 @@ inline fun SeekBar.bindFloat(range: FloatRange, steps: Int = 1000, obs: MutableO
  * When the value of the observable property changes, the seek bar will be adjusted accordingly.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun SeekBar.bindDouble(range: FloatRange, steps: Int = 1000, obs: MutableObservableProperty<Double>) {
+inline fun SeekBar.bindDouble(range: ClosedRange<Double>, steps: Int = 1000, obs: MutableObservableProperty<Double>) {
     max = steps
     lifecycle.bind(obs) {
-        val newProg = ((it - range.from) / (range.to - range.from) * steps).toInt()
+        val newProg = ((it - range.start) / (range.endInclusive - range.start) * steps).toInt()
         if (this.progress != newProg) {
             this.progress = newProg
         }
     }
-    setOnSeekBarChangeListener(object : SeekBarChangeAdapter() {
+    setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        override fun onStartTrackingTouch(seekBar: SeekBar?) = Unit
+        override fun onStopTrackingTouch(seekBar: SeekBar?) = Unit
         override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
             if (fromUser) {
-                val newValue = ((progress.toDouble() / steps) * (range.to - range.from) + range.from)
+                val newValue = ((progress.toDouble() / steps) * (range.endInclusive - range.start) + range.start)
                 if (obs.value != newValue) {
                     obs.value = newValue
                 }

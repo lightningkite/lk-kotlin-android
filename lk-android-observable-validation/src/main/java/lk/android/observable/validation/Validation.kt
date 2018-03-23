@@ -3,8 +3,6 @@
 
 package lk.android.observable.validation
 
-
-
 import android.support.annotation.StringRes
 import android.support.design.widget.TextInputLayout
 import android.widget.TextView

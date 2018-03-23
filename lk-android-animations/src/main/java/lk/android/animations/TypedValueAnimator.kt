@@ -9,6 +9,10 @@ import android.animation.ValueAnimator
  * Created by jivie on 6/30/16.
  */
 object TypedValueAnimator {
+
+    /**
+     * A value animator that animates between [Int] values.
+     */
     class IntAnimator(vararg values: Int) : ValueAnimator() {
         init {
             setIntValues(*values)
@@ -22,6 +26,9 @@ object TypedValueAnimator {
         }
     }
 
+    /**
+     * A value animator that animates between [Float] values.
+     */
     class FloatAnimator(vararg values: Float) : ValueAnimator() {
         init {
             setFloatValues(*values)

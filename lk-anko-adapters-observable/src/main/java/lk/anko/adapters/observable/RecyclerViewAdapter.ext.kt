@@ -19,8 +19,12 @@ import java.util.*
  * Created by joseph on 9/20/16.
  */
 
-val previousListenerSet: WeakHashMap<RecyclerView.Adapter<*>, Pair<ObservableList<*>, ObservableListListenerSet<*>>> = WeakHashMap()
+private val previousListenerSet: WeakHashMap<RecyclerView.Adapter<*>, Pair<ObservableList<*>, ObservableListListenerSet<*>>> = WeakHashMap()
 
+/**
+ * Attaches updates from an [ObservableList] to the adapter, such that the UI will display changes
+ * in the adapter.
+ */
 fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.attachAnimations(list: ObservableList<ITEM>) {
     detatchAnimations<ITEM, VH>()
     val newSet = list to ObservableListListenerSet(
@@ -44,6 +48,9 @@ fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.attachAnimatio
     list.addListenerSet(newSet.second)
 }
 
+/**
+ * Detaches updates made by [attachAnimations].
+ */
 @Suppress("UNCHECKED_CAST")
 fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.detatchAnimations() {
     val prev = previousListenerSet[this]
@@ -53,6 +60,9 @@ fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.detatchAnimati
     }
 }
 
+/**
+ * Attaches updates from an [ObservableList] to the adapter for the duration of the lifecycle.
+ */
 fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.attachAnimations(lifecycle: LifecycleConnectable, list: ObservableList<ITEM>) {
     lifecycle.connect(object : LifecycleListener {
         override fun onStart() {

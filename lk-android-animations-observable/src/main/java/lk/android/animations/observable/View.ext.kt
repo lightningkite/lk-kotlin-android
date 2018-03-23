@@ -12,7 +12,10 @@ import lk.android.lifecycle.lifecycle
 import lk.kotlin.observable.property.ObservableProperty
 import lk.kotlin.observable.property.lifecycle.listen
 
-
+/**
+ * Makes the view expand to full size when the observable is true, and contract otherwise.
+ * Animates.
+ */
 fun <T : View> T.expanding(expandedObs: ObservableProperty<Boolean>): T {
     var animator: TypedValueAnimator.IntAnimator? = null
     lifecycle.listen(expandedObs) {

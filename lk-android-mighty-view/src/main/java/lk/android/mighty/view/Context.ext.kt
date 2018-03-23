@@ -4,18 +4,21 @@ import android.content.Context
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import lk.android.animations.SwapView
 import lk.android.dialogs.dialog
 import lk.kotlin.observable.property.StackObservableProperty
-import lk.android.animations.SwapView
 
-
+/**
+ * Opens a dialog holding a stack of [ViewGenerator]s.
+ * When the final one is popped, then the dialog will dismiss itself.
+ */
 fun Context.stackDialog(
-        dismissOnTouchOutside: Boolean = true,
+        dismissible: Boolean = true,
         windowModifier: Window.() -> Unit = {},
         layoutParamModifier: WindowManager.LayoutParams.() -> Unit = {},
         stack:StackObservableProperty<ViewGenerator>
 ) = this.dialog(
-        dismissOnTouchOutside = dismissOnTouchOutside,
+        dismissible = dismissible,
         windowModifier = windowModifier,
         layoutParamModifier = layoutParamModifier,
         viewGenerator = { access ->
@@ -27,16 +30,4 @@ fun Context.stackDialog(
                 bind(access, stack)
             }
         }
-)
-
-fun Context.stackDialog(
-        dismissOnTouchOutside: Boolean = true,
-        windowModifier: Window.() -> Unit = {},
-        layoutParamModifier: WindowManager.LayoutParams.() -> Unit = {},
-        buildStack:(StackObservableProperty<ViewGenerator>)->ViewGenerator
-) = this.stackDialog(
-        dismissOnTouchOutside = dismissOnTouchOutside,
-        windowModifier = windowModifier,
-        layoutParamModifier = layoutParamModifier,
-        stack = StackObservableProperty(buildStack)
 )

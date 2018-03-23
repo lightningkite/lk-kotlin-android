@@ -4,208 +4,47 @@
 package lk.android.observable
 
 
-
-
 import android.widget.CompoundButton
 import lk.android.lifecycle.lifecycle
-import lk.kotlin.observable.list.ObservableList
-import lk.kotlin.observable.list.lifecycle.bind
 import lk.kotlin.observable.property.MutableObservableProperty
-import lk.kotlin.observable.property.ObservableProperty
 import lk.kotlin.observable.property.lifecycle.bind
 
+
 /**
- * Binds this [Switch] two way to the bond.
+ * Binds this view to the value of the [observable], such that this view and the observable
+ * always reflect each others values.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun CompoundButton.bindBoolean(bond: MutableObservableProperty<Boolean>, crossinline onChange: (Boolean) -> Unit) {
+inline fun CompoundButton.bindBoolean(observable: MutableObservableProperty<Boolean>) {
     this.setOnCheckedChangeListener { buttonView: CompoundButton?, isChecked: Boolean ->
-        Unit
-        if (isChecked != bond.value) {
-            bond.value = (isChecked)
-            onChange(isChecked)
+        if (isChecked != observable.value) {
+            observable.value = (isChecked)
         }
     }
-    lifecycle.bind(bond) {
-        if (isChecked != bond.value) {
-            isChecked = bond.value
-        }
-    }
-}
-
-@Suppress("NOTHING_TO_INLINE")
-inline fun CompoundButton.bindArray(bond: MutableObservableProperty<Array<Boolean>>, index: Int) {
-    this.setOnCheckedChangeListener { buttonView: CompoundButton?, isChecked: Boolean ->
-        if (isChecked != bond.value[index]) {
-            bond.value[index] = isChecked
-            bond.value = bond.value
-        }
-    }
-    lifecycle.bind(bond) {
-        val value = bond.value[index]
+    lifecycle.bind(observable) {
+        val value = observable.value
         if (isChecked != value) {
             isChecked = value
         }
     }
 }
 
-@Suppress("NOTHING_TO_INLINE")
-inline fun CompoundButton.bindBoolean(bond: MutableObservableProperty<Boolean>) {
-    this.setOnCheckedChangeListener { buttonView: CompoundButton?, isChecked: Boolean ->
-        if (isChecked != bond.value) {
-            bond.value = (isChecked)
-        }
-    }
-    lifecycle.bind(bond) {
-        val value = bond.value
-        if (isChecked != value) {
-            isChecked = value
-        }
-    }
-}
-
+/**
+ * Binds this view to the value of the [observable], such that this view and the observable
+ * always reflect each others values.
+ */
 @Suppress("NOTHING_TO_INLINE")
 @JvmName("bindBooleanOptional")
-inline fun CompoundButton.bindBoolean(bond: MutableObservableProperty<Boolean?>, default: Boolean = false) {
+inline fun CompoundButton.bindBoolean(observable: MutableObservableProperty<Boolean?>, default: Boolean = false) {
     this.setOnCheckedChangeListener { buttonView: CompoundButton?, isChecked: Boolean ->
-        if (isChecked != bond.value) {
-            bond.value = (isChecked)
+        if (isChecked != observable.value) {
+            observable.value = (isChecked)
         }
     }
-    lifecycle.bind(bond) {
-        val value = bond.value
+    lifecycle.bind(observable) {
+        val value = observable.value
         if (isChecked != value) {
             isChecked = value ?: default
-        }
-    }
-}
-
-inline fun CompoundButton.bindList(bond: MutableObservableProperty<MutableList<Boolean>>, index: Int) {
-    this.setOnCheckedChangeListener { buttonView: CompoundButton?, isChecked: Boolean ->
-        if (isChecked != bond.value[index]) {
-            bond.value[index] = isChecked
-            bond.value = bond.value
-        }
-    }
-    lifecycle.bind(bond) {
-        val value = bond.value[index]
-        if (isChecked != value) {
-            isChecked = value
-        }
-    }
-}
-
-/**
- * Binds this [RadioButton] two way to the bond.
- * When the user picks this radio button, [bond] is set to [value]
- * When the value of the bond changes, it will be shown as checked if they are equal.
- */
-@Suppress("NOTHING_TO_INLINE")
-inline fun <T> CompoundButton.bindValue(bond: MutableObservableProperty<T>, value: T) {
-    lifecycle.bind(bond) {
-        isChecked = value == bond.value
-    }
-    setOnCheckedChangeListener { compoundButton: CompoundButton, checked ->
-        if (checked && bond.value != value) {
-            bond.value = (value)
-        }
-    }
-}
-
-/**
- * Binds this [RadioButton] two way to the bond.
- * When the user picks this radio button, [bond] is set to [value]
- * When the value of the bond changes, it will be shown as checked if they are equal.
- */
-@Suppress("NOTHING_TO_INLINE")
-inline fun <T, A : T> CompoundButton.bindValue(bond: MutableObservableProperty<T>, otherBond: MutableObservableProperty<A>) {
-    lifecycle.bind(bond, otherBond) { currentValue, myValue ->
-        isChecked = currentValue == myValue
-    }
-    setOnCheckedChangeListener { compoundButton, checked ->
-        if (checked && bond.value != otherBond.value) {
-            bond.value = (otherBond.value)
-        }
-    }
-}
-
-
-fun <T> CompoundButton.bindList(list: ObservableList<T>, item: T) {
-    this.setOnCheckedChangeListener { buttonView: CompoundButton?, isChecked: Boolean ->
-
-        val index = list.indexOf(item)
-        if (isChecked != (index != -1)) {
-            if (index != -1) {
-                list.removeAt(index)
-            } else {
-                list.add(item)
-            }
-        }
-    }
-    lifecycle.bind(list) {
-        val contained = list.contains(item)
-        if (isChecked != contained) {
-            isChecked = contained
-        }
-    }
-}
-
-inline fun <T> CompoundButton.bindList(list: ObservableList<T>, item: T, crossinline matches: (T, T) -> Boolean) {
-    this.setOnCheckedChangeListener { buttonView: CompoundButton?, isChecked: Boolean ->
-
-        val index = list.indexOfFirst { matches(it, item) }
-        if (isChecked != (index != -1)) {
-            if (index != -1) {
-                list.removeAt(index)
-            } else {
-                list.add(item)
-            }
-        }
-    }
-    lifecycle.bind(list) {
-        val index = list.indexOfFirst { matches(it, item) }
-        if (isChecked != (index != -1)) {
-            isChecked = (index != -1)
-        }
-    }
-}
-
-fun <T> CompoundButton.bindList(list: ObservableList<T>, itemObs: ObservableProperty<T>) {
-    this.setOnCheckedChangeListener { buttonView: CompoundButton?, isChecked: Boolean ->
-
-        val index = list.indexOf(itemObs.value)
-        if (isChecked != (index != -1)) {
-            if (index != -1) {
-                list.removeAt(index)
-            } else {
-                list.add(itemObs.value)
-            }
-        }
-    }
-    lifecycle.bind(list.onUpdate, itemObs) { list, item ->
-        val contained = list.contains(item)
-        if (isChecked != contained) {
-            isChecked = contained
-        }
-    }
-}
-
-inline fun <T> CompoundButton.bindList(list: ObservableList<T>, itemObs: ObservableProperty<T>, crossinline matches: (T, T) -> Boolean) {
-    this.setOnCheckedChangeListener { buttonView: CompoundButton?, isChecked: Boolean ->
-
-        val index = list.indexOfFirst { matches(it, itemObs.value) }
-        if (isChecked != (index != -1)) {
-            if (index != -1) {
-                list.removeAt(index)
-            } else {
-                list.add(itemObs.value)
-            }
-        }
-    }
-    lifecycle.bind(list.onUpdate, itemObs) { list, item ->
-        val contained = list.contains(item)
-        if (isChecked != contained) {
-            isChecked = contained
         }
     }
 }

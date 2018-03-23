@@ -19,6 +19,9 @@ import java.util.*
  * Created by jivie on 6/1/16.
  */
 
+/**
+ * Attempts to find the activity from a context.
+ */
 fun Context.getActivity(): Activity? = when {
     this is Activity -> this
     this is ContextWrapper -> baseContext.getActivity()

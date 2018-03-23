@@ -42,39 +42,38 @@ dependencies {
 
     implementation 'com.android.support:multidex:1.0.0'
 
-//    implementation "lk-kotlin:lk-android-activity-access:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-android-animations:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-android-animations-observable:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-android-design-extensions:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-android-dialogs:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-android-extensions:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-android-image-loading:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-android-image-loading-observable:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-android-lifecycle:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-android-observable:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-android-observable-validation:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-android-ui-thread:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-android-mighty-view:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-anko-activity-access:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-anko-adapters-observable:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-anko-adapters:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-anko-animations-observable:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-anko-animations:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-anko-deprection:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-anko-extensions:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-kotlin-utils:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-kotlin-jvm-utils:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-kotlin-jackson:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-kotlin-okhttp:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-kotlin-okhttp-jackson:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-kotlin-lifecycle:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-kotlin-observable-property:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-kotlin-observable-property-jvm:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-kotlin-observable-property-lifecycle:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-kotlin-observable-list:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-kotlin-observable-list-lifecycle:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-anko-view-controllers-deprecated:${rootProject.libraryVersion}"
-//    implementation "lk-kotlin:lk-everything-deprecated:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-android-activity-access:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-android-animations:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-android-animations-observable:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-android-design-extensions:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-android-dialogs:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-android-extensions:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-android-image-loading:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-android-image-loading-observable:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-android-lifecycle:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-android-observable:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-android-observable-validation:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-android-ui-thread:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-android-mighty-view:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-anko-adapters-observable:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-anko-adapters:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-anko-animations-observable:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-anko-animations:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-anko-deprection:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-anko-extensions:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-kotlin-utils:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-kotlin-jvm-utils:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-kotlin-jackson:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-kotlin-okhttp:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-kotlin-okhttp-jackson:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-kotlin-lifecycle:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property-jvm:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property-lifecycle:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list-lifecycle:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-anko-view-controllers-deprecated:${rootProject.libraryVersion}"
+//    implementation "com.lightningkite.kotlin:lk-everything-deprecated:${rootProject.libraryVersion}"
 
     implementation project(":lk-android-activity-access")
     implementation project(":lk-android-animations")
@@ -89,26 +88,22 @@ dependencies {
     implementation project(":lk-android-observable-validation")
     implementation project(":lk-android-ui-thread")
     implementation project(":lk-android-mighty-view")
-    implementation project(":lk-anko-activity-access")
     implementation project(":lk-anko-adapters-observable")
     implementation project(":lk-anko-adapters")
     implementation project(":lk-anko-animations-observable")
     implementation project(":lk-anko-animations")
-    implementation project(":lk-anko-deprection")
     implementation project(":lk-anko-extensions")
-    implementation "lk-kotlin:lk-kotlin-utils:${rootProject.libraryVersion}"
-    implementation "lk-kotlin:lk-kotlin-jvm-utils:${rootProject.libraryVersion}"
-    implementation "lk-kotlin:lk-kotlin-jackson:${rootProject.libraryVersion}"
-    implementation "lk-kotlin:lk-kotlin-okhttp:${rootProject.libraryVersion}"
-    implementation "lk-kotlin:lk-kotlin-okhttp-jackson:${rootProject.libraryVersion}"
-    implementation "lk-kotlin:lk-kotlin-lifecycle:${rootProject.libraryVersion}"
-    implementation "lk-kotlin:lk-kotlin-observable-property:${rootProject.libraryVersion}"
-    implementation "lk-kotlin:lk-kotlin-observable-property-jvm:${rootProject.libraryVersion}"
-    implementation "lk-kotlin:lk-kotlin-observable-property-lifecycle:${rootProject.libraryVersion}"
-    implementation "lk-kotlin:lk-kotlin-observable-list:${rootProject.libraryVersion}"
-    implementation "lk-kotlin:lk-kotlin-observable-list-lifecycle:${rootProject.libraryVersion}"
-    implementation project(":lk-anko-view-controllers-deprecated")
-    implementation project(":lk-everything-deprecated")
+    implementation "com.lightningkite.kotlin:lk-kotlin-utils:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-jvm-utils:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-jackson:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-okhttp:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-okhttp-jackson:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-lifecycle:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property-jvm:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property-lifecycle:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list-lifecycle:${rootProject.libraryVersion}"
 
 
     ext.ankoVersion = rootProject.ankoVersion

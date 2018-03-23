@@ -13,6 +13,9 @@ import org.jetbrains.anko.layoutInflater
  * Created by joseph on 3/3/2016.
  */
 
+/**
+ * Anko function for a [RecyclerView] that is laid out vertically.
+ */
 inline fun ViewManager.verticalRecyclerView(init: RecyclerView.() -> Unit) = ankoView({
     val view = it.layoutInflater.inflate(R.layout.vertical_recycler_view, null) as RecyclerView
     view.apply {
@@ -22,6 +25,9 @@ inline fun ViewManager.verticalRecyclerView(init: RecyclerView.() -> Unit) = ank
     }
 }, 0, init)
 
+/**
+ * Anko function for a [RecyclerView] that is laid out horizontally.
+ */
 inline fun ViewManager.horizontalRecyclerView(init: RecyclerView.() -> Unit) = ankoView({
     val view = it.layoutInflater.inflate(R.layout.horizontal_recycler_view, null) as RecyclerView
     view.apply {
@@ -31,6 +37,9 @@ inline fun ViewManager.horizontalRecyclerView(init: RecyclerView.() -> Unit) = a
     }
 }, 0, init)
 
+/**
+ * Anko function for a [RecyclerView] that is laid out with a vertical grid.
+ */
 inline fun ViewManager.verticalGridRecyclerView(spanCount: Int, init: RecyclerView.() -> Unit) = ankoView({
     val view = it.layoutInflater.inflate(R.layout.vertical_recycler_view, null) as RecyclerView
     view.apply {
@@ -40,6 +49,9 @@ inline fun ViewManager.verticalGridRecyclerView(spanCount: Int, init: RecyclerVi
     }
 }, 0, init)
 
+/**
+ * Anko function for a [RecyclerView] that is laid out with a horizontal grid.
+ */
 inline fun ViewManager.horizontalGridRecyclerView(spanCount: Int, init: RecyclerView.() -> Unit) = ankoView({
     val view = it.layoutInflater.inflate(R.layout.horizontal_recycler_view, null) as RecyclerView
     view.apply {

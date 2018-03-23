@@ -21,6 +21,9 @@ import java.io.File
  * Created by jivie on 8/14/15.
  */
 
+/**
+ * Converts the file to an image content uri.
+ */
 fun File.toImageContentUri(context: Context): Uri? {
     val filePath = absolutePath;
     val cursor = context.contentResolver.query(

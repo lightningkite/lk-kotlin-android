@@ -3,11 +3,11 @@ package com.lightningkite.kotlincomponents
 import android.view.Gravity
 import android.view.View
 import lk.android.activity.access.ActivityAccess
-import lk.android.mighty.view.ViewGenerator
 import lk.android.extensions.selectableItemBackgroundResource
 import lk.android.lifecycle.lifecycle
-import lk.anko.activity.access.anko
+import lk.android.mighty.view.ViewGenerator
 import lk.anko.adapters.observable.listAdapter
+import lk.anko.extensions.anko
 import lk.anko.extensions.verticalRecyclerView
 import lk.kotlin.observable.property.lifecycle.bind
 import org.jetbrains.anko.*
@@ -27,7 +27,6 @@ class SelectorScreen(val main: MainScreen) : ViewGenerator {
             },
             "Observable List" to { ObservableListVC() },
             "Observable List 2" to { ObservableList2VC() },
-            "Observable List 3" to { ObservableList3VC() },
             "Network Image" to { NetImageTestVC() },
             "Observable Property" to { ObservablePropertyTestVC() },
             "View Controller Stacks" to { StackDemoVC(main.stack) },
@@ -35,7 +34,7 @@ class SelectorScreen(val main: MainScreen) : ViewGenerator {
             "List from Network" to { NetworkListVC() },
             "Just a Lambda View" to {
                 { access: ActivityAccess ->
-                    access.anko {
+                    access.context.anko().run {
                         verticalLayout {
                             gravity = Gravity.CENTER
                             textView {
@@ -47,7 +46,7 @@ class SelectorScreen(val main: MainScreen) : ViewGenerator {
             }
     )
 
-    override fun invoke(access: ActivityAccess): View = access.anko {
+    override fun invoke(access: ActivityAccess): View = access.context.anko().run {
         verticalLayout {
 
             textView(R.string.welcome_message) {

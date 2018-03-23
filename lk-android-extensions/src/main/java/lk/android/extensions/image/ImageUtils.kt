@@ -14,7 +14,6 @@ import android.media.ExifInterface
 import android.net.Uri
 import android.os.Build
 import android.util.Log
-import lk.android.extensions.files.fileSize
 import lk.android.extensions.files.getRealPath
 import java.io.File
 import java.io.FileOutputStream
@@ -45,14 +44,6 @@ fun Bitmap.rotate(degrees: Int): Bitmap {
  */
 fun Context.getBitmapFromUri(inputUri: Uri, maxWidth: Int, maxHeight: Int): Bitmap? {
     val initialBitmap = lessResolution(this, inputUri, maxWidth, maxHeight) ?: return null
-    return correctBitmapRotation(initialBitmap, inputUri)
-}
-
-/**
- * Gets a bitmap from a Uri, scaling it down if necessary.
- */
-fun Context.getBitmapFromUri(inputUri: Uri, minBytes: Long): Bitmap? {
-    val initialBitmap = lessResolution(this, inputUri, minBytes) ?: return null
     return correctBitmapRotation(initialBitmap, inputUri)
 }
 
@@ -164,36 +155,9 @@ private fun lessResolution(context: Context, fileUri: Uri, width: Int, height: I
 }
 
 
-private fun lessResolution(context: Context, fileUri: Uri, minBytes: Long): Bitmap? {
-    var inputStream: InputStream? = null
-    try {
-        val options = BitmapFactory.Options()
-
-        // Calculate inSampleSize
-        val size = context.contentResolver.fileSize(fileUri) ?: minBytes
-        options.inSampleSize = ImageUtils.calculateInSampleSize(size, minBytes)
-
-        inputStream = context.contentResolver.openInputStream(fileUri)
-        val returnValue = BitmapFactory.decodeStream(inputStream, null, options)
-        inputStream!!.close()
-
-        return returnValue
-
-    } catch (e: Exception) {
-        e.printStackTrace()
-    } finally {
-        try {
-            if (inputStream != null) {
-                inputStream.close()
-            }
-        } catch (e: Exception) {
-            /*squish*/
-        }
-
-    }
-    return null
-}
-
+/**
+ * Decodes an image byte array into a bitmap, sizing it down to be just bigger than [reqWidth] and [reqHeight] while retaining powers of 2 scaling.
+ */
 fun BitmapFactory_decodeByteArraySized(array: ByteArray, reqWidth: Int, reqHeight: Int): Bitmap {
     val measureOptions = BitmapFactory.Options().apply {
         inJustDecodeBounds = true
@@ -205,7 +169,7 @@ fun BitmapFactory_decodeByteArraySized(array: ByteArray, reqWidth: Int, reqHeigh
     return BitmapFactory.decodeByteArray(array, 0, array.size, options)
 }
 
-fun calculateInSampleSize(options: BitmapFactory.Options, reqWidth: Int, reqHeight: Int): Int {
+private fun calculateInSampleSize(options: BitmapFactory.Options, reqWidth: Int, reqHeight: Int): Int {
 
     val height = options.outHeight
     val width = options.outWidth
@@ -225,7 +189,7 @@ fun calculateInSampleSize(options: BitmapFactory.Options, reqWidth: Int, reqHeig
 }
 
 @Suppress("NOTHING_TO_INLINE")
-inline fun calculateInSampleSizeMax(options: BitmapFactory.Options, maxWidth: Int, maxHeight: Int): Int {
+private inline fun calculateInSampleSizeMax(options: BitmapFactory.Options, maxWidth: Int, maxHeight: Int): Int {
     var inSampleSize = 1
 
     if (options.outHeight > maxHeight || options.outWidth > maxWidth) {
@@ -239,14 +203,4 @@ inline fun calculateInSampleSizeMax(options: BitmapFactory.Options, maxWidth: In
         inSampleSize = if (heightRatio > widthRatio) heightRatio else widthRatio
     }
     return inSampleSize
-}
-
-/**
- * Created by jivie on 6/30/16.
- */
-object ImageUtils {
-    fun calculateInSampleSize(length: Long, minBytes: Long): Int {
-        return Math.ceil(length.toDouble() / minBytes).toInt().coerceIn(1, Int.MAX_VALUE)
-    }
-
 }

@@ -5,15 +5,15 @@ import android.graphics.drawable.ColorDrawable
 import android.view.Gravity
 import android.view.View
 import lk.android.activity.access.ActivityAccess
-import lk.android.mighty.view.ViewGenerator
 import lk.android.extensions.horizontalDivider
 import lk.android.extensions.selectableItemBackgroundResource
 import lk.android.lifecycle.lifecycle
-import lk.anko.activity.access.anko
+import lk.android.mighty.view.ViewGenerator
 import lk.anko.adapters.observable.listAdapter
 import lk.anko.adapters.swipeToDismiss
+import lk.anko.extensions.anko
 import lk.anko.extensions.verticalRecyclerView
-import lk.kotlin.jvm.utils.range.random
+import lk.kotlin.jvm.utils.random.random
 import lk.kotlin.observable.list.ObservableListWrapper
 import lk.kotlin.observable.list.sorting
 import lk.kotlin.observable.property.lifecycle.bind
@@ -30,7 +30,7 @@ class ObservableList2VC() : ViewGenerator {
 
     override fun toString(): String = "List Test"
 
-    override fun invoke(access: ActivityAccess): View = access.anko {
+    override fun invoke(access: ActivityAccess): View = access.context.anko().run {
         verticalLayout {
             gravity = Gravity.CENTER
 

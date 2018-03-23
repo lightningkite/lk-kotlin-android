@@ -3,17 +3,17 @@ package com.lightningkite.kotlincomponents
 import android.view.View
 import android.widget.Button
 import lk.android.activity.access.ActivityAccess
-import lk.android.mighty.view.ViewGenerator
 import lk.android.dialogs.infoDialog
 import lk.android.extensions.FullInputType
 import lk.android.extensions.onDone
+import lk.android.mighty.view.ViewGenerator
 import lk.android.observable.bindString
 import lk.android.observable.validation.bindError
 import lk.android.observable.validation.validation
 import lk.android.observable.validation.withValidation
 import lk.android.ui.thread.UIThread
-import lk.anko.activity.access.anko
 import lk.anko.animations.observable.progressLayout
+import lk.anko.extensions.anko
 import lk.anko.extensions.textInputEditText
 import lk.kotlin.jvm.utils.async.Async
 import lk.kotlin.jvm.utils.async.invokeOn
@@ -58,7 +58,7 @@ class ExampleLoginVC(val onLogin: (LoginData) -> Unit) : ViewGenerator {
 
     //Views
 
-    override fun invoke(access: ActivityAccess): View = access.anko().scrollView {
+    override fun invoke(access: ActivityAccess): View = access.context.anko().scrollView {
         isFillViewport = true
 
         verticalLayout {

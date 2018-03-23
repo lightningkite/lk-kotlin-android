@@ -9,6 +9,10 @@ import lk.kotlin.observable.property.ObservableProperty
 import lk.kotlin.observable.property.StackObservableProperty
 import lk.kotlin.observable.property.lifecycle.bind
 
+/**
+ * Binds a [SwapView] to an observable with [ViewGenerator]s - in other words, the view in the
+ * [SwapView] will always match the view inside the observable.
+ */
 fun <T : (ActivityAccess) -> View> SwapView.bind(
         access: ActivityAccess,
         observable: ObservableProperty<T>,
@@ -19,6 +23,11 @@ fun <T : (ActivityAccess) -> View> SwapView.bind(
     }
 }
 
+/**
+ * Binds a [SwapView] to a stack observable with [ViewGenerator]s - in other words, the view in the
+ * [SwapView] will always match the view inside the observable.  The animation will pop and push
+ * accordingly.
+ */
 fun <T : (ActivityAccess) -> View> SwapView.bind(
         access: ActivityAccess,
         observable: StackObservableProperty<T>,
@@ -30,40 +39,6 @@ fun <T : (ActivityAccess) -> View> SwapView.bind(
     bind(
             access = access,
             observable = observable,
-            getAnimation = {
-                val diff = observable.stack.size - previousSize
-                previousSize = observable.stack.size
-                if (diff > 0) pushAnimationSet
-                else if (diff < 0) popAnimationSet
-                else neutralAnimationSet
-            }
-    )
-}
-
-fun <T> SwapView.bindRenderMap(
-        access: ActivityAccess,
-        observable: ObservableProperty<T>,
-        getView: (T) -> (ActivityAccess) -> View,
-        getAnimation: (T) -> AnimationSet = { AnimationSet.fade }
-) {
-    lifecycle.bind(observable) {
-        swap(getView(it).invoke(access), getAnimation(it))
-    }
-}
-
-fun <T> SwapView.bindRenderMapStack(
-        access: ActivityAccess,
-        observable: StackObservableProperty<T>,
-        getView: (T) -> (ActivityAccess) -> View,
-        pushAnimationSet: AnimationSet = AnimationSet.slidePush,
-        neutralAnimationSet: AnimationSet = AnimationSet.fade,
-        popAnimationSet: AnimationSet = AnimationSet.slidePop
-) {
-    var previousSize = observable.stack.size
-    bindRenderMap(
-            access = access,
-            observable = observable,
-            getView = getView,
             getAnimation = {
                 val diff = observable.stack.size - previousSize
                 previousSize = observable.stack.size

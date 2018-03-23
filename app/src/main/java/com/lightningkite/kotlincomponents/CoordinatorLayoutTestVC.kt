@@ -8,11 +8,11 @@ import android.view.Gravity
 import android.view.View
 import android.widget.ImageView
 import lk.android.activity.access.ActivityAccess
-import lk.android.mighty.view.ViewGenerator
 import lk.android.extensions.selectableItemBackgroundResource
+import lk.android.mighty.view.ViewGenerator
 import lk.android.observable.bindAny
-import lk.anko.activity.access.anko
 import lk.anko.adapters.observable.listAdapter
+import lk.anko.extensions.anko
 import lk.anko.extensions.verticalRecyclerView
 import lk.kotlin.observable.list.ObservableListWrapper
 import org.jetbrains.anko.*
@@ -32,7 +32,7 @@ class CoordinatorLayoutTestVC() : ViewGenerator {
 
     val junk = ObservableListWrapper((0..100).map { Math.random() }.toMutableList())
 
-    override fun invoke(access: ActivityAccess): View = access.anko {
+    override fun invoke(access: ActivityAccess): View = access.context.anko().run {
         coordinatorLayout {
             appBarLayout {
                 collapsingToolbarLayout {

@@ -3,17 +3,17 @@ package com.lightningkite.kotlincomponents
 import android.view.Gravity
 import android.view.View
 import lk.android.activity.access.ActivityAccess
-import lk.android.mighty.view.ViewGenerator
 import lk.android.dialogs.inputDialog
 import lk.android.image.loading.image.lambdaBitmapExif
 import lk.android.lifecycle.lifecycle
+import lk.android.mighty.view.ViewGenerator
 import lk.android.ui.thread.UIThread
-import lk.anko.activity.access.anko
 import lk.anko.animations.transitionView
+import lk.anko.extensions.anko
 import lk.kotlin.jvm.utils.async.Async
 import lk.kotlin.jvm.utils.async.invokeOn
 import lk.kotlin.jvm.utils.async.thenOn
-import lk.kotlin.jvm.utils.range.random
+import lk.kotlin.jvm.utils.random.random
 import lk.kotlin.observable.property.StandardObservableProperty
 import lk.kotlin.observable.property.lifecycle.bind
 import okhttp3.Request
@@ -31,7 +31,7 @@ class NetImageTestVC() : ViewGenerator {
     //Creates and observable property, initialized to null.
     val imageUrlObs = StandardObservableProperty<String?>(null)
 
-    override fun invoke(access: ActivityAccess): View = access.anko {
+    override fun invoke(access: ActivityAccess): View = access.context.anko().run {
         verticalLayout {
             gravity = Gravity.CENTER
 

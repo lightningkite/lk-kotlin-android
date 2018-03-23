@@ -14,11 +14,17 @@ import java.util.*
  * Created by josep on 3/3/2016.
  */
 
+/**
+ * Sets the text resource for the hint.
+ */
 var TextInputLayout.hintResource: Int
     get() = throw IllegalAccessException()
     set(value) {
         hint = resources.getString(value)
     }
+/**
+ * Sets the text resource for the error.
+ */
 var TextInputLayout.errorResource: Int
     get() = throw IllegalAccessException()
     set(value) {
@@ -26,6 +32,9 @@ var TextInputLayout.errorResource: Int
     }
 
 private val tilFontCache: HashMap<String, Typeface> = HashMap()
+/**
+ * Sets the font for the TextInputLayout.
+ */
 fun TextInputLayout.setFont(fileName: String) {
     setTypeface(tilFontCache.getOrPut(fileName) { Typeface.createFromAsset(context.assets, fileName) })
 }

@@ -4,7 +4,8 @@ import android.view.Gravity
 import android.view.View
 import lk.android.activity.access.ActivityAccess
 import lk.android.mighty.view.ViewGenerator
-import lk.anko.activity.access.anko
+import lk.anko.extensions.anko
+
 import lk.kotlin.observable.property.StackObservableProperty
 import org.jetbrains.anko.button
 import org.jetbrains.anko.textView
@@ -18,7 +19,7 @@ class StackDemoVC(val stack: StackObservableProperty<ViewGenerator>, val depth: 
 
     override fun toString(): String = "Stack Demo ($depth)"
 
-    override fun invoke(access: ActivityAccess): View = access.anko {
+    override fun invoke(access: ActivityAccess): View = access.context.anko().run {
         verticalLayout {
             gravity = Gravity.CENTER
 

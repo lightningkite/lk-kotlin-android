@@ -35,6 +35,9 @@ fun Uri.isMediaDocument(): Boolean {
     return "com.android.providers.media.documents" == authority
 }
 
+/**
+ * Opens and reads the entirety of the Uri into a ByteArray.
+ */
 fun Uri.toByteArray(context: Context): ByteArray {
     return context.contentResolver.openInputStream(this).run {
         val array = this.readBytes()

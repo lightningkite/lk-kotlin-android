@@ -7,7 +7,7 @@ buildscript {
         classpath "digital.wup:android-maven-publish:${rootProject.androidMavenPublishPluginVersion}"
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.kotlinVersion}"
-        classpath "org.jetbrains.dokka:dokka-gradle-plugin:${rootProject.dokkaVersion}"
+        classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:${rootProject.dokkaVersion}"
     }
 }
 
@@ -36,9 +36,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
 
     implementation 'com.squareup.okhttp3:okhttp:3.9.0'
-    implementation "lk-kotlin:lk-kotlin-utils:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-utils:${rootProject.libraryVersion}"
     implementation project(':lk-android-extensions')
     implementation project(':lk-android-ui-thread')
-    implementation "lk-kotlin:lk-kotlin-jvm-utils:${rootProject.libraryVersion}"
-    implementation "lk-kotlin:lk-kotlin-okhttp:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-jvm-utils:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-okhttp:${rootProject.libraryVersion}"
 }

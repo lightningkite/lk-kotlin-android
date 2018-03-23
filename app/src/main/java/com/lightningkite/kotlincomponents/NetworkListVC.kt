@@ -3,12 +3,12 @@ package com.lightningkite.kotlincomponents
 import android.graphics.Color
 import android.view.View
 import lk.android.activity.access.ActivityAccess
-import lk.android.mighty.view.ViewGenerator
 import lk.android.lifecycle.lifecycle
+import lk.android.mighty.view.ViewGenerator
 import lk.android.ui.thread.UIThread
-import lk.anko.activity.access.anko
 import lk.anko.adapters.observable.listAdapter
 import lk.anko.animations.observable.progressLayout
+import lk.anko.extensions.anko
 import lk.anko.extensions.verticalRecyclerView
 import lk.kotlin.jvm.utils.async.Async
 import lk.kotlin.jvm.utils.async.invokeOn
@@ -40,46 +40,45 @@ class NetworkListVC : ViewGenerator {
         }.invokeOn(Async)
     }
 
-    override fun invoke(access: ActivityAccess): View = access.anko {
-        verticalLayout {
+    override fun invoke(access: ActivityAccess): View = access.context.anko().verticalLayout {
 
-            textView("This data is from https://jsonplaceholder.typicode.com/.") {
-                styleDefault()
-            }.lparams(matchParent, wrapContent) { margin = dip(8) }
+        textView("This data is from https://jsonplaceholder.typicode.com/.") {
+            styleDefault()
+        }.lparams(matchParent, wrapContent) { margin = dip(8) }
 
-            progressLayout { runningObs ->
+        progressLayout { runningObs ->
 
-                lifecycle.bind(posts.onUpdate) { posts ->
-                    runningObs.value = posts.isEmpty()
+            lifecycle.bind(posts.onUpdate) { posts ->
+                runningObs.value = posts.isEmpty()
+            }
+
+            verticalRecyclerView {
+                adapter = listAdapter(posts) { itemObs ->
+                    cardView {
+                        backgroundColor = Color.WHITE
+
+                        verticalLayout {
+                            padding = dip(8)
+
+                            textView {
+                                styleInvertedTitle()
+                                lifecycle.bind(itemObs) {
+                                    text = it.title
+                                }
+                            }.lparams(matchParent, wrapContent) { margin = dip(8) }
+
+                            textView {
+                                styleInverted()
+                                lifecycle.bind(itemObs) {
+                                    text = it.body
+                                }
+                            }.lparams(matchParent, wrapContent) { margin = dip(8) }
+
+                        }
+                    }.lparams(matchParent, wrapContent) { margin = dip(8) }
                 }
+            }
+        }.lparams(matchParent, 0, 1f)
 
-                verticalRecyclerView {
-                    adapter = listAdapter(posts) { itemObs ->
-                        cardView {
-                            backgroundColor = Color.WHITE
-
-                            verticalLayout {
-                                padding = dip(8)
-
-                                textView {
-                                    styleInvertedTitle()
-                                    lifecycle.bind(itemObs) {
-                                        text = it.title
-                                    }
-                                }.lparams(matchParent, wrapContent) { margin = dip(8) }
-
-                                textView {
-                                    styleInverted()
-                                    lifecycle.bind(itemObs) {
-                                        text = it.body
-                                    }
-                                }.lparams(matchParent, wrapContent) { margin = dip(8) }
-
-                            }
-                        }.lparams(matchParent, wrapContent) { margin = dip(8) }
-                    }
-                }
-            }.lparams(matchParent, 0, 1f)
-        }
     }
 }

@@ -10,7 +10,16 @@ import android.view.ViewGroup
  *
  * Created by joseph on 1/19/18.
  */
-class ViewSwapManager<VG : ViewGroup>(val parent: VG, val generateLayoutParams: () -> ViewGroup.LayoutParams) {
+class ViewSwapManager<VG : ViewGroup>(
+        /**
+         * The parent view to manage.
+         */
+        val parent: VG,
+        /**
+         * A lambda that generates the default layout parameters for views being swapped in.
+         */
+        val generateLayoutParams: () -> ViewGroup.LayoutParams
+) {
     var currentView: View? = null
 
     fun swap(newView: View, animation: AnimationSet = AnimationSet.fade) {

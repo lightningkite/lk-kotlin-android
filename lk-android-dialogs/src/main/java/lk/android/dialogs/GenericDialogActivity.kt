@@ -12,7 +12,7 @@ import java.util.*
 
 /**
  * An activity for creating dialogs of any sort.
- * More stable and flexible than default alerts.
+ * More stable and flexible than default alerts, as it is an independent activity.
  *
  * Created by joseph on 1/22/18.
  */

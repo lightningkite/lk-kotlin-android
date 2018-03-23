@@ -43,6 +43,9 @@ private fun obtainSnackbar(group: ViewGroup): Snackbar {
     return Snackbar.make(group, "", Toast.LENGTH_LONG)
 }
 
+/**
+ * Launches a snackbar.
+ */
 fun View.snackbar(text: CharSequence, duration: Int = Snackbar.LENGTH_LONG, init: Snackbar.() -> Unit = {}) {
     try {
         val snack = obtainSnackbar(findSuitableParent(this))
@@ -56,6 +59,9 @@ fun View.snackbar(text: CharSequence, duration: Int = Snackbar.LENGTH_LONG, init
     }
 }
 
+/**
+ * Launches a snackbar.
+ */
 fun View.snackbar(text: Int, duration: Int = Snackbar.LENGTH_LONG, init: Snackbar.() -> Unit = {}) {
     try {
         val snack = obtainSnackbar(findSuitableParent(this))
@@ -69,14 +75,9 @@ fun View.snackbar(text: Int, duration: Int = Snackbar.LENGTH_LONG, init: Snackba
     }
 }
 
-fun Snackbar.onDismissed(lambda: (event: Int) -> Unit) {
-    setCallback(object : Snackbar.Callback() {
-        override fun onDismissed(snackbar: Snackbar?, event: Int) {
-            lambda(event)
-        }
-    })
-}
-
+/**
+ * Launches a snackbar.
+ */
 fun Context.snackbar(text: CharSequence, duration: Int = Snackbar.LENGTH_LONG, init: Snackbar.() -> Unit = {}) {
     var currentContext = this
     loop@ while (currentContext !is Activity) {
@@ -100,6 +101,9 @@ fun Context.snackbar(text: CharSequence, duration: Int = Snackbar.LENGTH_LONG, i
     }
 }
 
+/**
+ * Launches a snackbar.
+ */
 fun Context.snackbar(text: Int, duration: Int = Snackbar.LENGTH_LONG, init: Snackbar.() -> Unit = {}) {
     var currentContext = this
     loop@ while (currentContext !is Activity) {
@@ -123,6 +127,9 @@ fun Context.snackbar(text: Int, duration: Int = Snackbar.LENGTH_LONG, init: Snac
     }
 }
 
+/**
+ * DSL for adding listeners to a snackbar.
+ */
 fun android.support.design.widget.Snackbar.callback(init: _Snackbar_Callback.() -> Unit) {
     val callback = _Snackbar_Callback()
     callback.init()

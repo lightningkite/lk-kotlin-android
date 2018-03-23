@@ -3,8 +3,6 @@
 
 package lk.anko.adapters.observable
 
-
-
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.View
@@ -17,16 +15,6 @@ import lk.kotlin.observable.property.lifecycle.listen
 import org.jetbrains.anko.AnkoContextImpl
 import java.util.*
 
-@Deprecated("Use ListRecyclerViewAdapter<T> instead.", ReplaceWith("ListRecyclerViewAdapter<T>", "com.lightningkite.kotlincomponents.adapter.ListRecyclerViewAdapter"))
-class StandardRecyclerViewAdapter<T>(
-        context: Context,
-        initialList: List<T>,
-        makeView: SRVAContext<T>.(ItemObservable<T>) -> Unit
-) : ListRecyclerViewAdapter<T>(
-        context,
-        initialList,
-        makeView
-)
 
 /**
  * An adapter for RecyclerViews intended to be used in all cases.
@@ -79,8 +67,8 @@ open class ListRecyclerViewAdapter<T>(
     }
 
 
-    val itemHolders = ArrayList<ViewHolder<T>>()
-    val itemObservables = ArrayList<ItemObservable<T>>()
+    private val itemHolders = ArrayList<ViewHolder<T>>()
+    private val itemObservables = ArrayList<ItemObservable<T>>()
 
     class ItemObservable<T>(val parent: ListRecyclerViewAdapter<T>) : BaseObservableProperty<T>() {
         var viewHolder: ViewHolder<T>? = null

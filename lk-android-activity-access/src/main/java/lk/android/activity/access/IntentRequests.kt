@@ -2,7 +2,6 @@ package lk.android.activity.access
 
 import android.Manifest
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -10,11 +9,13 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.support.v4.content.FileProvider
 import java.io.File
-import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
 
+/**
+ * Requests permission to use the camera, takes a picture using the camera app, and puts it into the [requestedUri].
+ */
 fun ActivityAccess.intentCameraRaw(
         requestedUri: Uri,
         callback : (Uri?)->Unit
@@ -33,17 +34,25 @@ fun ActivityAccess.intentCameraRaw(
     }
 }
 
+/**
+ * Requests permission to use the camera, takes a picture using the camera app, and puts it into a
+ * temporary file using the given [fileProviderAuthority].
+ */
 fun ActivityAccess.intentCameraTemp(
         fileProviderAuthority:String,
         callback : (Uri?)->Unit
 ) {
 
     val file = context.cacheDir
-        .let { File.createTempFile("", ".jpg", it) }
-        .let { FileProvider.getUriForFile(context, fileProviderAuthority, it) }
+            .let { File.createTempFile("", ".jpg", it) }
+            .let { FileProvider.getUriForFile(context, fileProviderAuthority, it) }
     intentCameraRaw(file, callback)
 }
 
+/**
+ * Requests permission to use the camera, takes a picture using the camera app, and puts it into a
+ * publicly accessible file using the given [fileProviderAuthority].
+ */
 fun ActivityAccess.intentCameraPublic(
         fileProviderAuthority:String,
         publicFolderName:String,
@@ -65,6 +74,10 @@ fun ActivityAccess.intentCameraPublic(
     }
 }
 
+/**
+ * Requests permission to read external storage and shows the system gallery to select an image.
+ * Returns the image URI selected in the callback.
+ */
 fun ActivityAccess.intentGallery(
         callback: (Uri?) -> Unit
 ){

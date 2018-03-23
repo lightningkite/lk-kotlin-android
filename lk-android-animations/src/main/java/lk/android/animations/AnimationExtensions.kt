@@ -33,6 +33,9 @@ fun View.heightAnimator(toHeight: Int): TypedValueAnimator.IntAnimator {
     }
 }
 
+/**
+ * Creates an animator that will animate from the current width to a new width.
+ */
 fun View.widthAnimator(toWidth: Int): TypedValueAnimator.IntAnimator {
     val currentWidth = layoutParams.width.let {
         when (it) {

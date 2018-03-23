@@ -2,10 +2,10 @@ package com.lightningkite.kotlincomponents
 
 import android.view.View
 import lk.android.activity.access.ActivityAccess
-import lk.android.mighty.view.ViewGenerator
 import lk.android.lifecycle.lifecycle
+import lk.android.mighty.view.ViewGenerator
 import lk.android.observable.bindString
-import lk.anko.activity.access.anko
+import lk.anko.extensions.anko
 import lk.kotlin.observable.property.StandardObservableProperty
 import lk.kotlin.observable.property.lifecycle.bind
 import org.jetbrains.anko.*
@@ -19,7 +19,7 @@ class ObservablePropertyTestVC() : ViewGenerator {
     val textObs = StandardObservableProperty("Start Text")
     var text by textObs
 
-    override fun invoke(access: ActivityAccess): View = access.anko {
+    override fun invoke(access: ActivityAccess): View = access.context.anko().run {
         verticalLayout {
 
             textView("This is an editable binding to an observable.")

@@ -13,12 +13,18 @@ import android.support.design.widget.TabLayout
  * Created by jivie on 4/28/16.
  */
 
+/**
+ * Sets the tab text size.
+ */
 fun TabLayout.setTabTextSize(sp: Float) {
     val field = TabLayout::class.java.getDeclaredField("mTabTextSize")
     field.isAccessible = true
     field.set(this, (sp * resources.displayMetrics.scaledDensity).toInt())
 }
 
+/**
+ * Sets the tab background resource.
+ */
 fun TabLayout.setTabBackgroundResource(res: Int) {
     val field = TabLayout::class.java.getDeclaredField("mTabBackgroundResId")
     field.isAccessible = true

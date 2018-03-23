@@ -12,10 +12,11 @@ import okhttp3.MediaType
 import okhttp3.RequestBody
 
 /**
- * Converts a [Uri] into a [RequestBody] using a content [resolver].
+ * Converts a [uri] into a [RequestBody].
  */
-fun Uri.toRequestBody(resolver: ContentResolver): RequestBody {
-    val type = resolver.getType(this) ?: pathSegments.lastOrNull()?.split('.')?.lastOrNull()
+fun ContentResolver.toRequestBody(uri: Uri): RequestBody {
+    val type = this.getType(uri) ?: uri.pathSegments.lastOrNull()?.split('.')?.lastOrNull()
     ?: throw IllegalArgumentException()
-    return okhttp3.RequestBody.create(MediaType.parse(type), resolver.openInputStream(this).toByteArray())
+    //TODO: This can be optimized for streaming
+    return okhttp3.RequestBody.create(MediaType.parse(type), this.openInputStream(uri).toByteArray())
 }

@@ -11,21 +11,21 @@ import lk.kotlin.observable.property.ObservableProperty
 import lk.kotlin.observable.property.lifecycle.bind
 
 /**
- * Makes this [TextView] display the value of the bond.
+ * Makes this [TextView] display the value of the observable.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun TextView.bindString(bond: ObservableProperty<String>) {
-    lifecycle.bind(bond) {
-        this.text = bond.value
+inline fun TextView.bindString(observable: ObservableProperty<String>) {
+    lifecycle.bind(observable) {
+        this.text = observable.value
     }
 }
 
 /**
- * Makes this [TextView] display the value of the bond.
+ * Makes this [TextView] display the value of the observable.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun <T : Any> TextView.bindAny(bond: ObservableProperty<T>) {
-    lifecycle.bind(bond) {
-        this.text = bond.value.toString()
+inline fun <T : Any> TextView.bindAny(observable: ObservableProperty<T>) {
+    lifecycle.bind(observable) {
+        this.text = observable.value.toString()
     }
 }

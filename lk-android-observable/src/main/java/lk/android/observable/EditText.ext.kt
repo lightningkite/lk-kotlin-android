@@ -24,56 +24,56 @@ abstract class TextWatcherAdapter : TextWatcher {
 }
 
 /**
- * Binds this [EditText] two way to the bond.
- * When the user edits this, the value of the bond will change.
- * When the value of the bond changes, the text here will be updated.
+ * Binds this [EditText] two way to the observable.
+ * When the user edits this, the value of the observable will change.
+ * When the value of the observable changes, the text here will be updated.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun EditText.bindString(bond: MutableObservableProperty<String>) {
-    setText(bond.value)
+inline fun EditText.bindString(observable: MutableObservableProperty<String>) {
+    setText(observable.value)
     addTextChangedListener(object : TextWatcherAdapter() {
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            if (bond.value != s) {
-                bond.value = (s.toString())
+            if (observable.value != s) {
+                observable.value = (s.toString())
             }
         }
     })
-    lifecycle.bind(bond) {
-        if (bond.value != text.toString()) {
-            this.setText(bond.value)
+    lifecycle.bind(observable) {
+        if (observable.value != text.toString()) {
+            this.setText(observable.value)
         }
     }
 }
 
 /**
- * Binds this [EditText] two way to the bond.
- * When the user edits this, the value of the bond will change.
- * When the value of the bond changes, the text here will be updated.
+ * Binds this [EditText] two way to the observable.
+ * When the user edits this, the value of the observable will change.
+ * When the value of the observable changes, the text here will be updated.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun EditText.bindNullableString(bond: MutableObservableProperty<String?>) {
-    setText(bond.value)
+inline fun EditText.bindNullableString(observable: MutableObservableProperty<String?>) {
+    setText(observable.value)
     addTextChangedListener(object : TextWatcherAdapter() {
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            if (bond.value != s) {
-                bond.value = (s.toString())
+            if (observable.value != s) {
+                observable.value = (s.toString())
             }
         }
     })
-    lifecycle.bind(bond) {
-        if (bond.value != text.toString()) {
-            this.setText(bond.value)
+    lifecycle.bind(observable) {
+        if (observable.value != text.toString()) {
+            this.setText(observable.value)
         }
     }
 }
 
 /**
- * Binds this [EditText] two way to the bond.
- * When the user edits this, the value of the bond will change.
- * When the value of the bond changes, the integer here will be updated.
+ * Binds this [EditText] two way to the observable.
+ * When the user edits this, the value of the observable will change.
+ * When the value of the observable changes, the integer here will be updated.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun EditText.bindInt(bond: MutableObservableProperty<Int>, format: NumberFormat = NumberFormat.getNumberInstance()) {
+inline fun EditText.bindInt(observable: MutableObservableProperty<Int>, format: NumberFormat = NumberFormat.getNumberInstance()) {
     inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
     val originalTextColor = this.textColors.defaultColor
     var value: Int? = null
@@ -97,25 +97,25 @@ inline fun EditText.bindInt(bond: MutableObservableProperty<Int>, format: Number
                 setTextColor(0xFFFF0000.toInt())
             } else {
                 setTextColor(originalTextColor)
-                if (bond.value != value) {
-                    bond.value = (value!!)
+                if (observable.value != value) {
+                    observable.value = (value!!)
                 }
             }
         }
     })
-    lifecycle.bind(bond) {
-        if (bond.value != value) {
-            this.setText(format.format(bond.value))
+    lifecycle.bind(observable) {
+        if (observable.value != value) {
+            this.setText(format.format(observable.value))
         }
     }
 }
 
 /**
- * Binds this [EditText] two way to the bond.
- * When the user edits this, the value of the bond will change.
- * When the value of the bond changes, the integer here will be updated.
+ * Binds this [EditText] two way to the observable.
+ * When the user edits this, the value of the observable will change.
+ * When the value of the observable changes, the integer here will be updated.
  */
-inline fun EditText.bindNullableInt(bond: MutableObservableProperty<Int?>, format: NumberFormat = NumberFormat.getNumberInstance()) {
+inline fun EditText.bindNullableInt(observable: MutableObservableProperty<Int?>, format: NumberFormat = NumberFormat.getNumberInstance()) {
     inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
     var value: Int? = null
     addTextChangedListener(object : TextWatcherAdapter() {
@@ -136,26 +136,26 @@ inline fun EditText.bindNullableInt(bond: MutableObservableProperty<Int?>, forma
 
             }
 
-            if (bond.value != value) {
-                bond.value = (value)
+            if (observable.value != value) {
+                observable.value = (value)
             }
         }
     })
-    lifecycle.bind(bond) {
-        if (bond.value != value) {
-            if (bond.value == null) this.setText("")
-            else this.setText(format.format(bond.value))
+    lifecycle.bind(observable) {
+        if (observable.value != value) {
+            if (observable.value == null) this.setText("")
+            else this.setText(format.format(observable.value))
         }
     }
 }
 
 /**
- * Binds this [EditText] two way to the bond.
- * When the user edits this, the value of the bond will change.
- * When the value of the bond changes, the integer here will be updated.
+ * Binds this [EditText] two way to the observable.
+ * When the user edits this, the value of the observable will change.
+ * When the value of the observable changes, the integer here will be updated.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun EditText.bindLong(bond: MutableObservableProperty<Long>, format: NumberFormat = NumberFormat.getNumberInstance()) {
+inline fun EditText.bindLong(observable: MutableObservableProperty<Long>, format: NumberFormat = NumberFormat.getNumberInstance()) {
     inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
     val originalTextColor = this.textColors.defaultColor
     var value: Long? = null
@@ -179,25 +179,25 @@ inline fun EditText.bindLong(bond: MutableObservableProperty<Long>, format: Numb
                 setTextColor(0xFFFF0000.toInt())
             } else {
                 setTextColor(originalTextColor)
-                if (bond.value != value) {
-                    bond.value = (value!!)
+                if (observable.value != value) {
+                    observable.value = (value!!)
                 }
             }
         }
     })
-    lifecycle.bind(bond) {
-        if (bond.value != value) {
-            this.setText(format.format(bond.value))
+    lifecycle.bind(observable) {
+        if (observable.value != value) {
+            this.setText(format.format(observable.value))
         }
     }
 }
 
 /**
- * Binds this [EditText] two way to the bond.
- * When the user edits this, the value of the bond will change.
- * When the value of the bond changes, the integer here will be updated.
+ * Binds this [EditText] two way to the observable.
+ * When the user edits this, the value of the observable will change.
+ * When the value of the observable changes, the integer here will be updated.
  */
-inline fun EditText.bindNullableLong(bond: MutableObservableProperty<Long?>, format: NumberFormat = NumberFormat.getNumberInstance()) {
+inline fun EditText.bindNullableLong(observable: MutableObservableProperty<Long?>, format: NumberFormat = NumberFormat.getNumberInstance()) {
     inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
     var value: Long? = null
     addTextChangedListener(object : TextWatcherAdapter() {
@@ -218,26 +218,26 @@ inline fun EditText.bindNullableLong(bond: MutableObservableProperty<Long?>, for
 
             }
 
-            if (bond.value != value) {
-                bond.value = (value)
+            if (observable.value != value) {
+                observable.value = (value)
             }
         }
     })
-    lifecycle.bind(bond) {
-        if (bond.value != value) {
-            if (bond.value == null) this.setText("")
-            else this.setText(format.format(bond.value!!))
+    lifecycle.bind(observable) {
+        if (observable.value != value) {
+            if (observable.value == null) this.setText("")
+            else this.setText(format.format(observable.value!!))
         }
     }
 }
 
 /**
- * Binds this [EditText] two way to the bond.
- * When the user edits this, the value of the bond will change.
- * When the value of the bond changes, the number here will be updated.
+ * Binds this [EditText] two way to the observable.
+ * When the user edits this, the value of the observable will change.
+ * When the value of the observable changes, the number here will be updated.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun EditText.bindNullableFloat(bond: MutableObservableProperty<Float?>, format: NumberFormat = NumberFormat.getNumberInstance()) {
+inline fun EditText.bindNullableFloat(observable: MutableObservableProperty<Float?>, format: NumberFormat = NumberFormat.getNumberInstance()) {
     inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
     var value: Float? = null
     addTextChangedListener(object : TextWatcherAdapter() {
@@ -258,28 +258,28 @@ inline fun EditText.bindNullableFloat(bond: MutableObservableProperty<Float?>, f
                 }
             }
 
-            println("PRE value $value obs ${bond.value}")
-            if (bond.value != value) {
-                bond.value = (value)
+            println("PRE value $value obs ${observable.value}")
+            if (observable.value != value) {
+                observable.value = (value)
             }
-            println("PST value $value obs ${bond.value}")
+            println("PST value $value obs ${observable.value}")
         }
     })
-    lifecycle.bind(bond) {
-        if (bond.value != value) {
-            if (bond.value == null) this.setText("")
-            else this.setText(format.format(bond.value))
+    lifecycle.bind(observable) {
+        if (observable.value != value) {
+            if (observable.value == null) this.setText("")
+            else this.setText(format.format(observable.value))
         }
     }
 }
 
 /**
- * Binds this [EditText] two way to the bond.
- * When the user edits this, the value of the bond will change.
- * When the value of the bond changes, the number here will be updated.
+ * Binds this [EditText] two way to the observable.
+ * When the user edits this, the value of the observable will change.
+ * When the value of the observable changes, the number here will be updated.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun EditText.bindNullableDouble(bond: MutableObservableProperty<Double?>, format: NumberFormat = NumberFormat.getNumberInstance()) {
+inline fun EditText.bindNullableDouble(observable: MutableObservableProperty<Double?>, format: NumberFormat = NumberFormat.getNumberInstance()) {
     inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
     val originalTextColor = this.textColors.defaultColor
     var value: Double? = null
@@ -302,27 +302,27 @@ inline fun EditText.bindNullableDouble(bond: MutableObservableProperty<Double?>,
             }
 
             setTextColor(originalTextColor)
-            if (bond.value != value) {
-                bond.value = (value)
+            if (observable.value != value) {
+                observable.value = (value)
             }
         }
     })
 
-    lifecycle.bind(bond) {
-        if (bond.value != value) {
-            if (bond.value == null) this.setText("")
-            else this.setText(format.format(bond.value!!))
+    lifecycle.bind(observable) {
+        if (observable.value != value) {
+            if (observable.value == null) this.setText("")
+            else this.setText(format.format(observable.value!!))
         }
     }
 }
 
 /**
- * Binds this [EditText] two way to the bond.
- * When the user edits this, the value of the bond will change.
- * When the value of the bond changes, the number here will be updated.
+ * Binds this [EditText] two way to the observable.
+ * When the user edits this, the value of the observable will change.
+ * When the value of the observable changes, the number here will be updated.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun EditText.bindFloat(bond: MutableObservableProperty<Float>, format: NumberFormat = NumberFormat.getNumberInstance()) {
+inline fun EditText.bindFloat(observable: MutableObservableProperty<Float>, format: NumberFormat = NumberFormat.getNumberInstance()) {
     inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
     val originalTextColor = this.textColors.defaultColor
     var value = Float.NaN
@@ -346,26 +346,26 @@ inline fun EditText.bindFloat(bond: MutableObservableProperty<Float>, format: Nu
                 setTextColor(0xFFFF0000.toInt())
             } else {
                 setTextColor(originalTextColor)
-                if (bond.value != value) {
-                    bond.value = (value)
+                if (observable.value != value) {
+                    observable.value = (value)
                 }
             }
         }
     })
-    lifecycle.bind(bond) {
-        if (bond.value != value) {
-            this.setText(format.format(bond.value))
+    lifecycle.bind(observable) {
+        if (observable.value != value) {
+            this.setText(format.format(observable.value))
         }
     }
 }
 
 /**
- * Binds this [EditText] two way to the bond.
- * When the user edits this, the value of the bond will change.
- * When the value of the bond changes, the number here will be updated.
+ * Binds this [EditText] two way to the observable.
+ * When the user edits this, the value of the observable will change.
+ * When the value of the observable changes, the number here will be updated.
  */
 @Suppress("NOTHING_TO_INLINE")
-inline fun EditText.bindDouble(bond: MutableObservableProperty<Double>, format: NumberFormat = NumberFormat.getNumberInstance()) {
+inline fun EditText.bindDouble(observable: MutableObservableProperty<Double>, format: NumberFormat = NumberFormat.getNumberInstance()) {
     inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
     val originalTextColor = this.textColors.defaultColor
     var value = Double.NaN
@@ -389,15 +389,15 @@ inline fun EditText.bindDouble(bond: MutableObservableProperty<Double>, format: 
                 setTextColor(0xFFFF0000.toInt())
             } else {
                 setTextColor(originalTextColor)
-                if (bond.value != value) {
-                    bond.value = (value)
+                if (observable.value != value) {
+                    observable.value = (value)
                 }
             }
         }
     })
-    lifecycle.bind(bond) {
-        if (bond.value != value) {
-            this.setText(format.format(bond.value))
+    lifecycle.bind(observable) {
+        if (observable.value != value) {
+            this.setText(format.format(observable.value))
         }
     }
 }

@@ -28,6 +28,9 @@ data class AnimationSet(
 ) {
 
     companion object {
+        /**
+         * Cross-fades between views.
+         */
         val fade: AnimationSet = AnimationSet(
                 animateIn = {
                     alpha = 0f
@@ -38,6 +41,10 @@ data class AnimationSet(
                     animate().alpha(0f).setDuration(300)
                 }
         )
+        /**
+         * Slides the old view out to the left, slides the new view in from the right.
+         * Primarily used for moving forward through screens in an app
+         */
         val slidePush: AnimationSet = AnimationSet(
                 animateIn = {
                     translationX = it.width.toFloat()
@@ -48,6 +55,10 @@ data class AnimationSet(
                     animate().translationX(-it.width.toFloat()).setDuration(300)
                 }
         )
+        /**
+         * Slides the old view out to the right, slides the new view in from the left.
+         * Primarily used for moving backwards through screens in an app
+         */
         val slidePop: AnimationSet = AnimationSet(
                 animateIn = {
                     translationX = -it.width.toFloat()
@@ -58,6 +69,9 @@ data class AnimationSet(
                     animate().translationX(it.width.toFloat()).setDuration(300)
                 }
         )
+        /**
+         * Slides the old view out upwards, slides the new view in from the bottom.
+         */
         val slideUp: AnimationSet = AnimationSet(
                 animateIn = {
                     translationY = it.height.toFloat()
@@ -68,6 +82,9 @@ data class AnimationSet(
                     animate().translationY(-it.height.toFloat()).setDuration(300)
                 }
         )
+        /**
+         * Slides the old view out downwards, slides the new view in from the top.
+         */
         val slideDown: AnimationSet = AnimationSet(
                 animateIn = {
                     translationY = (-it.height.toFloat())
@@ -78,6 +95,9 @@ data class AnimationSet(
                     animate().translationY(it.height.toFloat()).setDuration(300)
                 }
         )
+        /**
+         * Seemingly flips the view such that the old view is replaced by the new view.
+         */
         val flipVertical: AnimationSet = AnimationSet(
                 animateIn = {
                     scaleY = (0f)

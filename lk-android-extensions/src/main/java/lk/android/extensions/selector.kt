@@ -49,12 +49,18 @@ fun Context.selector(title: Int?, vararg pairs: Pair<Int, () -> Unit>) = selecto
         onCancel = {}
 )
 
+/**
+ * Opens a selector dialog.
+ */
 inline fun Context.selector(title: Int?, vararg pairs: Pair<Int, () -> Unit>, crossinline onCancel: () -> Unit) = selector(
         title = title?.let { resources.getString(it) },
         pairs = pairs.map { resources.getString(it.first) to it.second },
         onCancel = onCancel
 )
 
+/**
+ * Opens a selector dialog.
+ */
 inline fun Context.selector(title: String?, pairs: List<Pair<String, () -> Unit>>, crossinline onCancel: () -> Unit) {
     AlertDialog.Builder(this)
             .apply { if (title != null) setTitle(title) }

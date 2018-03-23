@@ -169,7 +169,7 @@ plainRep = [
     ),
     (
         "import com.lightningkite.kotlin.anko.activity.anko",
-        "import lk.anko.activity.access.anko"
+        ""
     ),
     (
         "import com.lightningkite.kotlin.networking.jackson.MyJackson",
