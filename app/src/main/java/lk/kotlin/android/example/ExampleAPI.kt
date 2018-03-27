@@ -1,4 +1,4 @@
-package com.lightningkite.kotlincomponents
+package lk.kotlin.android.example
 
 import lk.kotlin.jackson.jacksonObject
 import lk.kotlin.okhttp.OkHttpApi

@@ -1,15 +1,15 @@
-package com.lightningkite.kotlincomponents
+package lk.kotlin.android.example
 
 import android.os.Bundle
 import lk.android.activity.access.AccessibleActivity
 
 /**
- * The main activity is mostly empty when using [ViewController]s.
+ * When using the Mighty View style, we don't have very big activities.  This is sufficient.
  */
 class MainActivity : AccessibleActivity() {
 
     companion object {
-        var main = MainScreen()
+        var main = MainVG()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

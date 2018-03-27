@@ -10,3 +10,7 @@ import org.jetbrains.anko.AnkoContextImpl
 fun Context.anko(): AnkoContextImpl<Context> {
     return AnkoContextImpl(this, this, false)
 }
+
+fun <T> Context.anko(owner: T): AnkoContextImpl<T> {
+    return AnkoContextImpl(this, owner, false)
+}

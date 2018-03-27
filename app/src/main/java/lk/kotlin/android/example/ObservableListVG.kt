@@ -1,10 +1,11 @@
-package com.lightningkite.kotlincomponents
+package lk.kotlin.android.example
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.Gravity
 import android.view.View
 import lk.android.activity.access.ActivityAccess
+import lk.android.extensions.getColorCompat
 import lk.android.extensions.horizontalDivider
 import lk.android.extensions.selectableItemBackgroundResource
 import lk.android.lifecycle.lifecycle
@@ -12,10 +13,9 @@ import lk.android.mighty.view.ViewGenerator
 import lk.anko.adapters.observable.listAdapter
 import lk.anko.adapters.swipeToDismiss
 import lk.anko.extensions.anko
+import lk.anko.extensions.stickyHeaders
 import lk.anko.extensions.verticalRecyclerView
-import lk.kotlin.jvm.utils.random.random
 import lk.kotlin.observable.list.ObservableListWrapper
-import lk.kotlin.observable.list.sorting
 import lk.kotlin.observable.property.lifecycle.bind
 import org.jetbrains.anko.*
 
@@ -23,10 +23,9 @@ import org.jetbrains.anko.*
  * A [AnkoViewController] used for demonstrating observable lists.
  * Created by jivie on 2/10/16.
  */
-class ObservableList2VC() : ViewGenerator {
+class ObservableListVG() : ViewGenerator {
 
-    val items = ObservableListWrapper((190 downTo 1).map { it.toString() }.toMutableList())
-    val sorted = items.sorting { a, b -> a < b }
+    val items = ObservableListWrapper(arrayListOf<String>("A", "B", "C"))
 
     override fun toString(): String = "List Test"
 
@@ -36,15 +35,11 @@ class ObservableList2VC() : ViewGenerator {
 
             verticalRecyclerView {
 
-                adapter = listAdapter(sorted) { obs ->
+                adapter = listAdapter(items) { obs ->
                     textView {
                         lifecycle.bind(obs) {
-                            text = it
+                            text = it + " (position: ${obs.position})"
                         }
-//                    newLifecycle.bind(obs){
-//                        text = it
-//                    }
-//                    obs += { text = it }
                         gravity = Gravity.CENTER
                         textSize = 18f
                         minimumHeight = dip(40)
@@ -56,6 +51,20 @@ class ObservableList2VC() : ViewGenerator {
                     }.lparams(matchParent, wrapContent)
                 }
 
+                stickyHeaders(items, {
+                    when (it.toFloatOrNull()) {
+                        null -> "Not a Number"
+                        in 0..5 -> "Low"
+                        else -> "High"
+                    }
+                }, {
+                    textView {
+                        text = it
+                        backgroundColor = resources.getColorCompat(R.color.colorPrimary)
+                        padding = dip(8)
+                    }
+                })
+
                 swipeToDismiss {
                     items.removeAt(it)
                 }
@@ -66,14 +75,7 @@ class ObservableList2VC() : ViewGenerator {
 
             button("Add") {
                 setOnClickListener { it: View? ->
-                    items.add(Math.random().times(190).plus(1).toInt().toString() + " N")
-                }
-            }.lparams(matchParent, wrapContent)
-
-            button("Update Random") {
-                setOnClickListener { it: View? ->
-                    val index = items.indices.random()
-                    items[index] = items[index] + " M"
+                    items.add(Math.random().times(10).plus(1).toInt().toString())
                 }
             }.lparams(matchParent, wrapContent)
 

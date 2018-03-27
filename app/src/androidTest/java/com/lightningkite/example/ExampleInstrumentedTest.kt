@@ -1,4 +1,4 @@
-package com.lightningkite.kotlincomponents
+package com.lightningkite.example
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

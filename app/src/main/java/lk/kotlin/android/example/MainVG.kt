@@ -1,4 +1,4 @@
-package com.lightningkite.kotlincomponents
+package lk.kotlin.android.example
 
 import android.view.Gravity
 import android.view.View
@@ -29,9 +29,9 @@ import org.jetbrains.anko.wrapContent
  *
  * Created by jivie on 2/11/16.
  */
-class MainScreen() : ViewGenerator {
+class MainVG() : ViewGenerator {
     val stack = StackObservableProperty<ViewGenerator>().apply {
-        push(SelectorScreen(this@MainScreen))
+        push(SelectorVG(this@MainVG))
     }
 
     override fun invoke(access: ActivityAccess): View = access.context.anko().verticalLayout {

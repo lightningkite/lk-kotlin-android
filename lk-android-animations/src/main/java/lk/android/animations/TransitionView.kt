@@ -78,7 +78,19 @@ open class TransitionView(context: Context) : FrameLayout(context) {
             val animateIn = set.animateIn
             val animateOut = set.animateOut
 
+            oldView.clearAnimation()
+
+            newView.clearAnimation()
+            newView.alpha = 1f
+            newView.translationX = 0f
+            newView.translationY = 0f
+            newView.scaleX = 1f
+            newView.scaleY = 1f
+            newView.rotation = 0f
+            newView.rotationX = 0f
+            newView.rotationY = 0f
             newView.visibility = View.VISIBLE
+
             val newAnimation = newView.animateIn(this)
             val oldAnimation = oldView.animateOut(this).withEndAction {
                 oldView.visibility = animateOutToVisibilityState

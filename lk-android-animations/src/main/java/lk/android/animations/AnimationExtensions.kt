@@ -27,7 +27,18 @@ fun View.heightAnimator(toHeight: Int): TypedValueAnimator.IntAnimator {
             else -> it
         }
     }
-    return TypedValueAnimator.IntAnimator(currentHeight, toHeight).onUpdate {
+    val fixedToHeight = when (toHeight) {
+        WRAP_CONTENT -> {
+            measure(
+                    View.MeasureSpec.makeMeasureSpec((parent as? View)?.width
+                            ?: (Int.MAX_VALUE / 2 - 1), View.MeasureSpec.AT_MOST),
+                    View.MeasureSpec.makeMeasureSpec(Int.MAX_VALUE / 2 - 1, View.MeasureSpec.AT_MOST)
+            )
+            measuredHeight
+        }
+        else -> toHeight
+    }
+    return TypedValueAnimator.IntAnimator(currentHeight, fixedToHeight).onUpdate {
         layoutParams.height = it
         if (!ViewCompat.isInLayout(this@heightAnimator)) requestLayout()
     }
@@ -50,7 +61,18 @@ fun View.widthAnimator(toWidth: Int): TypedValueAnimator.IntAnimator {
             else -> it
         }
     }
-    return TypedValueAnimator.IntAnimator(currentWidth, toWidth).onUpdate {
+    val fixedToWidth = when (toWidth) {
+        WRAP_CONTENT -> {
+            measure(
+                    View.MeasureSpec.makeMeasureSpec(Int.MAX_VALUE / 2 - 1, View.MeasureSpec.AT_MOST),
+                    View.MeasureSpec.makeMeasureSpec((parent as? View)?.height
+                            ?: (Int.MAX_VALUE / 2 - 1), View.MeasureSpec.AT_MOST)
+            )
+            measuredHeight
+        }
+        else -> toWidth
+    }
+    return TypedValueAnimator.IntAnimator(currentWidth, fixedToWidth).onUpdate {
         layoutParams.width = it
         if (!ViewCompat.isInLayout(this@widthAnimator)) requestLayout()
     }

@@ -1,4 +1,4 @@
-package com.lightningkite.kotlincomponents
+package lk.kotlin.android.example
 
 import android.view.View
 import android.widget.Button
@@ -31,7 +31,7 @@ import org.jetbrains.anko.design.textInputLayout
  * An example login view.
  * Created by joseph on 11/2/17.
  */
-class ExampleLoginVC(val onLogin: (LoginData) -> Unit) : ViewGenerator {
+class ExampleLoginVG(val onLogin: (LoginData) -> Unit) : ViewGenerator {
 
     override fun toString(): String = "Example Login"
 

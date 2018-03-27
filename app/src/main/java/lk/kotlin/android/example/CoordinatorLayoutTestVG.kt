@@ -1,4 +1,4 @@
-package com.lightningkite.kotlincomponents
+package lk.kotlin.android.example
 
 import android.graphics.Color
 import android.graphics.PorterDuff
@@ -24,7 +24,7 @@ import org.jetbrains.anko.design.coordinatorLayout
 /**
  * A view for testing the coordinator layout.
  */
-class CoordinatorLayoutTestVC() : ViewGenerator {
+class CoordinatorLayoutTestVG() : ViewGenerator {
 
     override fun toString(): String {
         return "Coordinator Layout Test"

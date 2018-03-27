@@ -1,4 +1,4 @@
-package com.lightningkite.kotlincomponents
+package lk.kotlin.android.example
 
 import android.view.View
 import lk.android.activity.access.ActivityAccess
@@ -14,7 +14,7 @@ import org.jetbrains.anko.*
  * A [AnkoViewController] for demonstrating observable binding.
  * Created by josep on 11/10/2016.
  */
-class ObservablePropertyTestVC() : ViewGenerator {
+class ObservablePropertyTestVG() : ViewGenerator {
 
     val textObs = StandardObservableProperty("Start Text")
     var text by textObs

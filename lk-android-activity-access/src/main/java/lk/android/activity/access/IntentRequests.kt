@@ -3,14 +3,10 @@ package lk.android.activity.access
 import android.Manifest
 import android.app.Activity
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
-import android.os.Environment
 import android.provider.MediaStore
 import android.support.v4.content.FileProvider
 import java.io.File
-import java.text.SimpleDateFormat
-import java.util.*
 
 
 /**
@@ -37,41 +33,22 @@ fun ActivityAccess.intentCameraRaw(
 /**
  * Requests permission to use the camera, takes a picture using the camera app, and puts it into a
  * temporary file using the given [fileProviderAuthority].
+ *
+ * The default parameter for [fileProviderAuthority] is your app's package name plus ".fileprovider".
+ *
+ * The default parameter for [folder] is in the cache directory under the folder "images".  Your file
+ * provider's XML *must* have whatever folder you decide to use.
  */
-fun ActivityAccess.intentCameraTemp(
-        fileProviderAuthority:String,
+fun ActivityAccess.intentCamera(
+        fileProviderAuthority: String = context.packageName + ".fileprovider",
+        folder: File = File(context.cacheDir, "images").also { it.mkdirs() },
         callback : (Uri?)->Unit
 ) {
 
-    val file = context.cacheDir
-            .let { File.createTempFile("", ".jpg", it) }
+    val file = folder
+            .let { File.createTempFile("image", ".jpg", it) }
             .let { FileProvider.getUriForFile(context, fileProviderAuthority, it) }
     intentCameraRaw(file, callback)
-}
-
-/**
- * Requests permission to use the camera, takes a picture using the camera app, and puts it into a
- * publicly accessible file using the given [fileProviderAuthority].
- */
-fun ActivityAccess.intentCameraPublic(
-        fileProviderAuthority:String,
-        publicFolderName:String,
-        callback : (Uri?)->Unit
-) {
-    requestPermissions(arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE, android.Manifest.permission.READ_EXTERNAL_STORAGE, android.Manifest.permission.CAMERA)) {
-        if(it.values.all { it == PackageManager.PERMISSION_GRANTED }) {
-            val publicPictures = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)
-            val folder = publicPictures.let { File(it, publicFolderName) }
-
-            folder.mkdir()
-
-            val timeStamp = SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(Date())
-            val file = folder.let { File(it, timeStamp + ".jpg") }
-            val potentialFile = FileProvider.getUriForFile(context, fileProviderAuthority, file)
-
-            intentCameraRaw(potentialFile, callback)
-        }
-    }
 }
 
 /**

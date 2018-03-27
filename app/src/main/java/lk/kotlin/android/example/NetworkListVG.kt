@@ -1,4 +1,4 @@
-package com.lightningkite.kotlincomponents
+package lk.kotlin.android.example
 
 import android.graphics.Color
 import android.view.View
@@ -22,7 +22,7 @@ import org.jetbrains.anko.cardview.v7.cardView
  * Demonstrates loading and displaying a list from the network.
  * Created by josep on 11/10/2016.
  */
-class NetworkListVC : ViewGenerator {
+class NetworkListVG : ViewGenerator {
 
     override fun toString(): String {
         return "Network List Example"

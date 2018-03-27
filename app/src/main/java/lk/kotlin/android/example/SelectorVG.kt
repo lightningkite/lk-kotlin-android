@@ -1,4 +1,4 @@
-package com.lightningkite.kotlincomponents
+package lk.kotlin.android.example
 
 import android.view.Gravity
 import android.view.View
@@ -17,21 +17,28 @@ import java.util.*
  * A [ViewGenerator] for selecting which demo you want to view.
  * Created by jivie on 5/5/16.
  */
-class SelectorScreen(val main: MainScreen) : ViewGenerator {
+class SelectorVG(val main: MainVG) : ViewGenerator {
+
+    override fun toString(): String = "Demo Selector"
 
     val demos: ArrayList<Pair<String, () -> ViewGenerator>> = arrayListOf(
+            "Activity Access Example" to { lk.kotlin.android.example.activity.access.ExampleVG() },
+            "Height Animator Example" to { lk.kotlin.android.example.animations.HeightAnimatorVG() },
+            "Transition View Example" to { lk.kotlin.android.example.animations.TransitionViewVG() },
+            "Swap View Example" to { lk.kotlin.android.example.animations.SwapViewVG() },
+
             "Example Login" to {
-                ExampleLoginVC({
+                ExampleLoginVG({
                     main.stack.pop()
                 })
             },
-            "Observable List" to { ObservableListVC() },
-            "Observable List 2" to { ObservableList2VC() },
-            "Network Image" to { NetImageTestVC() },
-            "Observable Property" to { ObservablePropertyTestVC() },
-            "View Controller Stacks" to { StackDemoVC(main.stack) },
-            "Coordinator Layout" to { CoordinatorLayoutTestVC() },
-            "List from Network" to { NetworkListVC() },
+            "Observable List" to { ObservableListVG() },
+            "Observable List 2" to { ObservableList2VG() },
+            "Network Image" to { NetImageTestVG() },
+            "Observable Property" to { ObservablePropertyTestVG() },
+            "View Controller Stacks" to { StackDemoVG(main.stack) },
+            "Coordinator Layout" to { CoordinatorLayoutTestVG() },
+            "List from Network" to { NetworkListVG() },
             "Just a Lambda View" to {
                 { access: ActivityAccess ->
                     access.context.anko().run {

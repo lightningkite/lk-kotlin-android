@@ -1,4 +1,4 @@
-package com.lightningkite.kotlincomponents
+package lk.kotlin.android.example
 
 import android.view.Gravity
 import android.view.View
@@ -15,7 +15,7 @@ import org.jetbrains.anko.verticalLayout
  * Created as a dummy VC to test out the stack.
  * Created by josep on 11/6/2015.
  */
-class StackDemoVC(val stack: StackObservableProperty<ViewGenerator>, val depth: Int = 1) : ViewGenerator {
+class StackDemoVG(val stack: StackObservableProperty<ViewGenerator>, val depth: Int = 1) : ViewGenerator {
 
     override fun toString(): String = "Stack Demo ($depth)"
 
@@ -30,7 +30,7 @@ class StackDemoVC(val stack: StackObservableProperty<ViewGenerator>, val depth: 
             button("Go deeper") {
                 styleDefault()
                 setOnClickListener { it: View? ->
-                    stack.push(StackDemoVC(stack, depth + 1))
+                    stack.push(StackDemoVG(stack, depth + 1))
                 }
             }
 

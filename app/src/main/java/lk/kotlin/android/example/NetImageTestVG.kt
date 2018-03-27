@@ -1,4 +1,4 @@
-package com.lightningkite.kotlincomponents
+package lk.kotlin.android.example
 
 import android.view.Gravity
 import android.view.View
@@ -23,7 +23,7 @@ import org.jetbrains.anko.*
  * A ViewController with various tests on it.
  * Created by josep on 11/6/2015.
  */
-class NetImageTestVC() : ViewGenerator {
+class NetImageTestVG() : ViewGenerator {
 
     //Returns the title for the app bar.
     override fun toString(): String = "Net Test"

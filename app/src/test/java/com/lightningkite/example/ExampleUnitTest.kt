@@ -1,4 +1,4 @@
-package com.lightningkite.kotlincomponents
+package com.lightningkite.example
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
