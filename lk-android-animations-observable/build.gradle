@@ -36,11 +36,11 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
 
     implementation project(':lk-android-animations')
-    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list:${rootProject.libraryVersion}"
-    implementation "com.lightningkite.kotlin:lk-kotlin-lifecycle:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-lifecycle:${rootProject.libraryKotlinVersion}"
     implementation project(':lk-android-lifecycle')
-    implementation "com.lightningkite.kotlin:lk-kotlin-utils:${rootProject.libraryVersion}"
-    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property:${rootProject.libraryVersion}"
-    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list-lifecycle:${rootProject.libraryVersion}"
-    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property-lifecycle:${rootProject.libraryVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-utils:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-list-lifecycle:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin:lk-kotlin-observable-property-lifecycle:${rootProject.libraryKotlinVersion}"
 }

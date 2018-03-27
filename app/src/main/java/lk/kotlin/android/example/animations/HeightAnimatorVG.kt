@@ -20,8 +20,6 @@ class HeightAnimatorVG() : ViewGenerator {
     val lastResumed = StandardObservableProperty<Date?>(null)
     val imageUri = StandardObservableProperty<Uri?>(null)
 
-    override fun toString(): String = "Height Animator Example"
-
     override fun invoke(access: ActivityAccess): View = access.context.anko().scrollView {
 
         isFillViewport = true

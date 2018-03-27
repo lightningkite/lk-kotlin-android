@@ -4,7 +4,8 @@
 buildscript {
     ext.repositoryGroupName = 'com.lightningkite.kotlin.android'
     ext.kotlinVersion = '1.2.30'
-    ext.libraryVersion = '0.2.1'
+    ext.libraryVersion = '0.2.2'
+    ext.libraryKotlinVersion = '0.2.2'
     ext.ankoVersion = '0.10.0'
     ext.compatVersion = '27.1.0'
     ext.androidMavenPublishPluginVersion = '3.1.1'

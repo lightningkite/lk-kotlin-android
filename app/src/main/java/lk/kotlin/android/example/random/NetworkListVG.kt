@@ -1,4 +1,4 @@
-package lk.kotlin.android.example
+package lk.kotlin.android.example.random
 
 import android.graphics.Color
 import android.view.View
@@ -10,6 +10,9 @@ import lk.anko.adapters.observable.listAdapter
 import lk.anko.animations.observable.progressLayout
 import lk.anko.extensions.anko
 import lk.anko.extensions.verticalRecyclerView
+import lk.kotlin.android.example.styleDefault
+import lk.kotlin.android.example.styleInverted
+import lk.kotlin.android.example.styleInvertedTitle
 import lk.kotlin.jvm.utils.async.Async
 import lk.kotlin.jvm.utils.async.invokeOn
 import lk.kotlin.jvm.utils.async.thenOn
@@ -24,10 +27,6 @@ import org.jetbrains.anko.cardview.v7.cardView
  */
 class NetworkListVG : ViewGenerator {
 
-    override fun toString(): String {
-        return "Network List Example"
-    }
-
     val posts = observableListOf<Post>()
 
     init {
@@ -35,7 +34,8 @@ class NetworkListVG : ViewGenerator {
             if (it.isSuccessful()) {
                 posts.replace(it.result!!)
             } else {
-                posts.add(Post(title = "Loading error", body = it.errorString ?: "Unknown error"))
+                posts.add(Post(title = "Loading error", body = it.errorString
+                        ?: "Unknown error"))
             }
         }.invokeOn(Async)
     }

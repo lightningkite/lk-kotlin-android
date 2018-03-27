@@ -1,4 +1,4 @@
-package lk.kotlin.android.example
+package lk.kotlin.android.example.random
 
 import android.view.View
 import android.widget.Button
@@ -15,6 +15,7 @@ import lk.android.ui.thread.UIThread
 import lk.anko.animations.observable.progressLayout
 import lk.anko.extensions.anko
 import lk.anko.extensions.textInputEditText
+import lk.kotlin.android.example.R
 import lk.kotlin.jvm.utils.async.Async
 import lk.kotlin.jvm.utils.async.invokeOn
 import lk.kotlin.observable.property.MutableObservableProperty
@@ -33,7 +34,6 @@ import org.jetbrains.anko.design.textInputLayout
  */
 class ExampleLoginVG(val onLogin: (LoginData) -> Unit) : ViewGenerator {
 
-    override fun toString(): String = "Example Login"
 
     //Business Logic
 

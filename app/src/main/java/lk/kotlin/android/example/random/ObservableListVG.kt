@@ -1,4 +1,4 @@
-package lk.kotlin.android.example
+package lk.kotlin.android.example.random
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -15,6 +15,7 @@ import lk.anko.adapters.swipeToDismiss
 import lk.anko.extensions.anko
 import lk.anko.extensions.stickyHeaders
 import lk.anko.extensions.verticalRecyclerView
+import lk.kotlin.android.example.R
 import lk.kotlin.observable.list.ObservableListWrapper
 import lk.kotlin.observable.property.lifecycle.bind
 import org.jetbrains.anko.*
@@ -26,8 +27,6 @@ import org.jetbrains.anko.*
 class ObservableListVG() : ViewGenerator {
 
     val items = ObservableListWrapper(arrayListOf<String>("A", "B", "C"))
-
-    override fun toString(): String = "List Test"
 
     override fun invoke(access: ActivityAccess): View = access.context.anko().run {
         verticalLayout {

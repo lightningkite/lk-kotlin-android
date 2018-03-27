@@ -1,9 +1,10 @@
 package lk.android.image.loading.image
 
 
-
 import android.content.Context
 import android.graphics.Bitmap
+import android.net.Uri
+import lk.android.extensions.image.getBitmapFromUri
 import lk.android.ui.thread.UIThread
 import lk.kotlin.jvm.utils.async.Async
 import lk.kotlin.jvm.utils.async.invokeOn
@@ -19,27 +20,57 @@ import java.io.Closeable
 class ImageLoader(
         val baseRequest: Request.Builder = Request.Builder(),
         val imageMaxWidth: Int = 2048,
-        val imageMaxHeight: Int = 2048
+        val imageMaxHeight: Int = 2048,
+        val maxCachedImages: Int = 100
 ) : Closeable {
-    val requests = HashSet<String>()
-    val callbacks = HashMap<String, ArrayList<(TypedResponse<Bitmap>) -> Unit>>()
-    val results = HashMap<String, Bitmap>()
+    private val requests = HashSet<String>()
+    private val callbacks = HashMap<String, ArrayList<(TypedResponse<Bitmap>) -> Unit>>()
+    private val results = HashMap<String, Bitmap>()
+    private val lastRequest = HashMap<String, Long>()
 
     fun getImage(context: Context, input: String, callback: (TypedResponse<Bitmap>) -> Unit) {
+        lastRequest[input] = System.currentTimeMillis()
         if (results.containsKey(input)) {
             callback.invoke(TypedResponse(200, results[input]!!))
         } else {
             callbacks.getOrPut(input) { ArrayList() }.add(callback)
             if (!requests.contains(input)) {
                 requests.add(input)
-                baseRequest.url(input).lambdaBitmapExif(context, imageMaxWidth, imageMaxHeight).thenOn(UIThread) { out ->
-                    if (out.isSuccessful())
-                        results[input] = out.result!!
-                    callbacks[input]?.forEach { it.invoke(out) }
-                    callbacks.remove(input)
-                    requests.remove(input)
-                }.invokeOn(Async)
+
+                val request = if (input.startsWith("http")) {
+                    baseRequest.url(input).lambdaBitmapExif(context, imageMaxWidth, imageMaxHeight)
+                } else {
+                    {
+                        try {
+                            TypedResponse(
+                                    200,
+                                    context.getBitmapFromUri(Uri.parse(input), imageMaxWidth, imageMaxHeight)!!
+                            )
+                        } catch (e: Exception) {
+                            TypedResponse(0, exception = e)
+                        }
+                    }
+                }
+
+                request
+                        .thenOn(UIThread) { out ->
+                            requests.remove(input)
+                            if (out.isSuccessful()) {
+                                results[input] = out.result!!
+                            }
+                            clearCacheDownTo(maxCachedImages)
+                            callbacks[input]?.forEach { it.invoke(out) }
+                            callbacks.remove(input)
+                        }.invokeOn(Async)
             }
+        }
+    }
+
+    fun clearCacheDownTo(count: Int) {
+        while (results.size > count) {
+            val toRemove = lastRequest.minBy { it.value }!!
+            lastRequest.remove(toRemove.key)
+            results.remove(toRemove.key)
         }
     }
 

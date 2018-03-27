@@ -30,8 +30,6 @@ class SwapViewVG() : ViewGenerator {
 
     val transitionEvent = ArrayList<(AnimationSet) -> Unit>()
 
-    override fun toString(): String = "Swap View Example"
-
     override fun invoke(access: ActivityAccess): View = access.context.anko().verticalLayout {
         gravity = Gravity.CENTER
         padding = dip(8)

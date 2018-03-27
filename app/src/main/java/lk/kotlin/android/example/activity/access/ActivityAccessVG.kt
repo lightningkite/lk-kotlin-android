@@ -25,13 +25,11 @@ import java.util.*
 /**
  * This example is meant to demonstrate how to use ActivityAccess's special features.
  */
-class ExampleVG() : ViewGenerator {
+class ActivityAccessVG() : ViewGenerator {
 
     val lastPaused = StandardObservableProperty<Date?>(null)
     val lastResumed = StandardObservableProperty<Date?>(null)
     val imageUri = StandardObservableProperty<Uri?>(null)
-
-    override fun toString(): String = "Activity Access Example"
 
     override fun invoke(access: ActivityAccess): View = access.context.anko().scrollView {
 

@@ -339,6 +339,8 @@ fun Context.inputDialog(
             dismissible,
             {
                 EditText(this).apply {
+                    this.setTextColor(Color.BLACK)
+                    this.setHintTextColor(Color.GRAY)
                     this.setText(defaultValue)
                     this.inputType = inputType
                     this.hint = hint

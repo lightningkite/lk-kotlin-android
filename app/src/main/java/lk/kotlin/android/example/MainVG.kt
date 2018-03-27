@@ -31,7 +31,7 @@ import org.jetbrains.anko.wrapContent
  */
 class MainVG() : ViewGenerator {
     val stack = StackObservableProperty<ViewGenerator>().apply {
-        push(SelectorVG(this@MainVG))
+        push(DemoGroupSelectorVG(this@MainVG))
     }
 
     override fun invoke(access: ActivityAccess): View = access.context.anko().verticalLayout {
@@ -44,7 +44,7 @@ class MainVG() : ViewGenerator {
             }.lparams(Gravity.RIGHT)
 
             lifecycle.bind(stack) {
-                this.title = it.toString()
+                this.title = if (it is HasTitle) it.getTitle(resources) else it.javaClass.simpleName
                 setNavigationOnClickListener { stack.pop() }
                 if (stack.stack.size > 1) {
                     setNavigationIcon(R.drawable.ic_back)

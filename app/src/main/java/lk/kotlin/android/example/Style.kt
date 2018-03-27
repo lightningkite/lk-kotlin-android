@@ -7,6 +7,7 @@ import org.jetbrains.anko.textColor
 
 /**
  * We usually use a file like this to define styling.
+ * Alternatively, you could define all of your styles strictly in the style xml as usual.
  *
  * Created by jivie on 7/13/16.
  */

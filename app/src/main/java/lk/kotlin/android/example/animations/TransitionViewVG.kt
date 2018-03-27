@@ -29,8 +29,6 @@ class TransitionViewVG() : ViewGenerator {
 
     val transitionEvent = ArrayList<(AnimationSet) -> Unit>()
 
-    override fun toString(): String = "Transition View Example"
-
     override fun invoke(access: ActivityAccess): View = access.context.anko().verticalLayout {
         gravity = Gravity.CENTER
         padding = dip(8)

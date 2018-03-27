@@ -1,10 +1,11 @@
-package lk.kotlin.android.example
+package lk.kotlin.android.example.random
 
 import android.view.Gravity
 import android.view.View
 import lk.android.activity.access.ActivityAccess
 import lk.android.mighty.view.ViewGenerator
 import lk.anko.extensions.anko
+import lk.kotlin.android.example.styleDefault
 
 import lk.kotlin.observable.property.StackObservableProperty
 import org.jetbrains.anko.button
@@ -16,8 +17,6 @@ import org.jetbrains.anko.verticalLayout
  * Created by josep on 11/6/2015.
  */
 class StackDemoVG(val stack: StackObservableProperty<ViewGenerator>, val depth: Int = 1) : ViewGenerator {
-
-    override fun toString(): String = "Stack Demo ($depth)"
 
     override fun invoke(access: ActivityAccess): View = access.context.anko().run {
         verticalLayout {

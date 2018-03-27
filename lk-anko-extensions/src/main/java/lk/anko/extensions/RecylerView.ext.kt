@@ -8,13 +8,13 @@ import org.jetbrains.anko.AnkoContextImpl
 /**
  * Adds sticky headers.
  * @param list A reference to the list that the sticky headers are applied to.
- * @param sort A lambda that sorts the items into categories.
+ * @param group A lambda that sorts the items into categories.
  * @param makeView A lambda that generates a view based on the category.
  * Created by josep on 2/11/2016.
  */
 inline fun <T : Any, K> RecyclerView.stickyHeaders(
         list: List<T>,
-        noinline sort: (T) -> K,
+        noinline group: (T) -> K,
         crossinline makeView: AnkoContext<Unit>.(K) -> Unit) {
-    addItemDecoration(StickyHeadersItemDecorator(list, sort, { AnkoContextImpl<Unit>(context, Unit, false).apply { makeView(it) }.view }))
+    addItemDecoration(StickyHeadersItemDecorator(list, group, { AnkoContextImpl<Unit>(context, Unit, false).apply { makeView(it) }.view }))
 }

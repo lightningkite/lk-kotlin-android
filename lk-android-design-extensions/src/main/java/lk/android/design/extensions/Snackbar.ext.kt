@@ -27,7 +27,7 @@ import android.widget.Toast
 private fun View.setSubviewsTextColor(color: Int) {
     if (this is ViewGroup) {
         for (subviewIndex in 0..childCount) {
-            val subview = getChildAt(subviewIndex)
+            val subview = getChildAt(subviewIndex) ?: continue
             subview.setSubviewsTextColor(color)
         }
     }
@@ -62,18 +62,7 @@ fun View.snackbar(text: CharSequence, duration: Int = Snackbar.LENGTH_LONG, init
 /**
  * Launches a snackbar.
  */
-fun View.snackbar(text: Int, duration: Int = Snackbar.LENGTH_LONG, init: Snackbar.() -> Unit = {}) {
-    try {
-        val snack = obtainSnackbar(findSuitableParent(this))
-        snack.setText(text)
-        snack.duration = duration
-        snack.view.setSubviewsTextColor(Color.WHITE)
-        snack.init()
-        snack.show()
-    } catch (e: Exception) {
-        e.printStackTrace()
-    }
-}
+fun View.snackbar(text: Int, duration: Int = Snackbar.LENGTH_LONG, init: Snackbar.() -> Unit = {}) = snackbar(resources.getString(text), duration, init)
 
 /**
  * Launches a snackbar.

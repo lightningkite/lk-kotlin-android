@@ -1,4 +1,4 @@
-package lk.kotlin.android.example
+package lk.kotlin.android.example.random
 
 import android.view.Gravity
 import android.view.View
@@ -24,9 +24,6 @@ import org.jetbrains.anko.*
  * Created by josep on 11/6/2015.
  */
 class NetImageTestVG() : ViewGenerator {
-
-    //Returns the title for the app bar.
-    override fun toString(): String = "Net Test"
 
     //Creates and observable property, initialized to null.
     val imageUrlObs = StandardObservableProperty<String?>(null)

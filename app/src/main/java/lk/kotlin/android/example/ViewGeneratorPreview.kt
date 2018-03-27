@@ -28,6 +28,6 @@ class ViewGeneratorPreview(context: Context) : FrameLayout(context) {
     }
 
     init {
-        addView(lk.kotlin.android.example.activity.access.ExampleVG().invoke(access))
+        addView(lk.kotlin.android.example.activity.access.ActivityAccessVG().invoke(access))
     }
 }

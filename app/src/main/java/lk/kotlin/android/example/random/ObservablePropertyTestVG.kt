@@ -1,4 +1,4 @@
-package lk.kotlin.android.example
+package lk.kotlin.android.example.random
 
 import android.view.View
 import lk.android.activity.access.ActivityAccess
@@ -6,6 +6,7 @@ import lk.android.lifecycle.lifecycle
 import lk.android.mighty.view.ViewGenerator
 import lk.android.observable.bindString
 import lk.anko.extensions.anko
+import lk.kotlin.android.example.styleDefault
 import lk.kotlin.observable.property.StandardObservableProperty
 import lk.kotlin.observable.property.lifecycle.bind
 import org.jetbrains.anko.*

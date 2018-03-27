@@ -1,4 +1,4 @@
-package lk.kotlin.android.example
+package lk.kotlin.android.example.random
 
 import android.graphics.Color
 import android.graphics.PorterDuff
@@ -14,6 +14,7 @@ import lk.android.observable.bindAny
 import lk.anko.adapters.observable.listAdapter
 import lk.anko.extensions.anko
 import lk.anko.extensions.verticalRecyclerView
+import lk.kotlin.android.example.R
 import lk.kotlin.observable.list.ObservableListWrapper
 import org.jetbrains.anko.*
 import org.jetbrains.anko.appcompat.v7.toolbar
@@ -25,10 +26,6 @@ import org.jetbrains.anko.design.coordinatorLayout
  * A view for testing the coordinator layout.
  */
 class CoordinatorLayoutTestVG() : ViewGenerator {
-
-    override fun toString(): String {
-        return "Coordinator Layout Test"
-    }
 
     val junk = ObservableListWrapper((0..100).map { Math.random() }.toMutableList())
 

@@ -1,4 +1,4 @@
-package lk.kotlin.android.example
+package lk.kotlin.android.example.random
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -28,7 +28,6 @@ class ObservableList2VG() : ViewGenerator {
     val items = ObservableListWrapper((190 downTo 1).map { it.toString() }.toMutableList())
     val sorted = items.sorting { a, b -> a < b }
 
-    override fun toString(): String = "List Test"
 
     override fun invoke(access: ActivityAccess): View = access.context.anko().run {
         verticalLayout {
