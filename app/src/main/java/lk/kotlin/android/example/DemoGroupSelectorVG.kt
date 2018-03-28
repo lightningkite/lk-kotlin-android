@@ -37,14 +37,15 @@ class DemoGroupSelectorVG(val main: MainVG) : ViewGenerator {
                 lk.kotlin.android.example.image.loading.ImageLoadingVG::class.java,
                 lk.kotlin.android.example.image.loading.observable.ImageLoadingVG::class.java,
                 lk.kotlin.android.example.image.loading.observable.LargeListImagesVG::class.java,
+                lk.kotlin.android.example.observable.SimpleObservablePropertyVG::class.java,
+                lk.kotlin.android.example.observable.MultipleBindingsVG::class.java,
 
                 lk.kotlin.android.example.random.CoordinatorLayoutTestVG::class.java,
                 lk.kotlin.android.example.random.ExampleLoginVG::class.java,
                 lk.kotlin.android.example.random.NetImageTestVG::class.java,
                 lk.kotlin.android.example.random.NetworkListVG::class.java,
                 lk.kotlin.android.example.random.ObservableListVG::class.java,
-                lk.kotlin.android.example.random.ObservableList2VG::class.java,
-                lk.kotlin.android.example.random.ObservablePropertyTestVG::class.java
+                lk.kotlin.android.example.random.ObservableList2VG::class.java
         )
                 .groupBy { it.name.substringBeforeLast('.') }
                 .map {

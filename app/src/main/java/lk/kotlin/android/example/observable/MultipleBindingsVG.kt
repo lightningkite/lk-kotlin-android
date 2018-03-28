@@ -1,4 +1,4 @@
-package lk.kotlin.android.example.random
+package lk.kotlin.android.example.observable
 
 import android.view.View
 import lk.android.activity.access.ActivityAccess
@@ -12,10 +12,10 @@ import lk.kotlin.observable.property.lifecycle.bind
 import org.jetbrains.anko.*
 
 /**
- * A [AnkoViewController] for demonstrating observable binding.
+ * A [ViewGenerator] for demonstrating observable binding.
  * Created by josep on 11/10/2016.
  */
-class ObservablePropertyTestVG() : ViewGenerator {
+class MultipleBindingsVG() : ViewGenerator {
 
     val textObs = StandardObservableProperty("Start Text")
     var text by textObs
