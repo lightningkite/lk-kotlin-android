@@ -26,9 +26,9 @@ fun RecyclerView.horizontalDivider(drawable: Drawable, dividerSize: Int = drawab
             for (i in 0..childCount - 1) {
                 val child = parent.getChildAt(i)
 
-                drawable.alpha = (child.alpha * 255).toInt()
+                drawable.mutate().alpha = (child.alpha * 255).toInt()
 
-                val top = child.let {
+                val top = with(child) {
                     top - (
                             (layoutParams as? ViewGroup.MarginLayoutParams)?.topMargin ?: 0
                             ) + (translationY + .5f).toInt()
@@ -39,7 +39,7 @@ fun RecyclerView.horizontalDivider(drawable: Drawable, dividerSize: Int = drawab
                     drawable.draw(c)
                 }
 
-                val bottom = child.let {
+                val bottom = with(child) {
                     bottom + (
                             (layoutParams as? ViewGroup.MarginLayoutParams)?.bottomMargin ?: 0
                             ) + (translationY + .5f).toInt()
@@ -72,9 +72,9 @@ fun RecyclerView.verticalDivider(drawable: Drawable, dividerSize: Int = drawable
             for (i in 0..childCount - 1) {
                 val child = parent.getChildAt(i)
 
-                drawable.alpha = (child.alpha * 255).toInt()
+                drawable.mutate().alpha = (child.alpha * 255).toInt()
 
-                val left = child.let {
+                val left = with(child) {
                     left - (
                             (layoutParams as? ViewGroup.MarginLayoutParams)?.leftMargin ?: 0
                             ) + (translationX + .5f).toInt()
@@ -85,7 +85,7 @@ fun RecyclerView.verticalDivider(drawable: Drawable, dividerSize: Int = drawable
                     drawable.draw(c)
                 }
 
-                val right = child.let {
+                val right = with(child) {
                     right + (
                             (layoutParams as? ViewGroup.MarginLayoutParams)?.rightMargin ?: 0
                             ) + (translationX + .5f).toInt()

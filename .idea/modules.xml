@@ -21,8 +21,8 @@
       <module fileurl="file://$PROJECT_DIR$/lk-anko-animations/lk-anko-animations.iml" filepath="$PROJECT_DIR$/lk-anko-animations/lk-anko-animations.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-anko-animations-observable/lk-anko-animations-observable.iml" filepath="$PROJECT_DIR$/lk-anko-animations-observable/lk-anko-animations-observable.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-anko-extensions/lk-anko-extensions.iml" filepath="$PROJECT_DIR$/lk-anko-extensions/lk-anko-extensions.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/lk-kotlin-android.iml" filepath="$PROJECT_DIR$/.idea/lk-kotlin-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-kotlin-android.iml" filepath="$PROJECT_DIR$/lk-kotlin-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/lk-kotlin-android.iml" filepath="$PROJECT_DIR$/.idea/lk-kotlin-android.iml" />
     </modules>
   </component>
 </project>

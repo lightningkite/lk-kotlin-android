@@ -68,7 +68,7 @@ class ObservableListVG() : ViewGenerator {
                     items.removeAt(it)
                 }
 
-                horizontalDivider(ColorDrawable(Color.LTGRAY))
+                horizontalDivider(ColorDrawable(Color.LTGRAY), 1)
 
             }.lparams(matchParent, 0, 1f)
 
