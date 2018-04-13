@@ -48,38 +48,40 @@ dokka {
     externalDocumentationLink { url = new URL("http://fasterxml.github.io/jackson-core/javadoc/2.9/") }
     externalDocumentationLink { url = new URL("http://fasterxml.github.io/jackson-databind/javadoc/2.9/") }
 
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/lk-kotlin-utils/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/lk-kotlin-jvm-utils/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/lk-kotlin-jackson/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/lk-kotlin-okhttp-jackson/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/lk-kotlin-lifecycle/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/lk-kotlin-observable-property/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/lk-kotlin-observable-property-jvm/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/lk-kotlin-observable-property-lifecycle/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/lk-kotlin-observable-list/") }
-    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/lk-kotlin-observable-list-lifecycle/") }
 
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-android-mighty-view/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-android-activity-access/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-android-animations/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-android-animations-observable/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-android-design-extensions/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-android-dialogs/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-android-extensions/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-android-image-loading/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-android-image-loading-observable/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-android-lifecycle/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-android-observable/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-android-observable-validation/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-android-ui-thread/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-anko-activity-access/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-anko-adapters-observable/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-anko-adapters/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-anko-animations-observable/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-anko-animations/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-anko-deprection/") }
-//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lk-anko-extensions/") }
+    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/utils/") }
+    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/jvm-utils/") }
+    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/jackson/") }
+    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/okhttp/") }
+    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/okhttp-jackson/") }
+    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/lifecycle/") }
+    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/observable-property/") }
+    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/observable-property-jvm/") }
+    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/observable-property-lifecycle/") }
+    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/observable-list/") }
+    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/observable-list-lifecycle/") }
+    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin/reflect/") }
+
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/mighty-view/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/activity-access/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/animations/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/animations-observable/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/design-extensions/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/dialogs/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/extensions/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/image-loading/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/image-loading-observable/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/lifecycle/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/observable/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/observable-validation/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/ui-thread/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/anko-activity-access/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/anko-adapters-observable/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/anko-adapters/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/anko-animations-observable/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/anko-animations/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/anko-deprection/") }
+//    externalDocumentationLink { url = new URL("https://lightningkite.github.io/lk-kotlin-android/anko-extensions/") }
 }
 
 //Bintray

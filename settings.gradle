@@ -1,25 +1,25 @@
 include ':app',
 
-        ':lk-android-mighty-view',
+        ':mighty-view',
 
-        ':lk-android-activity-access',
-        ':lk-android-animations',
-        ':lk-android-animations-observable',
-        ':lk-android-design-extensions',
-        ':lk-android-dialogs',
-        ':lk-android-extensions',
-        ':lk-android-image-loading',
-        ':lk-android-image-loading-observable',
-        ':lk-android-lifecycle',
-        ':lk-android-observable',
-        ':lk-android-observable-validation',
-        ':lk-android-ui-thread',
+        ':activity-access',
+        ':animations',
+        ':animations-observable',
+        ':design-extensions',
+        ':dialogs',
+        ':extensions',
+        ':image-loading',
+        ':image-loading-observable',
+        ':lifecycle',
+        ':observable',
+        ':observable-validation',
+        ':ui-thread',
 
-        ':lk-anko-adapters-observable',
-        ':lk-anko-adapters',
-        ':lk-anko-animations-observable',
-        ':lk-anko-animations',
-        ':lk-anko-extensions'
+        ':anko-adapters-observable',
+        ':anko-adapters',
+        ':anko-animations-observable',
+        ':anko-animations',
+        ':anko-extensions'
 
 
 

@@ -2,27 +2,27 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/activity-access/activity-access.iml" filepath="$PROJECT_DIR$/activity-access/activity-access.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animations/animations.iml" filepath="$PROJECT_DIR$/animations/animations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animations-observable/animations-observable.iml" filepath="$PROJECT_DIR$/animations-observable/animations-observable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anko-adapters/anko-adapters.iml" filepath="$PROJECT_DIR$/anko-adapters/anko-adapters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anko-adapters-observable/anko-adapters-observable.iml" filepath="$PROJECT_DIR$/anko-adapters-observable/anko-adapters-observable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anko-animations/anko-animations.iml" filepath="$PROJECT_DIR$/anko-animations/anko-animations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anko-animations-observable/anko-animations-observable.iml" filepath="$PROJECT_DIR$/anko-animations-observable/anko-animations-observable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anko-extensions/anko-extensions.iml" filepath="$PROJECT_DIR$/anko-extensions/anko-extensions.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-android-activity-access/lk-android-activity-access.iml" filepath="$PROJECT_DIR$/lk-android-activity-access/lk-android-activity-access.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-android-animations/lk-android-animations.iml" filepath="$PROJECT_DIR$/lk-android-animations/lk-android-animations.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-android-animations-observable/lk-android-animations-observable.iml" filepath="$PROJECT_DIR$/lk-android-animations-observable/lk-android-animations-observable.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-android-design-extensions/lk-android-design-extensions.iml" filepath="$PROJECT_DIR$/lk-android-design-extensions/lk-android-design-extensions.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-android-dialogs/lk-android-dialogs.iml" filepath="$PROJECT_DIR$/lk-android-dialogs/lk-android-dialogs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-android-extensions/lk-android-extensions.iml" filepath="$PROJECT_DIR$/lk-android-extensions/lk-android-extensions.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-android-image-loading/lk-android-image-loading.iml" filepath="$PROJECT_DIR$/lk-android-image-loading/lk-android-image-loading.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-android-image-loading-observable/lk-android-image-loading-observable.iml" filepath="$PROJECT_DIR$/lk-android-image-loading-observable/lk-android-image-loading-observable.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-android-lifecycle/lk-android-lifecycle.iml" filepath="$PROJECT_DIR$/lk-android-lifecycle/lk-android-lifecycle.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-android-mighty-view/lk-android-mighty-view.iml" filepath="$PROJECT_DIR$/lk-android-mighty-view/lk-android-mighty-view.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-android-observable/lk-android-observable.iml" filepath="$PROJECT_DIR$/lk-android-observable/lk-android-observable.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-android-observable-validation/lk-android-observable-validation.iml" filepath="$PROJECT_DIR$/lk-android-observable-validation/lk-android-observable-validation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-android-ui-thread/lk-android-ui-thread.iml" filepath="$PROJECT_DIR$/lk-android-ui-thread/lk-android-ui-thread.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-anko-adapters/lk-anko-adapters.iml" filepath="$PROJECT_DIR$/lk-anko-adapters/lk-anko-adapters.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-anko-adapters-observable/lk-anko-adapters-observable.iml" filepath="$PROJECT_DIR$/lk-anko-adapters-observable/lk-anko-adapters-observable.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-anko-animations/lk-anko-animations.iml" filepath="$PROJECT_DIR$/lk-anko-animations/lk-anko-animations.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-anko-animations-observable/lk-anko-animations-observable.iml" filepath="$PROJECT_DIR$/lk-anko-animations-observable/lk-anko-animations-observable.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lk-anko-extensions/lk-anko-extensions.iml" filepath="$PROJECT_DIR$/lk-anko-extensions/lk-anko-extensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/design-extensions/design-extensions.iml" filepath="$PROJECT_DIR$/design-extensions/design-extensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dialogs/dialogs.iml" filepath="$PROJECT_DIR$/dialogs/dialogs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/extensions/extensions.iml" filepath="$PROJECT_DIR$/extensions/extensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/image-loading/image-loading.iml" filepath="$PROJECT_DIR$/image-loading/image-loading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/image-loading-observable/image-loading-observable.iml" filepath="$PROJECT_DIR$/image-loading-observable/image-loading-observable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lifecycle/lifecycle.iml" filepath="$PROJECT_DIR$/lifecycle/lifecycle.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-kotlin-android.iml" filepath="$PROJECT_DIR$/lk-kotlin-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/lk-kotlin-android.iml" filepath="$PROJECT_DIR$/.idea/lk-kotlin-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mighty-view/mighty-view.iml" filepath="$PROJECT_DIR$/mighty-view/mighty-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/observable/observable.iml" filepath="$PROJECT_DIR$/observable/observable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/observable-validation/observable-validation.iml" filepath="$PROJECT_DIR$/observable-validation/observable-validation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ui-thread/ui-thread.iml" filepath="$PROJECT_DIR$/ui-thread/ui-thread.iml" />
     </modules>
   </component>
 </project>

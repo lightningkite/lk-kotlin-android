@@ -1,6 +1,6 @@
 # LK Kotlin
 
-[ ![Download](https://api.bintray.com/packages/lightningkite/com.lightningkite.kotlin.android/lk-android-extensions/images/download.svg) ](https://bintray.com/lightningkite/com.lightningkite.kotlin.android/lk-android-extensions/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/lightningkite/com.lightningkite.kotlin.android/extensions/images/download.svg) ](https://bintray.com/lightningkite/com.lightningkite.kotlin.android/extensions/_latestVersion)
 
 Lightning Kite's project to make Android even more awesome for speedy development
 
@@ -14,29 +14,29 @@ Each piece of the library is built to be read - in other words, you should be ab
 
 This includes the following packages:
 
-[lk-android-mighty-view](lk-android-mighty-view/README.md) - My favorite package, personally.  While it, of itself, contains only four extension functions, it represents an entirely new, clean way of making Android apps.  It has dependencies on several other packages in this library.
-[lk-android-activity-access](lk-android-activity-access/README.md) - 
-[lk-android-animations](lk-android-animations/README.md) - 
-[lk-android-animations-observable](lk-android-animations-observable/README.md) - 
-[lk-android-design-extensions](lk-android-design-extensions/README.md) - 
-[lk-android-dialogs](lk-android-dialogs/README.md) - 
-[lk-android-extensions](lk-android-extensions/README.md) - 
-[lk-android-image-loading](lk-android-image-loading/README.md) - 
-[lk-android-image-loading-observable](lk-android-image-loading-observable/README.md) - 
-[lk-android-lifecycle](lk-android-lifecycle/README.md) - 
-[lk-android-observable](lk-android-observable/README.md) - 
-[lk-android-observable-validation](lk-android-observable-validation/README.md) - 
-[lk-android-ui-thread](lk-android-ui-thread/README.md) - 
-[lk-anko-adapters-observable](lk-anko-adapters-observable/README.md) - 
-[lk-anko-adapters](lk-anko-adapters/README.md) - 
-[lk-anko-animations-observable](lk-anko-animations-observable/README.md) - 
-[lk-anko-animations](lk-anko-animations/README.md) - 
-[lk-anko-extensions](lk-anko-extensions/README.md) - 
+[mighty-view](mighty-view/README.md) - My favorite package, personally.  While it, of itself, contains only four extension functions, it represents an entirely new, clean way of making Android apps.  It has dependencies on several other packages in this library.
+[activity-access](activity-access/README.md) -
+[animations](animations/README.md) -
+[animations-observable](animations-observable/README.md) -
+[design-extensions](design-extensions/README.md) -
+[dialogs](dialogs/README.md) -
+[extensions](extensions/README.md) -
+[image-loading](image-loading/README.md) -
+[image-loading-observable](image-loading-observable/README.md) -
+[lifecycle](lifecycle/README.md) -
+[observable](observable/README.md) -
+[observable-validation](observable-validation/README.md) -
+[ui-thread](ui-thread/README.md) -
+[anko-adapters-observable](anko-adapters-observable/README.md) -
+[anko-adapters](anko-adapters/README.md) -
+[anko-animations-observable](anko-animations-observable/README.md) -
+[anko-animations](anko-animations/README.md) -
+[anko-extensions](anko-extensions/README.md) -
 
 
 ## Gradle Inclusion
 
-Bintray: [ ![Download](https://api.bintray.com/packages/lightningkite/com.lightningkite.kotlin.android/lk-android-extensions/images/download.svg) ](https://bintray.com/lightningkite/com.lightningkite.kotlin.android/lk-android-extensions/_latestVersion)
+Bintray: [ ![Download](https://api.bintray.com/packages/lightningkite/com.lightningkite.kotlin.android/extensions/images/download.svg) ](https://bintray.com/lightningkite/com.lightningkite.kotlin.android/extensions/_latestVersion)
 
 Add the repository:
 
