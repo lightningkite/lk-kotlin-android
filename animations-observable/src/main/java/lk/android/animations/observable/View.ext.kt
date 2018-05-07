@@ -19,11 +19,13 @@ import lk.kotlin.observable.property.lifecycle.listen
 fun <T : View> T.expanding(expandedObs: ObservableProperty<Boolean>): T {
     var animator: TypedValueAnimator.IntAnimator? = null
     lifecycle.listen(expandedObs) {
-        val final = if (it) WRAP_CONTENT else 0
-        animator?.cancel()
-        val new = heightAnimator(final)
-        animator = new
-        new.start()
+        post {
+            val final = if (it) WRAP_CONTENT else 0
+            animator?.cancel()
+            val new = heightAnimator(final)
+            animator = new
+            new.start()
+        }
     }
 
     val final = if (expandedObs.value) {

@@ -94,7 +94,13 @@ fun View.requestLayoutSafe() {
 /**
  * Sets an on click listener for a view, but ensures the action cannot be triggered more often than [cooldown] milliseconds.
  */
-inline fun View.onClickWithCooldown(cooldown: Long = 1000L, crossinline action: () -> Unit) {
+@Deprecated("Use setOnClickListenerCooldown instead.", ReplaceWith("setOnClickListenerCooldown", "lk.android.extensions.setOnClickListenerCooldown"))
+inline fun View.onClickWithCooldown(cooldown: Long = 1000L, crossinline action: () -> Unit) = setOnClickListenerCooldown(cooldown, action)
+
+/**
+ * Sets an on click listener for a view, but ensures the action cannot be triggered more often than [cooldown] milliseconds.
+ */
+inline fun View.setOnClickListenerCooldown(cooldown: Long = 1000L, crossinline action: () -> Unit) {
     setOnClickListener(object : View.OnClickListener {
         var lastTime = 0L
         override fun onClick(v: View?) {
