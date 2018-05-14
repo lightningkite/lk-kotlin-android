@@ -21,7 +21,8 @@ open class GenericDialogActivity(private val containers: HashMap<Int, ContainerD
     data class ContainerData(
             val viewGenerator: (ActivityAccess) -> View,
             val layoutParamsSetup: WindowManager.LayoutParams.() -> Unit,
-            val windowModifier: Window.() -> Unit = {}
+            val windowModifier: Window.() -> Unit = {},
+            val themeResource: Int? = null
     )
 
     companion object {
@@ -34,10 +35,11 @@ open class GenericDialogActivity(private val containers: HashMap<Int, ContainerD
     var myContainerData: ContainerData? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         myIndex = intent.getIntExtra(EXTRA_CONTAINER, 0)
         myContainerData = containers[myIndex]
+        myContainerData?.themeResource?.let { setTheme(it) }
+        super.onCreate(savedInstanceState)
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         if (myContainerData != null) {
             setContentView(myContainerData!!.viewGenerator.invoke(this))
             setFinishOnTouchOutside(intent.getBooleanExtra(EXTRA_DISMISS_ON_TOUCH_OUTSIDE, true))

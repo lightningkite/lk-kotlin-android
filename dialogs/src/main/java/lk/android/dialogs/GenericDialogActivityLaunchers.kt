@@ -36,10 +36,11 @@ fun Context.dialog(
         dismissible: Boolean = true,
         windowModifier: Window.() -> Unit = {},
         layoutParamModifier: WindowManager.LayoutParams.() -> Unit = {},
+        theme: Int? = null,
         viewGenerator: (ActivityAccess) -> View
 ) {
     val id: Int = viewGenerator.hashCode()
-    GenericDialogActivity.containers[id] = GenericDialogActivity.ContainerData(viewGenerator, layoutParamModifier, windowModifier)
+    GenericDialogActivity.containers[id] = GenericDialogActivity.ContainerData(viewGenerator, layoutParamModifier, windowModifier, theme)
     startActivity(Intent(this, GenericDialogActivity::class.java).apply {
         putExtra(GenericDialogActivity.EXTRA_CONTAINER, id)
         putExtra(GenericDialogActivity.EXTRA_DISMISS_ON_TOUCH_OUTSIDE, dismissible)
@@ -209,7 +210,7 @@ fun Context.confirmationDialog(title: String? = null, message: String, okResourc
     return standardDialog(
             title,
             message,
-            listOf(StandardDialog.okButton(resources, okResource, onConfirm), StandardDialog.cancelButton(resources, cancelResource, onCancel)),
+            listOf(StandardDialog.cancelButton(resources, cancelResource, onCancel), StandardDialog.okButton(resources, okResource, onConfirm)),
             dismissible = dismissible)
 }
 
@@ -226,7 +227,7 @@ fun Context.confirmationDialog(title: Int? = null, message: Int, okResource: Int
     return standardDialog(
             title,
             message,
-            listOf(StandardDialog.okButton(resources, okResource, onConfirm), StandardDialog.cancelButton(resources, cancelResource, onCancel)),
+            listOf(StandardDialog.cancelButton(resources, cancelResource, onCancel), StandardDialog.okButton(resources, okResource, onConfirm)),
             dismissible = dismissible)
 }
 
