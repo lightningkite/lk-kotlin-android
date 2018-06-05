@@ -24,6 +24,7 @@ interface ActivityAccess {
     val onLowMemory: MutableCollection<() -> Unit>
     val onDestroy: MutableCollection<() -> Unit>
     val onActivityResult: MutableCollection<(request: Int, result: Int, data: Intent?) -> Unit>
+    val onNewIntent: MutableCollection<(Intent) -> Unit>
 
     /**
      * When the back button is pressed, the lambdas in the list are invoked in reverse order until

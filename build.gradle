@@ -6,7 +6,7 @@ buildscript {
     ext.kotlinVersion = '1.2.31'
     ext.libraryVersion = '0.3.0'
     ext.libraryKotlinVersion = '0.3.0'
-    ext.ankoVersion = '0.10.4'
+    ext.ankoVersion = '0.10.5'
     ext.compatVersion = '27.1.1'
     ext.androidMavenPublishPluginVersion = '3.1.1'
     ext.dokkaVersion = '0.9.16'
