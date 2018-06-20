@@ -20,6 +20,7 @@ class ViewGeneratorPreview(context: Context) : FrameLayout(context) {
         override val onDestroy: MutableCollection<() -> Unit> = ArrayList()
         override val onActivityResult: MutableCollection<(request: Int, result: Int, data: Intent?) -> Unit> = ArrayList()
         override val onBackPressed: MutableList<() -> Boolean> = ArrayList()
+        override val onNewIntent: MutableCollection<(Intent) -> Unit> = ArrayList()
 
         override fun prepareOnResult(presetCode: Int, onResult: (Int, Intent?) -> Unit): Int = 0
         override fun requestPermissions(permission: Array<String>, onResult: (Map<String, Int>) -> Unit) {}
