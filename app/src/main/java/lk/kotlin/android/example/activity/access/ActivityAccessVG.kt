@@ -15,9 +15,9 @@ import lk.android.lifecycle.lifecycle
 import lk.android.mighty.view.ViewGenerator
 import lk.anko.extensions.anko
 import lk.kotlin.jvm.utils.files.child
-import lk.kotlin.lifecycle.listen
 import lk.kotlin.observable.property.StandardObservableProperty
 import lk.kotlin.observable.property.lifecycle.bind
+import lk.kotlin.observable.property.lifecycle.listen
 import org.jetbrains.anko.*
 import java.text.DateFormat
 import java.util.*

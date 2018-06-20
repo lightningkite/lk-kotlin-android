@@ -13,10 +13,10 @@ import lk.kotlin.observable.property.StackObservableProperty
  * When the final one is popped, then the dialog will dismiss itself.
  */
 fun Context.stackDialog(
+        stack: StackObservableProperty<ViewGenerator>,
         dismissible: Boolean = true,
         windowModifier: Window.() -> Unit = {},
-        layoutParamModifier: WindowManager.LayoutParams.() -> Unit = {},
-        stack:StackObservableProperty<ViewGenerator>
+        layoutParamModifier: WindowManager.LayoutParams.() -> Unit = {}
 ) = this.dialog(
         dismissible = dismissible,
         windowModifier = windowModifier,

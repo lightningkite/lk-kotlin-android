@@ -37,10 +37,7 @@ dependencies {
 
     implementation "com.android.support:appcompat-v7:${rootProject.compatVersion}"
     implementation "com.lightningkite.kotlin:observable-list:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:lifecycle:${rootProject.libraryKotlinVersion}"
     implementation project(':lifecycle')
     implementation "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
     implementation "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:observable-list-lifecycle:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:observable-property-lifecycle:${rootProject.libraryKotlinVersion}"
 }

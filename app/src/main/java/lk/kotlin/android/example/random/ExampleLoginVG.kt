@@ -32,7 +32,7 @@ import org.jetbrains.anko.design.textInputLayout
  * An example login view.
  * Created by joseph on 11/2/17.
  */
-class ExampleLoginVG(val onLogin: (LoginData) -> Unit) : ViewGenerator {
+class ExampleLoginVG(val onLogin: (LoginData) -> Unit = {}) : ViewGenerator {
 
 
     //Business Logic

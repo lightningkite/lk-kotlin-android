@@ -9,8 +9,8 @@ package lk.android.lifecycle
 import android.support.v4.view.ViewCompat
 import android.view.View
 import android.view.ViewGroup
-import lk.kotlin.lifecycle.LifecycleConnectable
-import lk.kotlin.lifecycle.LifecycleListener
+import lk.kotlin.observable.property.ObservableProperty
+import lk.kotlin.utils.lambda.invokeAll
 import java.util.*
 
 //View lifecycle stuff
@@ -20,42 +20,40 @@ private val View_lifecycleListener = WeakHashMap<View, ViewLifecycleListener>()
 /**
  * A lifecycle for a view, that starts when the view is attached and ends when it is detatched.
  */
-class ViewLifecycleListener(val view: View) : View.OnAttachStateChangeListener, LifecycleConnectable {
+class ViewLifecycleListener(val view: View) : View.OnAttachStateChangeListener, ObservableProperty<Boolean> {
 
-    var attached = ViewCompat.isAttachedToWindow(view)
+    override var value = ViewCompat.isAttachedToWindow(view)
         private set
-    private val lifecycleListeners = ArrayList<LifecycleListener>()
+
+    @Transient
+    val listeners = ArrayList<(Boolean) -> Unit>()
+
+    override fun add(element: (Boolean) -> Unit): Boolean = listeners.add(element)
+    override fun remove(element: (Boolean) -> Unit): Boolean = listeners.remove(element)
 
     override fun onViewDetachedFromWindow(v: View?) {
-        if (!attached) {
+        if (!value) {
             println("Broken cycling detected in onViewDetachedFromWindow $view")
             return
         }
-        lifecycleListeners.forEach { it.onStop() }
-        attached = false
+        value = false
+        listeners.invokeAll(value)
     }
 
     override fun onViewAttachedToWindow(v: View?) {
-        if (attached) {
+        if (value) {
             println("Broken cycling detected in onViewAttachedToWindow $view")
             return
         }
-        lifecycleListeners.forEach { it.onStart() }
-        attached = true
-    }
-
-    override fun connect(listener: LifecycleListener) {
-        if (attached) {
-            listener.onStart()
-        }
-        lifecycleListeners.add(listener)
+        value = true
+        listeners.invokeAll(value)
     }
 
     fun setAlwaysOn() {
         view.removeOnAttachStateChangeListener(this)
-        if (!attached) {
-            attached = true
-            lifecycleListeners.forEach { it.onStart() }
+        if (!value) {
+            value = true
+            listeners.invokeAll(value)
         }
     }
 

@@ -7,8 +7,8 @@ import android.support.annotation.StringRes
 import android.support.design.widget.TextInputLayout
 import android.widget.TextView
 import lk.android.lifecycle.lifecycle
-import lk.kotlin.lifecycle.listen
 import lk.kotlin.observable.property.ObservableProperty
+import lk.kotlin.observable.property.lifecycle.listen
 import java.util.*
 
 /**

@@ -37,13 +37,10 @@ dependencies {
 
     implementation "com.lightningkite.kotlin:observable-list:${rootProject.libraryKotlinVersion}"
     implementation project(':animations')
-    implementation "com.lightningkite.kotlin:lifecycle:${rootProject.libraryKotlinVersion}"
     implementation project(':lifecycle')
     implementation "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
     implementation "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:observable-list-lifecycle:${rootProject.libraryKotlinVersion}"
     implementation project(':anko-animations')
-    implementation "com.lightningkite.kotlin:observable-property-lifecycle:${rootProject.libraryKotlinVersion}"
 
     ext.ankoVersion = rootProject.ankoVersion
     implementation "org.jetbrains.anko:anko-sdk15:$ankoVersion"

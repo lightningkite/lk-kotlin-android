@@ -37,13 +37,10 @@ dependencies {
 
     implementation project(':animations')
     implementation "com.lightningkite.kotlin:observable-list:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:lifecycle:${rootProject.libraryKotlinVersion}"
     implementation project(':lifecycle')
     implementation project(':animations-observable')
     implementation "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
     implementation project(':dialogs')
     implementation "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:observable-list-lifecycle:${rootProject.libraryKotlinVersion}"
     implementation project(':activity-access')
-    implementation "com.lightningkite.kotlin:observable-property-lifecycle:${rootProject.libraryKotlinVersion}"
 }

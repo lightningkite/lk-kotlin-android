@@ -9,9 +9,9 @@ import lk.android.mighty.view.ViewGenerator
 import lk.android.mighty.view.bind
 import lk.anko.animations.swapView
 import lk.anko.extensions.anko
-import lk.kotlin.lifecycle.listen
 import lk.kotlin.observable.property.StackObservableProperty
 import lk.kotlin.observable.property.lifecycle.bind
+import lk.kotlin.observable.property.lifecycle.listen
 import org.jetbrains.anko.appcompat.v7.actionMenuView
 import org.jetbrains.anko.appcompat.v7.toolbar
 import org.jetbrains.anko.design.coordinatorLayout
