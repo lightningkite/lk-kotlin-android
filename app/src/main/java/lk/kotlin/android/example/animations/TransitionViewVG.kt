@@ -11,9 +11,9 @@ import lk.anko.adapters.observable.listAdapter
 import lk.anko.animations.transitionView
 import lk.anko.extensions.anko
 import lk.anko.extensions.verticalGridRecyclerView
-import lk.kotlin.lifecycle.listen
 import lk.kotlin.observable.property.StandardObservableProperty
 import lk.kotlin.observable.property.lifecycle.bind
+import lk.kotlin.observable.property.lifecycle.listen
 import lk.kotlin.utils.lambda.invokeAll
 import org.jetbrains.anko.*
 import java.util.*

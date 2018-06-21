@@ -4,9 +4,9 @@
 buildscript {
     ext.repositoryGroupName = 'com.lightningkite.kotlin.android'
     ext.kotlinVersion = '1.2.31'
-    ext.libraryVersion = '0.3.0'
-    ext.libraryKotlinVersion = '0.3.0'
-    ext.ankoVersion = '0.10.5'
+    ext.libraryVersion = '0.5.0'
+    ext.libraryKotlinVersion = '0.5.0'
+    ext.ankoVersion = '0.10.4'
     ext.compatVersion = '27.1.1'
     ext.androidMavenPublishPluginVersion = '3.1.1'
     ext.dokkaVersion = '0.9.16'
@@ -15,7 +15,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.1'
+        classpath 'com.android.tools.build:gradle:3.1.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}"
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
 

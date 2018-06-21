@@ -94,16 +94,11 @@ dependencies {
     implementation project(":anko-animations")
     implementation project(":anko-extensions")
     implementation "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:jvm-utils:${rootProject.libraryKotlinVersion}"
     implementation "com.lightningkite.kotlin:jackson:${rootProject.libraryKotlinVersion}"
     implementation "com.lightningkite.kotlin:okhttp:${rootProject.libraryKotlinVersion}"
     implementation "com.lightningkite.kotlin:okhttp-jackson:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:lifecycle:${rootProject.libraryKotlinVersion}"
     implementation "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:observable-property-jvm:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:observable-property-lifecycle:${rootProject.libraryKotlinVersion}"
     implementation "com.lightningkite.kotlin:observable-list:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:observable-list-lifecycle:${rootProject.libraryKotlinVersion}"
 
 
     ext.ankoVersion = rootProject.ankoVersion

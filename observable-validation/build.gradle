@@ -35,10 +35,8 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
 
-    implementation "com.lightningkite.kotlin:lifecycle:${rootProject.libraryKotlinVersion}"
     implementation project(':lifecycle')
     implementation "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
     implementation "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:observable-property-lifecycle:${rootProject.libraryKotlinVersion}"
     implementation "com.android.support:design:${rootProject.compatVersion}"
 }

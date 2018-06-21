@@ -36,14 +36,11 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
 
     implementation 'com.squareup.okhttp3:okhttp:3.9.0'
-    implementation "com.lightningkite.kotlin:lifecycle:${rootProject.libraryKotlinVersion}"
     implementation project(':lifecycle')
     implementation "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
     implementation "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
     implementation project(':extensions')
     implementation project(':ui-thread')
-    implementation "com.lightningkite.kotlin:jvm-utils:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:observable-property-lifecycle:${rootProject.libraryKotlinVersion}"
     implementation "com.lightningkite.kotlin:okhttp:${rootProject.libraryKotlinVersion}"
     implementation project(':image-loading')
 }

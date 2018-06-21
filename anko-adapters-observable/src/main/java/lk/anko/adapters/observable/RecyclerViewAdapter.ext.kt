@@ -6,12 +6,12 @@ package lk.anko.adapters.observable
 
 
 import android.support.v7.widget.RecyclerView
-import lk.kotlin.lifecycle.LifecycleConnectable
-import lk.kotlin.lifecycle.LifecycleListener
 import lk.kotlin.observable.list.ObservableList
 import lk.kotlin.observable.list.ObservableListListenerSet
 import lk.kotlin.observable.list.addListenerSet
 import lk.kotlin.observable.list.removeListenerSet
+import lk.kotlin.observable.property.ObservableProperty
+import lk.kotlin.observable.property.lifecycle.openCloseBinding
 import java.util.*
 
 /**
@@ -63,15 +63,14 @@ fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.detatchAnimati
 /**
  * Attaches updates from an [ObservableList] to the adapter for the duration of the lifecycle.
  */
-fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.attachAnimations(lifecycle: LifecycleConnectable, list: ObservableList<ITEM>) {
-    lifecycle.connect(object : LifecycleListener {
-        override fun onStart() {
-            notifyDataSetChanged()
-            attachAnimations<ITEM, VH>(list)
-        }
-
-        override fun onStop() {
-            detatchAnimations<ITEM, VH>()
-        }
-    })
+fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.attachAnimations(lifecycle: ObservableProperty<Boolean>, list: ObservableList<ITEM>) {
+    lifecycle.openCloseBinding(
+            onOpen = {
+                notifyDataSetChanged()
+                attachAnimations<ITEM, VH>(list)
+            },
+            onClose = {
+                detatchAnimations<ITEM, VH>()
+            }
+    )
 }

@@ -39,6 +39,5 @@ dependencies {
     implementation "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
     implementation project(':extensions')
     implementation project(':ui-thread')
-    implementation "com.lightningkite.kotlin:jvm-utils:${rootProject.libraryKotlinVersion}"
     implementation "com.lightningkite.kotlin:okhttp:${rootProject.libraryKotlinVersion}"
 }
