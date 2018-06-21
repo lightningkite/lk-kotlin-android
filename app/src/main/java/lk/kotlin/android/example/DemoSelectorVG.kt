@@ -10,10 +10,11 @@ import lk.android.mighty.view.ViewGenerator
 import lk.anko.adapters.observable.listAdapter
 import lk.anko.extensions.anko
 import lk.anko.extensions.verticalRecyclerView
+import lk.kotlin.observable.property.StackObservableProperty
 import lk.kotlin.observable.property.lifecycle.bind
 import org.jetbrains.anko.*
 
-class DemoSelectorVG(val main: MainVG, val value: DemoGroupSelectorVG.DemoGroup) : ViewGenerator, HasTitle {
+class DemoSelectorVG(val stack: StackObservableProperty<ViewGenerator>, val value: DemoGroupSelectorVG.DemoGroup) : ViewGenerator, HasTitle {
 
     override fun getTitle(resources: Resources): String = value.name
 
@@ -36,7 +37,7 @@ class DemoSelectorVG(val main: MainVG, val value: DemoGroupSelectorVG.DemoGroup)
                             text = it.name
                         }
                         setOnClickListener { it: View? ->
-                            main.stack.push(itemObs.value.maker.invoke(main.stack))
+                            stack.push(itemObs.value.maker.invoke(stack))
                         }
                     }.lparams(matchParent, wrapContent)
                 }

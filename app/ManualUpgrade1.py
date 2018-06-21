@@ -96,12 +96,20 @@ plainRep = [
         "lambdaJackson"
     ),
     (
+        "lambdaJson",
+        "lambdaJacksonNode"
+    ),
+    (
         "gsonToRequestBody",
         "jacksonToRequestBody"
     ),
     (
         "import com.lightningkite.kotlin.anko.viewcontrollers.VCContext",
         "import lk.android.activity.access.ActivityAccess"
+    ),
+    (
+        "stack.onEmptyListener()",
+        "access.activity?.onBackPressed()"
     ),
     (
         "VCContext",
@@ -156,5 +164,5 @@ for subdir, dirs, files in os.walk(rootdir):
         path = os.path.join(subdir, file)
         if 'build' in path:
             continue
-        print path
+
         do_replace_on_file(path)

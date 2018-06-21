@@ -31,7 +31,7 @@ import org.jetbrains.anko.wrapContent
  */
 class MainVG() : ViewGenerator {
     val stack = StackObservableProperty<ViewGenerator>().apply {
-        push(DemoGroupSelectorVG(this@MainVG))
+        push(DemoGroupSelectorVG(this))
     }
 
     override fun invoke(access: ActivityAccess): View = access.context.anko().verticalLayout {

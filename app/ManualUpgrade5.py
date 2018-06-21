@@ -1,4 +1,5 @@
 import os
+import re
 
 rootdir = os.path.dirname(os.path.abspath(__file__))
 
@@ -21,7 +22,7 @@ plainRep = [
     ),
     (
         "import lk.everything.deprecated.async.invokeAsync",
-        "import lk.kotlin.jvm.utils.async.invokeOn\nimport lk.kotlin.jvm.utils.async.Async\nimport lk.android.ui.thread.UIThread"
+        "import lk.kotlin.jvm.utils.async.invokeOn\nimport lk.kotlin.jvm.utils.async.thenOn\nimport lk.kotlin.jvm.utils.async.Async\nimport lk.android.ui.thread.UIThread"
     ),
     (
         ".invokeAsync()",
@@ -56,16 +57,20 @@ plainRep = [
         "import lk.android.image.loading.observable.bindUri"
     ),
     (
-        ".transform {",
-        ".then {"
+        ".mapReadOnly {",
+        ".transform {"
+    ),
+    (
+        ".mapReadOnly(",
+        ".transform("
     ),
     (
         "import lk.everything.deprecated.lambda.transform",
         "import lk.kotlin.utils.lambda.then"
     ),
     (
-        "import lk.everything.deprecated.lambda.transform",
-        "import lk.kotlin.utils.lambda.then"
+        "import lk.android.extensions.textColorResource",
+        ""
     ),
 ]
 regexRep = [
@@ -96,5 +101,5 @@ for subdir, dirs, files in os.walk(rootdir):
         path = os.path.join(subdir, file)
         if 'build' in path:
             continue
-        print path
+
         do_replace_on_file(path)

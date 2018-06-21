@@ -31,7 +31,6 @@ kt_plain_replacements = [
     ("as? VCActivity", "as? VCActivity/*TODO: Don't refer to VCActivity directly*/")
 ]
 
-
 def do_replace_kt(text):
     for pattern, replace in kt_plain_replacements:
         text = text.replace(pattern, replace)
@@ -46,11 +45,10 @@ def do_replace_on_file(path):
         afterText = do_replace_kt(text)
         open(path, 'w').write(afterText)
 
-
 for subdir, dirs, files in os.walk(rootdir):
     for file in files:
         path = os.path.join(subdir, file)
         if 'build' in path:
             continue
-        print path
+
         do_replace_on_file(path)

@@ -56,5 +56,5 @@ for subdir, dirs, files in os.walk(rootdir):
         path = os.path.join(subdir, file)
         if 'build' in path:
             continue
-        print path
+
         do_replace_on_file(path)

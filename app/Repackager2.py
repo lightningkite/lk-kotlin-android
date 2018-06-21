@@ -121,7 +121,7 @@ plainRep = [
     ),
     (
         "import com.lightningkite.kotlin.networking.*",
-        "import lk.kotlin.okhttp.*\nimport lk.everything.deprecated.networking.*"
+        "import lk.kotlin.okhttp.*\nimport lk.kotlin.jackson.*\nimport lk.kotlin.okhttp.jackson.*"
     ),
     (
         "import com.lightningkite.kotlin.anko.observable.adapter.*",
@@ -488,19 +488,19 @@ plainRep = [
         "import lk.everything.deprecated.text.toLongMaybe"
     ),
     (
-        "import com.lightningkite.kotlin.materialStyleAction",
+        "import com.lightningkite.kotlin.anko.materialStyleAction",
         "import lk.everything.deprecated.materialStyleAction"
     ),
     (
-        "import com.lightningkite.kotlin.materialStylePrimary",
+        "import com.lightningkite.kotlin.anko.materialStylePrimary",
         "import lk.everything.deprecated.materialStylePrimary"
     ),
     (
-        "import com.lightningkite.kotlin.materialStyleSecondary",
+        "import com.lightningkite.kotlin.anko.materialStyleSecondary",
         "import lk.everything.deprecated.materialStyleSecondary"
     ),
     (
-        "import com.lightningkite.kotlin.materialStyleTertiary",
+        "import com.lightningkite.kotlin.anko.materialStyleTertiary",
         "import lk.everything.deprecated.materialStyleTertiary"
     ),
     (
@@ -1197,23 +1197,23 @@ plainRep = [
     ),
     (
         "import com.lightningkite.kotlin.observable.list.filtering",
-        "import lk.kotlin.observable.list.lifecycle.filtering"
+        "import lk.kotlin.observable.list.lifecycle.filtering\nimport lk.kotlin.observable.list.filtering"
     ),
     (
         "import com.lightningkite.kotlin.observable.list.flatMapping",
-        "import lk.kotlin.observable.list.lifecycle.flatMapping"
+        "import lk.kotlin.observable.list.lifecycle.flatMapping\nimport lk.kotlin.observable.list.flatMapping"
     ),
     (
         "import com.lightningkite.kotlin.observable.list.groupingBy",
-        "import lk.kotlin.observable.list.lifecycle.groupingBy"
+        "import lk.kotlin.observable.list.lifecycle.groupingBy\nimport lk.kotlin.observable.list.groupingBy"
     ),
     (
         "import com.lightningkite.kotlin.observable.list.multiGroupingBy",
-        "import lk.kotlin.observable.list.lifecycle.multiGroupingBy"
+        "import lk.kotlin.observable.list.lifecycle.multiGroupingBy\nimport lk.kotlin.observable.list.multiGroupingBy"
     ),
     (
         "import com.lightningkite.kotlin.observable.list.sorting",
-        "import lk.kotlin.observable.list.lifecycle.sorting"
+        "import lk.kotlin.observable.list.lifecycle.sorting\nimport lk.kotlin.observable.list.sorting"
     ),
     (
         "import com.lightningkite.kotlin.anko.full.bindUri",
@@ -2244,5 +2244,5 @@ for subdir, dirs, files in os.walk(rootdir):
         path = os.path.join(subdir, file)
         if 'build' in path:
             continue
-        print path
+
         do_replace_on_file(path)

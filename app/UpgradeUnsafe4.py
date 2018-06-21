@@ -4,6 +4,10 @@ rootdir = os.path.dirname(os.path.abspath(__file__))
 
 plainRep = [
     (
+        "ui.owner.stackDialog",
+        "context.stackDialog"
+    ),
+    (
         "ui.owner",
         "access"
     ),
@@ -93,5 +97,5 @@ for subdir, dirs, files in os.walk(rootdir):
         path = os.path.join(subdir, file)
         if 'build' in path:
             continue
-        print path
+
         do_replace_on_file(path)
