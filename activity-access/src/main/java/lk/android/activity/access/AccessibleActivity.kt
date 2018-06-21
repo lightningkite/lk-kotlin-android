@@ -70,6 +70,12 @@ abstract class AccessibleActivity : AppCompatActivity(), ActivityAccess {
         super.onDestroy()
     }
 
+    override val onNewIntent = HashSet<(Intent) -> Unit>()
+    override fun onNewIntent(intent: Intent) {
+        onNewIntent.forEach { it.invoke(intent) }
+        super.onNewIntent(intent)
+    }
+
     val requestReturns: HashMap<Int, (Map<String, Int>) -> Unit> = HashMap()
 
     companion object {
