@@ -1,7 +1,10 @@
 package lk.kotlin.android.example.random
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.os.Parcelable
+import android.util.SparseArray
 import android.view.Gravity
 import android.view.View
 import lk.android.activity.access.ActivityAccess
@@ -16,18 +19,23 @@ import lk.anko.extensions.verticalRecyclerView
 import lk.kotlin.jvm.utils.random.random
 import lk.kotlin.observable.list.ObservableListWrapper
 import lk.kotlin.observable.list.sorting
+import lk.kotlin.observable.property.StackObservableProperty
 import lk.kotlin.observable.property.lifecycle.bind
+import lk.kotlin.observable.property.lifecycle.openCloseBinding
 import org.jetbrains.anko.*
 
 /**
  * A [AnkoViewController] used for demonstrating observable lists.
  * Created by jivie on 2/10/16.
  */
-class ObservableList2VG() : ViewGenerator {
+class ObservableList2VG(
+        val stack: StackObservableProperty<ViewGenerator>
+) : ViewGenerator {
 
     val items = ObservableListWrapper((190 downTo 1).map { it.toString() }.toMutableList())
     val sorted = items.sorting { a, b -> a < b }
 
+    val state = SparseArray<Parcelable>()
 
     override fun invoke(access: ActivityAccess): View = access.context.anko().run {
         verticalLayout {
@@ -35,15 +43,13 @@ class ObservableList2VG() : ViewGenerator {
 
             verticalRecyclerView {
 
+                retainState(state)
+
                 adapter = listAdapter(sorted) { obs ->
                     textView {
                         lifecycle.bind(obs) {
                             text = it
                         }
-//                    newLifecycle.bind(obs){
-//                        text = it
-//                    }
-//                    obs += { text = it }
                         gravity = Gravity.CENTER
                         textSize = 18f
                         minimumHeight = dip(40)
@@ -51,6 +57,15 @@ class ObservableList2VG() : ViewGenerator {
                         setOnLongClickListener {
                             items.removeAt(obs.position)
                             true
+                        }
+                        setOnClickListener {
+                            val item = obs.value
+                            stack.push {
+                                it.context.anko().textView {
+                                    gravity = Gravity.CENTER
+                                    text = "I am item $item"
+                                }
+                            }
                         }
                     }.lparams(matchParent, wrapContent)
                 }
@@ -78,4 +93,17 @@ class ObservableList2VG() : ViewGenerator {
 
         }
     }
+}
+
+@SuppressLint("ResourceType")
+fun View.retainState(repository: SparseArray<Parcelable>) {
+    id = 39283
+    lifecycle.openCloseBinding(
+            onOpen = {
+                this.restoreHierarchyState(repository)
+            },
+            onClose = {
+                this.saveHierarchyState(repository)
+            }
+    )
 }

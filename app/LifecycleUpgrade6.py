@@ -1,4 +1,5 @@
 import os
+import re
 
 rootdir = os.path.dirname(os.path.abspath(__file__))
 
@@ -16,8 +17,8 @@ plainRep = [
         "ObservableProperty<Boolean>"
     ),
     (
-        "lifecycle.connect(object : LifecycleListener {",
-        "lifecycle.openCloseBinding("
+        ".connect(object : LifecycleListener {",
+        ".openCloseBinding("
     ),
     (
         "override fun onStart() {",
@@ -30,6 +31,10 @@ plainRep = [
     (
         "import lk.kotlin.lifecycle.listen",
         "import lk.kotlin.observable.property.lifecycle.listen"
+    ),
+    (
+        "import lk.kotlin.lifecycle.bind",
+        "import lk.kotlin.observable.property.lifecycle.bind\nimport lk.kotlin.observable.list.lifecycle.bind"
     ),
 ]
 regexRep = [
@@ -60,5 +65,5 @@ for subdir, dirs, files in os.walk(rootdir):
         path = os.path.join(subdir, file)
         if 'build' in path:
             continue
-        print path
+
         do_replace_on_file(path)
