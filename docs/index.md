@@ -14,24 +14,24 @@ Each piece of the library is built to be read - in other words, you should be ab
 
 This includes the following packages:
 
-- [mighty-view](mighty-view/README.md) - My favorite package, personally.  While it, of itself, contains only four extension functions, it represents an entirely new, clean way of making Android apps.  It has dependencies on several other packages in this library.
-- [activity-access](activity-access/README.md) - Defines and implements an interface for accessing the activity lifecycle more easily.
-- [animations](animations/README.md) - Various animation tools
-- [animations-observable](animations-observable/README.md) - Various animation tools that use [observables](https://github.com/lightningkite/lk-kotlin)
-- [design-extensions](design-extensions/README.md) - Various extensions for using the 'design' elements from the compat libraries.
-- [dialogs](dialogs/README.md) - Uses `activity-access` to show very sturdy dialogs.
-- [extensions](extensions/README.md) - Various Kotlin extensions to make Android more usable.
-- [image-loading](image-loading/README.md) - Various stuff for loading images.
-- [image-loading-observable](image-loading-observable/README.md) - Various stuff for loading images using [observables](https://github.com/lightningkite/lk-kotlin).
-- [lifecycle](lifecycle/README.md) - Exposes the view's lifecycle using [observables](https://github.com/lightningkite/lk-kotlin).
-- [observable](observable/README.md) - Various Android things that can be done with [observables](https://github.com/lightningkite/lk-kotlin).
-- [observable-validation](observable-validation/README.md) - A system for validating forms using [observables](https://github.com/lightningkite/lk-kotlin).
-- [ui-thread](ui-thread/README.md) - Exposes a [Executor] that represents the UI thread.
-- [anko-adapters](anko-adapters/README.md) - Tools for building adapters in Anko.
-- [anko-adapters-observable](anko-adapters-observable/README.md) - Tools for building adapters in Anko combined with [observables](https://github.com/lightningkite/lk-kotlin).
-- [anko-animations](anko-animations/README.md) - More animation tools, specifically for Anko.
-- [anko-animations-observable](anko-animations-observable/README.md) - Same as above with additional things for [observables](https://github.com/lightningkite/lk-kotlin).
-- [anko-extensions](anko-extensions/README.md) - Various extensions to Anko.
+- [mighty-view](mighty-view/index.html) - My favorite package, personally.  While it, of itself, contains only four extension functions, it represents an entirely new, clean way of making Android apps.  It has dependencies on several other packages in this library.
+- [activity-access](activity-access/index.html) - Defines and implements an interface for accessing the activity lifecycle more easily.
+- [animations](animations/index.html) - Various animation tools
+- [animations-observable](animations-observable/index.html) - Various animation tools that use [observables](https://github.com/lightningkite/lk-kotlin)
+- [design-extensions](design-extensions/index.html) - Various extensions for using the 'design' elements from the compat libraries.
+- [dialogs](dialogs/index.html) - Uses `activity-access` to show very sturdy dialogs.
+- [extensions](extensions/index.html) - Various Kotlin extensions to make Android more usable.
+- [image-loading](image-loading/index.html) - Various stuff for loading images.
+- [image-loading-observable](image-loading-observable/index.html) - Various stuff for loading images using [observables](https://github.com/lightningkite/lk-kotlin).
+- [lifecycle](lifecycle/index.html) - Exposes the view's lifecycle using [observables](https://github.com/lightningkite/lk-kotlin).
+- [observable](observable/index.html) - Various Android things that can be done with [observables](https://github.com/lightningkite/lk-kotlin).
+- [observable-validation](observable-validation/index.html) - A system for validating forms using [observables](https://github.com/lightningkite/lk-kotlin).
+- [ui-thread](ui-thread/index.html) - Exposes a [Executor] that represents the UI thread.
+- [anko-adapters](anko-adapters/index.html) - Tools for building adapters in Anko.
+- [anko-adapters-observable](anko-adapters-observable/index.html) - Tools for building adapters in Anko combined with [observables](https://github.com/lightningkite/lk-kotlin).
+- [anko-animations](anko-animations/index.html) - More animation tools, specifically for Anko.
+- [anko-animations-observable](anko-animations-observable/index.html) - Same as above with additional things for [observables](https://github.com/lightningkite/lk-kotlin).
+- [anko-extensions](anko-extensions/index.html) - Various extensions to Anko.
 
 
 ## Gradle Inclusion
