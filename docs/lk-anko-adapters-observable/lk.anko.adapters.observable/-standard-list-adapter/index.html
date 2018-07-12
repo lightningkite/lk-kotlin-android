@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StandardListAdapter - anko-adapters-observable</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">anko-adapters-observable</a>&nbsp;/&nbsp;<a href="../index.html">lk.anko.adapters.observable</a>&nbsp;/&nbsp;<a href="./index.html">StandardListAdapter</a><br/>
+<br/>
+<h1>StandardListAdapter</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">StandardListAdapter</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/widget/BaseAdapter.html"><span class="identifier">BaseAdapter</span></a></code>
+<p>A <a href="https://developer.android.com/reference/android/widget/BaseAdapter.html">BaseAdapter</a> made more convenient.
+Created by josep on 1/24/2016.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-item-observable/index.html">ItemObservable</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ItemObservable</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-observable-property/lk.kotlin.observable.property/-standard-observable-property/index.html"><span class="identifier">StandardObservableProperty</span></a><span class="symbol">&lt;</span><a href="-item-observable/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-s-l-v-a-context/index.html">SLVAContext</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SLVAContext</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AnkoContextImpl</span><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">StandardListAdapter</span></a><span class="symbol">&lt;</span><a href="-s-l-v-a-context/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">StandardListAdapter</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.observable.StandardListAdapter$<init>(android.content.Context, kotlin.collections.List((lk.anko.adapters.observable.StandardListAdapter.T)), kotlin.Function2((lk.anko.adapters.observable.StandardListAdapter.SLVAContext((lk.anko.adapters.observable.StandardListAdapter.T)), lk.anko.adapters.observable.StandardListAdapter.ItemObservable(()), kotlin.Unit)))/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.observable.StandardListAdapter$<init>(android.content.Context, kotlin.collections.List((lk.anko.adapters.observable.StandardListAdapter.T)), kotlin.Function2((lk.anko.adapters.observable.StandardListAdapter.SLVAContext((lk.anko.adapters.observable.StandardListAdapter.T)), lk.anko.adapters.observable.StandardListAdapter.ItemObservable(()), kotlin.Unit)))/list">list</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.observable.StandardListAdapter$<init>(android.content.Context, kotlin.collections.List((lk.anko.adapters.observable.StandardListAdapter.T)), kotlin.Function2((lk.anko.adapters.observable.StandardListAdapter.SLVAContext((lk.anko.adapters.observable.StandardListAdapter.T)), lk.anko.adapters.observable.StandardListAdapter.ItemObservable(()), kotlin.Unit)))/makeView">makeView</span><span class="symbol">:</span>&nbsp;<a href="-s-l-v-a-context/index.html"><span class="identifier">SLVAContext</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><a href="-item-observable/index.html"><span class="identifier">ItemObservable</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code>
+<p>A <a href="https://developer.android.com/reference/android/widget/BaseAdapter.html">BaseAdapter</a> made more convenient.
+Created by josep on 1/24/2016.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="context.html">context</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">context</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="list.html">list</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">list</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="make-view.html">makeView</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">makeView</span><span class="symbol">: </span><a href="-s-l-v-a-context/index.html"><span class="identifier">SLVAContext</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><a href="-item-observable/index.html"><span class="identifier">ItemObservable</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-count.html">getCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-item.html">getItem</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItem</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.observable.StandardListAdapter$getItem(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-item-id.html">getItemId</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItemId</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.observable.StandardListAdapter$getItemId(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-view.html">getView</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getView</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.observable.StandardListAdapter$getView(kotlin.Int, android.view.View, android.view.ViewGroup)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.observable.StandardListAdapter$getView(kotlin.Int, android.view.View, android.view.ViewGroup)/convertView">convertView</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.observable.StandardListAdapter$getView(kotlin.Int, android.view.View, android.view.ViewGroup)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-filterable-standard-list-adapter/index.html">FilterableStandardListAdapter</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">FilterableStandardListAdapter</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">StandardListAdapter</span></a><span class="symbol">&lt;</span><a href="../-filterable-standard-list-adapter/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a href="https://developer.android.com/reference/android/widget/Filterable.html"><span class="identifier">Filterable</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

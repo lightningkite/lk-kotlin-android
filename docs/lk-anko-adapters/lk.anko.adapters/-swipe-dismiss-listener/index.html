@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SwipeDismissListener - anko-adapters</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">anko-adapters</a>&nbsp;/&nbsp;<a href="../index.html">lk.anko.adapters</a>&nbsp;/&nbsp;<a href="./index.html">SwipeDismissListener</a><br/>
+<br/>
+<h1>SwipeDismissListener</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SwipeDismissListener</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Callback</span></code>
+<p>Listener for easily making swipe-away gestures for a <a href="#">RecyclerView</a>.
+Created by jivie on 2/11/16.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SwipeDismissListener</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.SwipeDismissListener$<init>(kotlin.Function1((kotlin.Int, kotlin.Boolean)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/canDismiss">canDismiss</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{ true }<span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeDismissListener$<init>(kotlin.Function1((kotlin.Int, kotlin.Boolean)), kotlin.Function1((kotlin.Int, kotlin.Unit)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code>
+<p>Listener for easily making swipe-away gestures for a <a href="#">RecyclerView</a>.
+Created by jivie on 2/11/16.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="action.html">action</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">action</span><span class="symbol">: </span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="can-dismiss.html">canDismiss</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">canDismiss</span><span class="symbol">: </span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-movement-flags.html">getMovementFlags</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMovementFlags</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.SwipeDismissListener$getMovementFlags(android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder)/p0">p0</span><span class="symbol">:</span>&nbsp;<span class="identifier">RecyclerView</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeDismissListener$getMovementFlags(android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder)/holder">holder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-move.html">onMove</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onMove</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.SwipeDismissListener$onMove(android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder, android.support.v7.widget.RecyclerView.ViewHolder)/p0">p0</span><span class="symbol">:</span>&nbsp;<span class="identifier">RecyclerView</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeDismissListener$onMove(android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder, android.support.v7.widget.RecyclerView.ViewHolder)/p1">p1</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeDismissListener$onMove(android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder, android.support.v7.widget.RecyclerView.ViewHolder)/p2">p2</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-swiped.html">onSwiped</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onSwiped</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.SwipeDismissListener$onSwiped(android.support.v7.widget.RecyclerView.ViewHolder, kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeDismissListener$onSwiped(android.support.v7.widget.RecyclerView.ViewHolder, kotlin.Int)/swipeDirection">swipeDirection</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

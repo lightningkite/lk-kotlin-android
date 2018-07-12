@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>hiddenTouchFunctionality - observable</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">observable</a>&nbsp;/&nbsp;<a href="../index.html">lk.android.observable</a>&nbsp;/&nbsp;<a href="index.html">android.view.View</a>&nbsp;/&nbsp;<a href="./hidden-touch-functionality.html">hiddenTouchFunctionality</a><br/>
+<br/>
+<h1>hiddenTouchFunctionality</h1>
+<a name="lk.android.observable$hiddenTouchFunctionality(android.view.View, kotlin.collections.List((kotlin.Function1((android.graphics.PointF, kotlin.Boolean)))), kotlin.Function0((kotlin.Unit)))"></a>
+<code><span class="keyword">fun </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">.</span><span class="identifier">hiddenTouchFunctionality</span><span class="symbol">(</span><span class="identifier" id="lk.android.observable$hiddenTouchFunctionality(android.view.View, kotlin.collections.List((kotlin.Function1((android.graphics.PointF, kotlin.Boolean)))), kotlin.Function0((kotlin.Unit)))/requirements">requirements</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/graphics/PointF.html"><span class="identifier">PointF</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="lk.android.observable$hiddenTouchFunctionality(android.view.View, kotlin.collections.List((kotlin.Function1((android.graphics.PointF, kotlin.Boolean)))), kotlin.Function0((kotlin.Unit)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-observable-property/lk.kotlin.observable.property/-observable-property/index.html"><span class="identifier">ObservableProperty</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code>
+<p>Allows you to add in "secret codes" to views.
+When the user taps the view correctly, the <a href="hidden-touch-functionality.html#lk.android.observable$hiddenTouchFunctionality(android.view.View, kotlin.collections.List((kotlin.Function1((android.graphics.PointF, kotlin.Boolean)))), kotlin.Function0((kotlin.Unit)))/action">action</a> will be invoked.</p>
+<h3>Parameters</h3>
+<p><a name="requirements"></a>
+<code>requirements</code> - The requirements for code, in order.  Each requirement is a predicate that is
+given a point with both x and y between 0 and 1, representing how far the point is. 0 would be
+left/top, and 1 would be right/bottom.</p>
+<a name="lk.android.observable$hiddenTouchFunctionality(android.view.View, kotlin.BooleanArray, kotlin.Function0((kotlin.Unit)))"></a>
+<code><span class="keyword">fun </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">.</span><span class="identifier">hiddenTouchFunctionality</span><span class="symbol">(</span><span class="identifier" id="lk.android.observable$hiddenTouchFunctionality(android.view.View, kotlin.BooleanArray, kotlin.Function0((kotlin.Unit)))/rightSide">rightSide</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean-array/index.html"><span class="identifier">BooleanArray</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.observable$hiddenTouchFunctionality(android.view.View, kotlin.BooleanArray, kotlin.Function0((kotlin.Unit)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-observable-property/lk.kotlin.observable.property/-observable-property/index.html"><span class="identifier">ObservableProperty</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code>
+<p>Allows you to add in "secret codes" to views.
+When the user taps the view correctly, the <a href="hidden-touch-functionality.html#lk.android.observable$hiddenTouchFunctionality(android.view.View, kotlin.BooleanArray, kotlin.Function0((kotlin.Unit)))/action">action</a> will be invoked.</p>
+<p>Example: using booleanArrayOf(false, true, true, false, true) would require the user to tap
+(left, right, right, left, right) on the view to activate the action.</p>
+<h3>Parameters</h3>
+<p><a name="rightSide"></a>
+<code>rightSide</code> - Whether or not the tap at this stage should be on the right side or left side of
+the view.</p>
+</BODY>
+</HTML>

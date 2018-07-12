@@ -1,0 +1,4 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.android.lifecycle$lifecycle#android.view.Viewlk.android.lifecycle/android.view.-view/lifecycle.html
+lk.android.lifecycle

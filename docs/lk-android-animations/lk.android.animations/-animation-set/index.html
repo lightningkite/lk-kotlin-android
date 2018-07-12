@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AnimationSet - animations</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">animations</a>&nbsp;/&nbsp;<a href="../index.html">lk.android.animations</a>&nbsp;/&nbsp;<a href="./index.html">AnimationSet</a><br/>
+<br/>
+<h1>AnimationSet</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">AnimationSet</span></code>
+<p>A set of animation lambdas for transitioning between two views.
+Created by jivie on 8/6/15.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">AnimationSet</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations.AnimationSet$<init>(kotlin.Function2((android.view.View, android.view.ViewGroup, android.view.ViewPropertyAnimator)), kotlin.Function2((android.view.View, android.view.ViewGroup, android.view.ViewPropertyAnimator)))/animateIn">animateIn</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="identifier">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewPropertyAnimator.html"><span class="identifier">ViewPropertyAnimator</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.animations.AnimationSet$<init>(kotlin.Function2((android.view.View, android.view.ViewGroup, android.view.ViewPropertyAnimator)), kotlin.Function2((android.view.View, android.view.ViewGroup, android.view.ViewPropertyAnimator)))/animateOut">animateOut</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="identifier">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewPropertyAnimator.html"><span class="identifier">ViewPropertyAnimator</span></a><span class="symbol">)</span></code>
+<p>A set of animation lambdas for transitioning between two views.
+Created by jivie on 8/6/15.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="animate-in.html">animateIn</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">animateIn</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="identifier">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewPropertyAnimator.html"><span class="identifier">ViewPropertyAnimator</span></a></code>
+<p>An animation lambda for animating the new view in.
+This - The view being animated.
+parent - the view group that contains it.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="animate-out.html">animateOut</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">animateOut</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">.</span><span class="symbol">(</span><span class="identifier">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewPropertyAnimator.html"><span class="identifier">ViewPropertyAnimator</span></a></code>
+<p>An animation lambda for animating the old view out.
+This - The view being animated.
+parent - the view group that contains it.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="fade.html">fade</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">fade</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AnimationSet</span></a></code>
+<p>Cross-fades between views.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="flip-vertical.html">flipVertical</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">flipVertical</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AnimationSet</span></a></code>
+<p>Seemingly flips the view such that the old view is replaced by the new view.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="slide-down.html">slideDown</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">slideDown</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AnimationSet</span></a></code>
+<p>Slides the old view out downwards, slides the new view in from the top.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="slide-pop.html">slidePop</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">slidePop</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AnimationSet</span></a></code>
+<p>Slides the old view out to the right, slides the new view in from the left.
+Primarily used for moving backwards through screens in an app</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="slide-push.html">slidePush</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">slidePush</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AnimationSet</span></a></code>
+<p>Slides the old view out to the left, slides the new view in from the right.
+Primarily used for moving forward through screens in an app</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="slide-up.html">slideUp</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">slideUp</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">AnimationSet</span></a></code>
+<p>Slides the old view out upwards, slides the new view in from the bottom.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

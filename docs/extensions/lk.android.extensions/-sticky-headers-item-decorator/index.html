@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StickyHeadersItemDecorator - extensions</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">extensions</a>&nbsp;/&nbsp;<a href="../index.html">lk.android.extensions</a>&nbsp;/&nbsp;<a href="./index.html">StickyHeadersItemDecorator</a><br/>
+<br/>
+<h1>StickyHeadersItemDecorator</h1>
+<code><span class="keyword">class </span><span class="identifier">StickyHeadersItemDecorator</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">K</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ItemDecoration</span></code>
+<p>Adds sticky headers to a <a href="#">RecyclerView</a>.</p>
+<h3>Parameters</h3>
+<p><a name="list"></a>
+<code>list</code> - A reference to the list that the sticky headers are applied to.</p>
+<p><a name="sort"></a>
+<code>sort</code> - A lambda that sorts the items into categories.</p>
+<p><a name="makeView"></a>
+<code>makeView</code> - A lambda that generates a view based on the category.
+Created by josep on 2/11/2016.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">StickyHeadersItemDecorator</span><span class="symbol">(</span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$<init>(kotlin.collections.List((lk.android.extensions.StickyHeadersItemDecorator.T)), kotlin.Function1((lk.android.extensions.StickyHeadersItemDecorator.T, lk.android.extensions.StickyHeadersItemDecorator.K)), kotlin.Function1((lk.android.extensions.StickyHeadersItemDecorator.K, android.view.View)))/list">list</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$<init>(kotlin.collections.List((lk.android.extensions.StickyHeadersItemDecorator.T)), kotlin.Function1((lk.android.extensions.StickyHeadersItemDecorator.T, lk.android.extensions.StickyHeadersItemDecorator.K)), kotlin.Function1((lk.android.extensions.StickyHeadersItemDecorator.K, android.view.View)))/sort">sort</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$<init>(kotlin.collections.List((lk.android.extensions.StickyHeadersItemDecorator.T)), kotlin.Function1((lk.android.extensions.StickyHeadersItemDecorator.T, lk.android.extensions.StickyHeadersItemDecorator.K)), kotlin.Function1((lk.android.extensions.StickyHeadersItemDecorator.K, android.view.View)))/makeView">makeView</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">)</span></code>
+<p>Adds sticky headers to a <a href="#">RecyclerView</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="first-pos.html">firstPos</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">firstPos</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="list.html">list</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">list</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>A reference to the list that the sticky headers are applied to.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="make-view.html">makeView</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">makeView</span><span class="symbol">: </span><span class="symbol">(</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a></code>
+<p>A lambda that generates a view based on the category.
+Created by josep on 2/11/2016.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="sort.html">sort</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">sort</span><span class="symbol">: </span><span class="symbol">(</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="index.html#K"><span class="identifier">K</span></a></code>
+<p>A lambda that sorts the items into categories.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="view-headers.html">viewHeaders</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">viewHeaders</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="index.html#K"><span class="identifier">K</span></a><span class="symbol">,</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-header.html">getHeader</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getHeader</span><span class="symbol">(</span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$getHeader(android.support.v7.widget.RecyclerView, kotlin.Int)/parent">parent</span><span class="symbol">:</span>&nbsp;<span class="identifier">RecyclerView</span><span class="symbol">, </span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$getHeader(android.support.v7.widget.RecyclerView, kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-item-offsets.html">getItemOffsets</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getItemOffsets</span><span class="symbol">(</span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$getItemOffsets(android.graphics.Rect, android.view.View, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.State)/outRect">outRect</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/graphics/Rect.html"><span class="identifier">Rect</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$getItemOffsets(android.graphics.Rect, android.view.View, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.State)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$getItemOffsets(android.graphics.Rect, android.view.View, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.State)/parent">parent</span><span class="symbol">:</span>&nbsp;<span class="identifier">RecyclerView</span><span class="symbol">, </span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$getItemOffsets(android.graphics.Rect, android.view.View, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.State)/state">state</span><span class="symbol">:</span>&nbsp;<span class="identifier">State</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-draw-over.html">onDrawOver</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onDrawOver</span><span class="symbol">(</span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$onDrawOver(android.graphics.Canvas, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.State)/c">c</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/graphics/Canvas.html"><span class="identifier">Canvas</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$onDrawOver(android.graphics.Canvas, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.State)/parent">parent</span><span class="symbol">:</span>&nbsp;<span class="identifier">RecyclerView</span><span class="symbol">, </span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$onDrawOver(android.graphics.Canvas, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.State)/state">state</span><span class="symbol">:</span>&nbsp;<span class="identifier">State</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="update-first-pos.html">updateFirstPos</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateFirstPos</span><span class="symbol">(</span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$updateFirstPos(android.support.v7.widget.RecyclerView)/parent">parent</span><span class="symbol">:</span>&nbsp;<span class="identifier">RecyclerView</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="view-has-header-over.html">viewHasHeaderOver</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">viewHasHeaderOver</span><span class="symbol">(</span><span class="identifier" id="lk.android.extensions.StickyHeadersItemDecorator$viewHasHeaderOver(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

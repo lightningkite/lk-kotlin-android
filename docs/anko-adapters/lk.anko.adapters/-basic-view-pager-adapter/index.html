@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BasicViewPagerAdapter - anko-adapters</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">anko-adapters</a>&nbsp;/&nbsp;<a href="../index.html">lk.anko.adapters</a>&nbsp;/&nbsp;<a href="./index.html">BasicViewPagerAdapter</a><br/>
+<br/>
+<h1>BasicViewPagerAdapter</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BasicViewPagerAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">PagerAdapter</span></code>
+<p>A simple adapter for <a href="#">ViewPager</a>.
+Created by joseph on 11/16/16.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BasicViewPagerAdapter</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.BasicViewPagerAdapter$<init>(kotlin.Function2((android.view.ViewGroup, kotlin.Int, android.view.View)))/makeView">makeView</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">.</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">)</span></code>
+<p>A simple adapter for <a href="#">ViewPager</a>.
+Created by joseph on 11/16/16.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="item-count.html">itemCount</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">itemCount</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="make-view.html">makeView</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">makeView</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">.</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="destroy-item.html">destroyItem</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">destroyItem</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.BasicViewPagerAdapter$destroyItem(android.view.ViewGroup, kotlin.Int, kotlin.Any)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.BasicViewPagerAdapter$destroyItem(android.view.ViewGroup, kotlin.Int, kotlin.Any)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.BasicViewPagerAdapter$destroyItem(android.view.ViewGroup, kotlin.Int, kotlin.Any)/item">item</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-count.html">getCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="instantiate-item.html">instantiateItem</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">instantiateItem</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.BasicViewPagerAdapter$instantiateItem(android.view.ViewGroup, kotlin.Int)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.BasicViewPagerAdapter$instantiateItem(android.view.ViewGroup, kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="is-view-from-object.html">isViewFromObject</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isViewFromObject</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.BasicViewPagerAdapter$isViewFromObject(android.view.View, kotlin.Any)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.BasicViewPagerAdapter$isViewFromObject(android.view.View, kotlin.Any)/item">item</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

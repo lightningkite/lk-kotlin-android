@@ -1,0 +1,5 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.android.ui.thread$cancelling(kotlin.Function0((lk.android.ui.thread.cancelling.T)), android.view.View)lk.android.ui.thread/kotlin.-function0/cancelling.html
+$dokka.location:lk.android.ui.thread$cancelling(kotlin.Function0((lk.android.ui.thread.cancelling.T)), android.view.View, lk.android.ui.thread.cancelling.T)lk.android.ui.thread/kotlin.-function0/cancelling.html
+lk.android.ui.thread

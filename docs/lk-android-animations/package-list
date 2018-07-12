@@ -1,0 +1,5 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.android.animations$heightAnimator(android.view.View, kotlin.Int)lk.android.animations/android.view.-view/height-animator.html
+$dokka.location:lk.android.animations$widthAnimator(android.view.View, kotlin.Int)lk.android.animations/android.view.-view/width-animator.html
+lk.android.animations

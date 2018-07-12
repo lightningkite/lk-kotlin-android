@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SwipeActionListener - anko-adapters</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">anko-adapters</a>&nbsp;/&nbsp;<a href="../index.html">lk.anko.adapters</a>&nbsp;/&nbsp;<a href="./index.html">SwipeActionListener</a><br/>
+<br/>
+<h1>SwipeActionListener</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SwipeActionListener</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Callback</span></code>
+<p>Listener that allows you to easily make two swipe actions on a <a href="#">RecyclerView</a>.
+Created by jivie on 2/11/16.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-swipe-action/index.html">SwipeAction</a></p>
+</td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">SwipeAction</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">SwipeActionListener</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$<init>(lk.anko.adapters.SwipeActionListener.SwipeAction, lk.anko.adapters.SwipeActionListener.SwipeAction, kotlin.Int)/leftAction">leftAction</span><span class="symbol">:</span>&nbsp;<a href="-swipe-action/index.html"><span class="identifier">SwipeAction</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$<init>(lk.anko.adapters.SwipeActionListener.SwipeAction, lk.anko.adapters.SwipeActionListener.SwipeAction, kotlin.Int)/rightAction">rightAction</span><span class="symbol">:</span>&nbsp;<a href="-swipe-action/index.html"><span class="identifier">SwipeAction</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$<init>(lk.anko.adapters.SwipeActionListener.SwipeAction, lk.anko.adapters.SwipeActionListener.SwipeAction, kotlin.Int)/drawablePadding">drawablePadding</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">)</span></code>
+<p>Listener that allows you to easily make two swipe actions on a <a href="#">RecyclerView</a>.
+Created by jivie on 2/11/16.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="draw-rect.html">drawRect</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">drawRect</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/graphics/RectF.html"><span class="identifier">RectF</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="drawable-padding.html">drawablePadding</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">drawablePadding</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="left-action.html">leftAction</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">leftAction</span><span class="symbol">: </span><a href="-swipe-action/index.html"><span class="identifier">SwipeAction</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="right-action.html">rightAction</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">rightAction</span><span class="symbol">: </span><a href="-swipe-action/index.html"><span class="identifier">SwipeAction</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-movement-flags.html">getMovementFlags</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getMovementFlags</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$getMovementFlags(android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder)/p0">p0</span><span class="symbol">:</span>&nbsp;<span class="identifier">RecyclerView</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$getMovementFlags(android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder)/p1">p1</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-child-draw.html">onChildDraw</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onChildDraw</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$onChildDraw(android.graphics.Canvas, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/c">c</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/graphics/Canvas.html"><span class="identifier">Canvas</span></a><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$onChildDraw(android.graphics.Canvas, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/recyclerView">recyclerView</span><span class="symbol">:</span>&nbsp;<span class="identifier">RecyclerView</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$onChildDraw(android.graphics.Canvas, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/viewHolder">viewHolder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$onChildDraw(android.graphics.Canvas, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/dX">dX</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$onChildDraw(android.graphics.Canvas, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/dY">dY</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$onChildDraw(android.graphics.Canvas, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/actionState">actionState</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$onChildDraw(android.graphics.Canvas, android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder, kotlin.Float, kotlin.Float, kotlin.Int, kotlin.Boolean)/isCurrentlyActive">isCurrentlyActive</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-move.html">onMove</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onMove</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$onMove(android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder, android.support.v7.widget.RecyclerView.ViewHolder)/p0">p0</span><span class="symbol">:</span>&nbsp;<span class="identifier">RecyclerView</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$onMove(android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder, android.support.v7.widget.RecyclerView.ViewHolder)/p1">p1</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$onMove(android.support.v7.widget.RecyclerView, android.support.v7.widget.RecyclerView.ViewHolder, android.support.v7.widget.RecyclerView.ViewHolder)/p2">p2</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-swiped.html">onSwiped</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onSwiped</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$onSwiped(android.support.v7.widget.RecyclerView.ViewHolder, kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.SwipeActionListener$onSwiped(android.support.v7.widget.RecyclerView.ViewHolder, kotlin.Int)/swipeDirection">swipeDirection</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

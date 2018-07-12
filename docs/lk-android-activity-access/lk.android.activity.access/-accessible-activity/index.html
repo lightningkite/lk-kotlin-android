@@ -1,0 +1,262 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AccessibleActivity - activity-access</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">activity-access</a>&nbsp;/&nbsp;<a href="../index.html">lk.android.activity.access</a>&nbsp;/&nbsp;<a href="./index.html">AccessibleActivity</a><br/>
+<br/>
+<h1>AccessibleActivity</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AccessibleActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span><span class="symbol">, </span><a href="../-activity-access/index.html"><span class="identifier">ActivityAccess</span></a></code>
+<p>An activity that implements <a href="../-activity-access/index.html">ActivityAccess</a>.</p>
+<p>Created by jivie on 10/12/15.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">AccessibleActivity</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>An activity that implements <a href="../-activity-access/index.html">ActivityAccess</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="activity.html">activity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">activity</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/app/Activity.html"><span class="identifier">Activity</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="context.html">context</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">context</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-activity-result.html">onActivityResult</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">onActivityResult</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-back-pressed.html">onBackPressed</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">onBackPressed</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+<p>When the back button is pressed, the lambdas in the list are invoked in reverse order until
+one of the lambdas returns true, indicating that the button press has been handled.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="on-destroy.html">onDestroy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">onDestroy</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/HashSet.html"><span class="identifier">HashSet</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-low-memory.html">onLowMemory</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">onLowMemory</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/HashSet.html"><span class="identifier">HashSet</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-pause.html">onPause</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">onPause</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/HashSet.html"><span class="identifier">HashSet</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-resume.html">onResume</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">onResume</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/HashSet.html"><span class="identifier">HashSet</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-save-instance-state.html">onSaveInstanceState</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">onSaveInstanceState</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/HashSet.html"><span class="identifier">HashSet</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><span class="identifier">outState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="request-returns.html">requestReturns</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">requestReturns</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="saved-instance-state.html">savedInstanceState</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">savedInstanceState</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="on-activity-result.html">onActivityResult</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onActivityResult</span><span class="symbol">(</span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$onActivityResult(kotlin.Int, kotlin.Int, android.content.Intent)/requestCode">requestCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$onActivityResult(kotlin.Int, kotlin.Int, android.content.Intent)/resultCode">resultCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$onActivityResult(kotlin.Int, kotlin.Int, android.content.Intent)/data">data</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-back-pressed.html">onBackPressed</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onBackPressed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-create.html">onCreate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreate</span><span class="symbol">(</span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$onCreate(android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-destroy.html">onDestroy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onDestroy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-low-memory.html">onLowMemory</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onLowMemory</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-pause.html">onPause</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onPause</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-request-permissions-result.html">onRequestPermissionsResult</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onRequestPermissionsResult</span><span class="symbol">(</span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$onRequestPermissionsResult(kotlin.Int, kotlin.Array((kotlin.String)), kotlin.IntArray)/requestCode">requestCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$onRequestPermissionsResult(kotlin.Int, kotlin.Array((kotlin.String)), kotlin.IntArray)/permissions">permissions</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$onRequestPermissionsResult(kotlin.Int, kotlin.Array((kotlin.String)), kotlin.IntArray)/grantResults">grantResults</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html"><span class="identifier">IntArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-resume.html">onResume</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onResume</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-save-instance-state.html">onSaveInstanceState</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onSaveInstanceState</span><span class="symbol">(</span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$onSaveInstanceState(android.os.Bundle)/outState">outState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="prepare-on-result.html">prepareOnResult</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">prepareOnResult</span><span class="symbol">(</span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$prepareOnResult(kotlin.Int, kotlin.Function2((kotlin.Int, android.content.Intent, kotlin.Unit)))/presetCode">presetCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$prepareOnResult(kotlin.Int, kotlin.Function2((kotlin.Int, android.content.Intent, kotlin.Unit)))/onResult">onResult</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="request-permission.html">requestPermission</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">requestPermission</span><span class="symbol">(</span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$requestPermission(kotlin.String, kotlin.Function1((kotlin.Boolean, kotlin.Unit)))/permission">permission</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$requestPermission(kotlin.String, kotlin.Function1((kotlin.Boolean, kotlin.Unit)))/onResult">onResult</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Requests a single permissions and returns whether it was granted or not.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="request-permissions.html">requestPermissions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">requestPermissions</span><span class="symbol">(</span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$requestPermissions(kotlin.Array((kotlin.String)), kotlin.Function1((kotlin.collections.Map((kotlin.String, kotlin.Int)), kotlin.Unit)))/permission">permission</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="lk.android.activity.access.AccessibleActivity$requestPermissions(kotlin.Array((kotlin.String)), kotlin.Function1((kotlin.collections.Map((kotlin.String, kotlin.Int)), kotlin.Unit)))/onResult">onResult</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Requests a bunch of permissions and returns a map of permissions that were previously ungranted and their new status.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="returns.html">returns</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">returns</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../intent-camera.html">intentCamera</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../-activity-access/index.html"><span class="identifier">ActivityAccess</span></a><span class="symbol">.</span><span class="identifier">intentCamera</span><span class="symbol">(</span><span class="identifier" id="lk.android.activity.access$intentCamera(lk.android.activity.access.ActivityAccess, kotlin.String, java.io.File, kotlin.Function1((android.net.Uri, kotlin.Unit)))/fileProviderAuthority">fileProviderAuthority</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;context.packageName + ".fileprovider"<span class="symbol">, </span><span class="identifier" id="lk.android.activity.access$intentCamera(lk.android.activity.access.ActivityAccess, kotlin.String, java.io.File, kotlin.Function1((android.net.Uri, kotlin.Unit)))/folder">folder</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/io/File.html"><span class="identifier">File</span></a>&nbsp;<span class="symbol">=</span>&nbsp;File(context.cacheDir, "images").also { it.mkdirs() }<span class="symbol">, </span><span class="identifier" id="lk.android.activity.access$intentCamera(lk.android.activity.access.ActivityAccess, kotlin.String, java.io.File, kotlin.Function1((android.net.Uri, kotlin.Unit)))/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Requests permission to use the camera, takes a picture using the camera app, and puts it into a
+temporary file using the given <a href="../intent-camera.html#lk.android.activity.access$intentCamera(lk.android.activity.access.ActivityAccess, kotlin.String, java.io.File, kotlin.Function1((android.net.Uri, kotlin.Unit)))/fileProviderAuthority">fileProviderAuthority</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../intent-camera-raw.html">intentCameraRaw</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../-activity-access/index.html"><span class="identifier">ActivityAccess</span></a><span class="symbol">.</span><span class="identifier">intentCameraRaw</span><span class="symbol">(</span><span class="identifier" id="lk.android.activity.access$intentCameraRaw(lk.android.activity.access.ActivityAccess, android.net.Uri, kotlin.Function1((android.net.Uri, kotlin.Unit)))/requestedUri">requestedUri</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.activity.access$intentCameraRaw(lk.android.activity.access.ActivityAccess, android.net.Uri, kotlin.Function1((android.net.Uri, kotlin.Unit)))/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Requests permission to use the camera, takes a picture using the camera app, and puts it into the <a href="../intent-camera-raw.html#lk.android.activity.access$intentCameraRaw(lk.android.activity.access.ActivityAccess, android.net.Uri, kotlin.Function1((android.net.Uri, kotlin.Unit)))/requestedUri">requestedUri</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../intent-gallery.html">intentGallery</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../-activity-access/index.html"><span class="identifier">ActivityAccess</span></a><span class="symbol">.</span><span class="identifier">intentGallery</span><span class="symbol">(</span><span class="identifier" id="lk.android.activity.access$intentGallery(lk.android.activity.access.ActivityAccess, kotlin.Function1((android.net.Uri, kotlin.Unit)))/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Requests permission to read external storage and shows the system gallery to select an image.
+Returns the image URI selected in the callback.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../start-intent.html">startIntent</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="../-activity-access/index.html"><span class="identifier">ActivityAccess</span></a><span class="symbol">.</span><span class="identifier">startIntent</span><span class="symbol">(</span><span class="identifier" id="lk.android.activity.access$startIntent(lk.android.activity.access.ActivityAccess, android.content.Intent, android.os.Bundle, kotlin.Function2((kotlin.Int, android.content.Intent, kotlin.Unit)))/intent">intent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.activity.access$startIntent(lk.android.activity.access.ActivityAccess, android.content.Intent, android.os.Bundle, kotlin.Function2((kotlin.Int, android.content.Intent, kotlin.Unit)))/options">options</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Bundle()<span class="symbol">, </span><span class="identifier" id="lk.android.activity.access$startIntent(lk.android.activity.access.ActivityAccess, android.content.Intent, android.os.Bundle, kotlin.Function2((kotlin.Int, android.content.Intent, kotlin.Unit)))/onResult">onResult</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a><span class="symbol">?</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>&nbsp;<span class="symbol">=</span>&nbsp;{ _, _ -&gt; }<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Starts an intent with a direct callback.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

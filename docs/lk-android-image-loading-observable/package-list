@@ -1,0 +1,5 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.android.image.loading.observable$bindUri(android.widget.ImageView, lk.kotlin.observable.property.ObservableProperty((android.net.Uri)), lk.android.image.loading.image.ImageLoader, kotlin.Int, kotlin.Int, lk.kotlin.observable.property.MutableObservableProperty((kotlin.Boolean)), kotlin.Function1((lk.android.image.loading.observable.ImageViewBindUriState, kotlin.Unit)))lk.android.image.loading.observable/android.widget.-image-view/bind-uri.html
+$dokka.location:lk.android.image.loading.observable$bindUri(android.widget.ImageView, lk.kotlin.observable.property.ObservableProperty((kotlin.String)), lk.android.image.loading.image.ImageLoader, kotlin.Int, kotlin.Int, lk.kotlin.observable.property.MutableObservableProperty((kotlin.Boolean)), kotlin.Function1((lk.android.image.loading.observable.ImageViewBindUriState, kotlin.Unit)))lk.android.image.loading.observable/android.widget.-image-view/bind-uri.html
+lk.android.image.loading.observable

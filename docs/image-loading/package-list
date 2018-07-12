@@ -1,0 +1,7 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.android.image.loading$toRequestBody(android.content.ContentResolver, android.net.Uri)lk.android.image.loading/android.content.-content-resolver/to-request-body.html
+$dokka.location:lk.android.image.loading.image$lambdaBitmap(okhttp3.Request.Builder, android.graphics.BitmapFactory.Options)lk.android.image.loading.image/okhttp3.-request.-builder/lambda-bitmap.html
+$dokka.location:lk.android.image.loading.image$lambdaBitmapExif(okhttp3.Request.Builder, android.content.Context, kotlin.Int, kotlin.Int)lk.android.image.loading.image/okhttp3.-request.-builder/lambda-bitmap-exif.html
+lk.android.image.loading
+lk.android.image.loading.image

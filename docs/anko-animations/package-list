@@ -1,0 +1,5 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.anko.animations$swapView(android.view.ViewManager, kotlin.Function1((lk.android.animations.SwapView, kotlin.Unit)))lk.anko.animations/android.view.-view-manager/swap-view.html
+$dokka.location:lk.anko.animations$transitionView(android.view.ViewManager, kotlin.Function1((lk.anko.animations._TransitionView, kotlin.Unit)))lk.anko.animations/android.view.-view-manager/transition-view.html
+lk.anko.animations

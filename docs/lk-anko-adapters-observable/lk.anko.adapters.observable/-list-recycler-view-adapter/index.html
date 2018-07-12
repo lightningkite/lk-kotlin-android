@@ -1,0 +1,161 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ListRecyclerViewAdapter - anko-adapters-observable</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">anko-adapters-observable</a>&nbsp;/&nbsp;<a href="../index.html">lk.anko.adapters.observable</a>&nbsp;/&nbsp;<a href="./index.html">ListRecyclerViewAdapter</a><br/>
+<br/>
+<h1>ListRecyclerViewAdapter</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ListRecyclerViewAdapter</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Adapter</span><span class="symbol">&lt;</span><a href="-view-holder/index.html"><span class="identifier">ViewHolder</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>An adapter for RecyclerViews intended to be used in all cases.</p>
+<p>Created by jivie on 5/4/16.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-item-observable/index.html">ItemObservable</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ItemObservable</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-observable-property/lk.kotlin.observable.property/-base-observable-property/index.html"><span class="identifier">BaseObservableProperty</span></a><span class="symbol">&lt;</span><a href="-item-observable/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-s-r-v-a-context/index.html">SRVAContext</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">SRVAContext</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AnkoContextImpl</span><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">ListRecyclerViewAdapter</span></a><span class="symbol">&lt;</span><a href="-s-r-v-a-context/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-view-holder/index.html">ViewHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">ViewHolder</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ListRecyclerViewAdapter</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.observable.ListRecyclerViewAdapter$<init>(android.content.Context, kotlin.collections.List((lk.anko.adapters.observable.ListRecyclerViewAdapter.T)), kotlin.Function2((lk.anko.adapters.observable.ListRecyclerViewAdapter.SRVAContext((lk.anko.adapters.observable.ListRecyclerViewAdapter.T)), lk.anko.adapters.observable.ListRecyclerViewAdapter.ItemObservable(()), kotlin.Unit)))/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.observable.ListRecyclerViewAdapter$<init>(android.content.Context, kotlin.collections.List((lk.anko.adapters.observable.ListRecyclerViewAdapter.T)), kotlin.Function2((lk.anko.adapters.observable.ListRecyclerViewAdapter.SRVAContext((lk.anko.adapters.observable.ListRecyclerViewAdapter.T)), lk.anko.adapters.observable.ListRecyclerViewAdapter.ItemObservable(()), kotlin.Unit)))/initialList">initialList</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.observable.ListRecyclerViewAdapter$<init>(android.content.Context, kotlin.collections.List((lk.anko.adapters.observable.ListRecyclerViewAdapter.T)), kotlin.Function2((lk.anko.adapters.observable.ListRecyclerViewAdapter.SRVAContext((lk.anko.adapters.observable.ListRecyclerViewAdapter.T)), lk.anko.adapters.observable.ListRecyclerViewAdapter.ItemObservable(()), kotlin.Unit)))/makeView">makeView</span><span class="symbol">:</span>&nbsp;<a href="-s-r-v-a-context/index.html"><span class="identifier">SRVAContext</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><a href="-item-observable/index.html"><span class="identifier">ItemObservable</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code>
+<p>An adapter for RecyclerViews intended to be used in all cases.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="context.html">context</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">context</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="default.html">default</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">default</span><span class="symbol">: </span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="list.html">list</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">list</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="make-view.html">makeView</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">makeView</span><span class="symbol">: </span><a href="-s-r-v-a-context/index.html"><span class="identifier">SRVAContext</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><a href="-item-observable/index.html"><span class="identifier">ItemObservable</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-scroll-to-bottom.html">onScrollToBottom</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">onScrollToBottom</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="should-set-default.html">shouldSetDefault</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">shouldSetDefault</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-item-count.html">getItemCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItemCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-bind-view-holder.html">onBindViewHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onBindViewHolder</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.observable.ListRecyclerViewAdapter$onBindViewHolder(lk.anko.adapters.observable.ListRecyclerViewAdapter.ViewHolder((lk.anko.adapters.observable.ListRecyclerViewAdapter.T)), kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<a href="-view-holder/index.html"><span class="identifier">ViewHolder</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.observable.ListRecyclerViewAdapter$onBindViewHolder(lk.anko.adapters.observable.ListRecyclerViewAdapter.ViewHolder((lk.anko.adapters.observable.ListRecyclerViewAdapter.T)), kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-create-view-holder.html">onCreateViewHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateViewHolder</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.observable.ListRecyclerViewAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.observable.ListRecyclerViewAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/viewType">viewType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-view-holder/index.html"><span class="identifier">ViewHolder</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="update.html">update</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">update</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.observable.ListRecyclerViewAdapter$update(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../android.support.v7.widget.-recycler-view.-adapter/attach-animations.html">attachAnimations</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">ITEM</span><span class="symbol">, </span><span class="identifier">VH</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">&gt;</span> <span class="identifier">Adapter</span><span class="symbol">&lt;</span><a href="../android.support.v7.widget.-recycler-view.-adapter/attach-animations.html#VH"><span class="identifier">VH</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">attachAnimations</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.observable$attachAnimations(android.support.v7.widget.RecyclerView.Adapter((lk.anko.adapters.observable.attachAnimations.VH)), lk.kotlin.observable.list.ObservableList((lk.anko.adapters.observable.attachAnimations.ITEM)))/list">list</span><span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-observable-list/lk.kotlin.observable.list/-observable-list/index.html"><span class="identifier">ObservableList</span></a><span class="symbol">&lt;</span><a href="../android.support.v7.widget.-recycler-view.-adapter/attach-animations.html#ITEM"><span class="identifier">ITEM</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Attaches updates from an <a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-observable-list/lk.kotlin.observable.list/-observable-list/index.html">ObservableList</a> to the adapter, such that the UI will display changes
+in the adapter.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">ITEM</span><span class="symbol">, </span><span class="identifier">VH</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">&gt;</span> <span class="identifier">Adapter</span><span class="symbol">&lt;</span><a href="../android.support.v7.widget.-recycler-view.-adapter/attach-animations.html#VH"><span class="identifier">VH</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">attachAnimations</span><span class="symbol">(</span><span class="identifier" id="lk.anko.adapters.observable$attachAnimations(android.support.v7.widget.RecyclerView.Adapter((lk.anko.adapters.observable.attachAnimations.VH)), lk.kotlin.lifecycle.LifecycleConnectable, lk.kotlin.observable.list.ObservableList((lk.anko.adapters.observable.attachAnimations.ITEM)))/lifecycle">lifecycle</span><span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-lifecycle/lk.kotlin.lifecycle/-lifecycle-connectable/index.html"><span class="identifier">LifecycleConnectable</span></a><span class="symbol">, </span><span class="identifier" id="lk.anko.adapters.observable$attachAnimations(android.support.v7.widget.RecyclerView.Adapter((lk.anko.adapters.observable.attachAnimations.VH)), lk.kotlin.lifecycle.LifecycleConnectable, lk.kotlin.observable.list.ObservableList((lk.anko.adapters.observable.attachAnimations.ITEM)))/list">list</span><span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-observable-list/lk.kotlin.observable.list/-observable-list/index.html"><span class="identifier">ObservableList</span></a><span class="symbol">&lt;</span><a href="../android.support.v7.widget.-recycler-view.-adapter/attach-animations.html#ITEM"><span class="identifier">ITEM</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Attaches updates from an <a href="https://lightningkite.github.io/lk-kotlin/lk-kotlin-observable-list/lk.kotlin.observable.list/-observable-list/index.html">ObservableList</a> to the adapter for the duration of the lifecycle.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../android.support.v7.widget.-recycler-view.-adapter/detatch-animations.html">detatchAnimations</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">ITEM</span><span class="symbol">, </span><span class="identifier">VH</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">&gt;</span> <span class="identifier">Adapter</span><span class="symbol">&lt;</span><a href="../android.support.v7.widget.-recycler-view.-adapter/detatch-animations.html#VH"><span class="identifier">VH</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">detatchAnimations</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Detaches updates made by <a href="../android.support.v7.widget.-recycler-view.-adapter/attach-animations.html">attachAnimations</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

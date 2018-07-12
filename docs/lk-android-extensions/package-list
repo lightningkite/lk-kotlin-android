@@ -1,0 +1,66 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.android.extensions$colorAdd(kotlin.Int, kotlin.Double)lk.android.extensions/kotlin.-int/color-add.html
+$dokka.location:lk.android.extensions$colorAdd(kotlin.Int, kotlin.Float)lk.android.extensions/kotlin.-int/color-add.html
+$dokka.location:lk.android.extensions$colorAlpha(kotlin.Int, kotlin.Float)lk.android.extensions/kotlin.-int/color-alpha.html
+$dokka.location:lk.android.extensions$colorAlpha(kotlin.Int, kotlin.Int)lk.android.extensions/kotlin.-int/color-alpha.html
+$dokka.location:lk.android.extensions$colorMultiply(kotlin.Int, kotlin.Double)lk.android.extensions/kotlin.-int/color-multiply.html
+$dokka.location:lk.android.extensions$colorMultiply(kotlin.Int, kotlin.Float)lk.android.extensions/kotlin.-int/color-multiply.html
+$dokka.location:lk.android.extensions$datePicker(android.content.Context, java.util.Calendar, kotlin.Function1((java.util.Calendar, kotlin.Unit)))lk.android.extensions/android.content.-context/date-picker.html
+$dokka.location:lk.android.extensions$elevationCompat#android.view.Viewlk.android.extensions/android.view.-view/elevation-compat.html
+$dokka.location:lk.android.extensions$getActivity(android.content.Context)lk.android.extensions/android.content.-context/get-activity.html
+$dokka.location:lk.android.extensions$getActivity(android.view.View)lk.android.extensions/android.view.-view/get-activity.html
+$dokka.location:lk.android.extensions$getColorCompat(android.content.res.Resources, kotlin.Int)lk.android.extensions/android.content.res.-resources/get-color-compat.html
+$dokka.location:lk.android.extensions$getColorStateListCompat(android.content.res.Resources, kotlin.Int)lk.android.extensions/android.content.res.-resources/get-color-state-list-compat.html
+$dokka.location:lk.android.extensions$getDrawableCompat(android.content.res.Resources, kotlin.Int)lk.android.extensions/android.content.res.-resources/get-drawable-compat.html
+$dokka.location:lk.android.extensions$getUniquePreferenceId(android.content.Context)lk.android.extensions/android.content.-context/get-unique-preference-id.html
+$dokka.location:lk.android.extensions$hideSoftInput(android.content.Context)lk.android.extensions/android.content.-context/hide-soft-input.html
+$dokka.location:lk.android.extensions$hideSoftInput(android.view.View)lk.android.extensions/android.view.-view/hide-soft-input.html
+$dokka.location:lk.android.extensions$hintTextColorResource#android.widget.TextViewlk.android.extensions/android.widget.-text-view/hint-text-color-resource.html
+$dokka.location:lk.android.extensions$hintTextColorsResource#android.widget.TextViewlk.android.extensions/android.widget.-text-view/hint-text-colors-resource.html
+$dokka.location:lk.android.extensions$horizontalDivider(android.support.v7.widget.RecyclerView, android.graphics.drawable.Drawable, kotlin.Int, kotlin.Int)lk.android.extensions/android.support.v7.widget.-recycler-view/horizontal-divider.html
+$dokka.location:lk.android.extensions$isAttachedToWindowCompat(android.view.View)lk.android.extensions/android.view.-view/is-attached-to-window-compat.html
+$dokka.location:lk.android.extensions$isInLayoutCompat(android.view.View)lk.android.extensions/android.view.-view/is-in-layout-compat.html
+$dokka.location:lk.android.extensions$measureDesiredSize(android.view.View, kotlin.Int, kotlin.Int)lk.android.extensions/android.view.-view/measure-desired-size.html
+$dokka.location:lk.android.extensions$onClickWithCooldown(android.view.View, kotlin.Long, kotlin.Function0((kotlin.Unit)))lk.android.extensions/android.view.-view/on-click-with-cooldown.html
+$dokka.location:lk.android.extensions$onDone(android.widget.EditText, kotlin.Function1((kotlin.String, kotlin.Unit)))lk.android.extensions/android.widget.-edit-text/on-done.html
+$dokka.location:lk.android.extensions$onImeAction(android.widget.EditText, kotlin.Function1((kotlin.String, kotlin.Unit)))lk.android.extensions/android.widget.-edit-text/on-ime-action.html
+$dokka.location:lk.android.extensions$onSend(android.widget.EditText, kotlin.Function1((kotlin.String, kotlin.Unit)))lk.android.extensions/android.widget.-edit-text/on-send.html
+$dokka.location:lk.android.extensions$once(android.content.SharedPreferences, kotlin.String)lk.android.extensions/android.content.-shared-preferences/once.html
+$dokka.location:lk.android.extensions$requestLayoutSafe(android.view.View)lk.android.extensions/android.view.-view/request-layout-safe.html
+$dokka.location:lk.android.extensions$requestSingleUpdate(android.location.LocationManager, android.location.Criteria, kotlin.Function1((android.location.Location, kotlin.Unit)))lk.android.extensions/android.location.-location-manager/request-single-update.html
+$dokka.location:lk.android.extensions$resetCursorColor(android.widget.EditText)lk.android.extensions/android.widget.-edit-text/reset-cursor-color.html
+$dokka.location:lk.android.extensions$selectableItemBackgroundBorderlessResource#android.view.Viewlk.android.extensions/android.view.-view/selectable-item-background-borderless-resource.html
+$dokka.location:lk.android.extensions$selectableItemBackgroundResource#android.view.Viewlk.android.extensions/android.view.-view/selectable-item-background-resource.html
+$dokka.location:lk.android.extensions$selector(android.content.Context, kotlin.Int, kotlin.Array((kotlin.Pair((kotlin.Int, kotlin.Function0((kotlin.Unit)))))))lk.android.extensions/android.content.-context/selector.html
+$dokka.location:lk.android.extensions$selector(android.content.Context, kotlin.Int, kotlin.Array((kotlin.Pair((kotlin.Int, kotlin.Function0((kotlin.Unit)))))), kotlin.Function0((kotlin.Unit)))lk.android.extensions/android.content.-context/selector.html
+$dokka.location:lk.android.extensions$selector(android.content.Context, kotlin.Int, kotlin.collections.List((kotlin.Pair((kotlin.Int, kotlin.Function0((kotlin.Unit)))))))lk.android.extensions/android.content.-context/selector.html
+$dokka.location:lk.android.extensions$selector(android.content.Context, kotlin.String, kotlin.Array((kotlin.Pair((kotlin.String, kotlin.Function0((kotlin.Unit)))))))lk.android.extensions/android.content.-context/selector.html
+$dokka.location:lk.android.extensions$selector(android.content.Context, kotlin.String, kotlin.collections.List((kotlin.Pair((kotlin.String, kotlin.Function0((kotlin.Unit)))))))lk.android.extensions/android.content.-context/selector.html
+$dokka.location:lk.android.extensions$selector(android.content.Context, kotlin.String, kotlin.collections.List((kotlin.Pair((kotlin.String, kotlin.Function0((kotlin.Unit)))))), kotlin.Function0((kotlin.Unit)))lk.android.extensions/android.content.-context/selector.html
+$dokka.location:lk.android.extensions$setBoundsCentered(android.graphics.drawable.Drawable, kotlin.Float, kotlin.Float)lk.android.extensions/android.graphics.drawable.-drawable/set-bounds-centered.html
+$dokka.location:lk.android.extensions$setBoundsCentered(android.graphics.drawable.Drawable, kotlin.Int, kotlin.Int)lk.android.extensions/android.graphics.drawable.-drawable/set-bounds-centered.html
+$dokka.location:lk.android.extensions$setCompoundDrawablesWithIntrinsicBoundsKotlin(android.widget.TextView, android.graphics.drawable.Drawable, android.graphics.drawable.Drawable, android.graphics.drawable.Drawable, android.graphics.drawable.Drawable)lk.android.extensions/android.widget.-text-view/set-compound-drawables-with-intrinsic-bounds-kotlin.html
+$dokka.location:lk.android.extensions$setCompoundDrawablesWithIntrinsicBoundsKotlin(android.widget.TextView, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)lk.android.extensions/android.widget.-text-view/set-compound-drawables-with-intrinsic-bounds-kotlin.html
+$dokka.location:lk.android.extensions$setCursorColor(android.widget.EditText, kotlin.Int)lk.android.extensions/android.widget.-edit-text/set-cursor-color.html
+$dokka.location:lk.android.extensions$setFont(android.widget.TextView, kotlin.String)lk.android.extensions/android.widget.-text-view/set-font.html
+$dokka.location:lk.android.extensions$showSoftInput(android.view.View)lk.android.extensions/android.view.-view/show-soft-input.html
+$dokka.location:lk.android.extensions$textChanger(android.widget.EditText, kotlin.Function1((lk.android.extensions.EditTextChangeData, kotlin.Pair((kotlin.String, kotlin.ranges.IntRange)))))lk.android.extensions/android.widget.-edit-text/text-changer.html
+$dokka.location:lk.android.extensions$textColorResource#android.widget.TextViewlk.android.extensions/android.widget.-text-view/text-color-resource.html
+$dokka.location:lk.android.extensions$textColorsResource#android.widget.TextViewlk.android.extensions/android.widget.-text-view/text-colors-resource.html
+$dokka.location:lk.android.extensions$textListener(android.widget.EditText, kotlin.Function1((lk.android.extensions.EditTextChangeData, kotlin.Unit)))lk.android.extensions/android.widget.-edit-text/text-listener.html
+$dokka.location:lk.android.extensions$timePicker(android.content.Context, java.util.Calendar, kotlin.Function1((java.util.Calendar, kotlin.Unit)))lk.android.extensions/android.content.-context/time-picker.html
+$dokka.location:lk.android.extensions$verticalDivider(android.support.v7.widget.RecyclerView, android.graphics.drawable.Drawable, kotlin.Int, kotlin.Int)lk.android.extensions/android.support.v7.widget.-recycler-view/vertical-divider.html
+$dokka.location:lk.android.extensions.files$fileSize(android.content.ContentResolver, android.net.Uri)lk.android.extensions.files/android.content.-content-resolver/file-size.html
+$dokka.location:lk.android.extensions.files$getDataColumn(android.content.Context, android.net.Uri, kotlin.String, kotlin.Array((kotlin.String)))lk.android.extensions.files/android.content.-context/get-data-column.html
+$dokka.location:lk.android.extensions.files$getRealPath(android.net.Uri, android.content.Context)lk.android.extensions.files/android.net.-uri/get-real-path.html
+$dokka.location:lk.android.extensions.files$isDownloadsDocument(android.net.Uri)lk.android.extensions.files/android.net.-uri/is-downloads-document.html
+$dokka.location:lk.android.extensions.files$isExternalStorageDocument(android.net.Uri)lk.android.extensions.files/android.net.-uri/is-external-storage-document.html
+$dokka.location:lk.android.extensions.files$isMediaDocument(android.net.Uri)lk.android.extensions.files/android.net.-uri/is-media-document.html
+$dokka.location:lk.android.extensions.files$toByteArray(android.net.Uri, android.content.Context)lk.android.extensions.files/android.net.-uri/to-byte-array.html
+$dokka.location:lk.android.extensions.files$toImageContentUri(java.io.File, android.content.Context)lk.android.extensions.files/java.io.-file/to-image-content-uri.html
+$dokka.location:lk.android.extensions.image$getBitmapFromUri(android.content.Context, android.net.Uri, kotlin.Int, kotlin.Int)lk.android.extensions.image/android.content.-context/get-bitmap-from-uri.html
+$dokka.location:lk.android.extensions.image$rotate(android.graphics.Bitmap, kotlin.Int)lk.android.extensions.image/android.graphics.-bitmap/rotate.html
+lk.android.extensions
+lk.android.extensions.files
+lk.android.extensions.image

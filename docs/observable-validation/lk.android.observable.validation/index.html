@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>lk.android.observable.validation - observable-validation</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">observable-validation</a>&nbsp;/&nbsp;<a href="./index.html">lk.android.observable.validation</a><br/>
+<br/>
+<h2>Package lk.android.observable.validation</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-string-fetcher-direct/index.html">StringFetcherDirect</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">StringFetcherDirect</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-string-fetcher.html"><span class="identifier">StringFetcher</span></a></code>
+<p>Directly holds an returns a string.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-string-fetcher-resource/index.html">StringFetcherResource</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">StringFetcherResource</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-string-fetcher.html"><span class="identifier">StringFetcher</span></a></code>
+<p>Retrieves a string from resources.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-validation/index.html">Validation</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Validation</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+<p>An extension on an <a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-observable-property/index.html">ObservableProperty</a> which evaluates if the value is valid when asked.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Type Aliases</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-string-fetcher.html">StringFetcher</a></p>
+</td>
+<td>
+<code><span class="keyword">typealias </span><span class="identifier">StringFetcher</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="symbol">(</span><a href="https://developer.android.com/reference/android/content/res/Resources.html"><span class="identifier">Resources</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Abstraction for handling string fetching, as for unit tests we don't have access to <a href="https://developer.android.com/reference/android/content/res/Resources.html">Resources</a>.
+Created by joseph on 11/2/17.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extensions for External Classes</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="android.support.design.widget.-text-input-layout/index.html">android.support.design.widget.TextInputLayout</a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="android.widget.-text-view/index.html">android.widget.TextView</a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="lk.kotlin.observable.property.-observable-property/index.html">lk.kotlin.observable.property.ObservableProperty</a></p>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="with-validation.html">withValidation</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">, </span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://lightningkite.github.io/lk-kotlin/observable-property/lk.kotlin.observable.property/-observable-property/index.html"><span class="identifier">ObservableProperty</span></a><span class="symbol">&lt;</span><a href="with-validation.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span> <a href="with-validation.html#P"><span class="identifier">P</span></a><span class="symbol">.</span><span class="identifier">withValidation</span><span class="symbol">(</span><span class="identifier" id="lk.android.observable.validation$withValidation(lk.android.observable.validation.withValidation.P, kotlin.Function2((lk.android.observable.validation.Validation((lk.android.observable.validation.withValidation.T)), , kotlin.Function1((android.content.res.Resources, kotlin.String)))))/getError">getError</span><span class="symbol">:</span>&nbsp;<a href="-validation/index.html"><span class="identifier">Validation</span></a><span class="symbol">&lt;</span><a href="with-validation.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><a href="with-validation.html#T"><span class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="-string-fetcher.html"><span class="identifier">StringFetcher</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="with-validation.html#P"><span class="identifier">P</span></a></code>
+<p>Adds a validation to the observable.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

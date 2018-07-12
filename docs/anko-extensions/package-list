@@ -1,0 +1,12 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.anko.extensions$anko(android.content.Context)lk.anko.extensions/android.content.-context/anko.html
+$dokka.location:lk.anko.extensions$anko(android.content.Context, lk.anko.extensions.anko.T)lk.anko.extensions/android.content.-context/anko.html
+$dokka.location:lk.anko.extensions$horizontalGridRecyclerView(android.view.ViewManager, kotlin.Int, kotlin.Function1((android.support.v7.widget.RecyclerView, kotlin.Unit)))lk.anko.extensions/android.view.-view-manager/horizontal-grid-recycler-view.html
+$dokka.location:lk.anko.extensions$horizontalRecyclerView(android.view.ViewManager, kotlin.Function1((android.support.v7.widget.RecyclerView, kotlin.Unit)))lk.anko.extensions/android.view.-view-manager/horizontal-recycler-view.html
+$dokka.location:lk.anko.extensions$stickyHeaders(android.support.v7.widget.RecyclerView, kotlin.collections.List((lk.anko.extensions.stickyHeaders.T)), kotlin.Function1((lk.anko.extensions.stickyHeaders.T, lk.anko.extensions.stickyHeaders.K)), kotlin.Function2((org.jetbrains.anko.AnkoContext((kotlin.Unit)), lk.anko.extensions.stickyHeaders.K, )))lk.anko.extensions/android.support.v7.widget.-recycler-view/sticky-headers.html
+$dokka.location:lk.anko.extensions$textInputEditText(android.support.design.widget.TextInputLayout, kotlin.Function1((android.support.design.widget.TextInputEditText, kotlin.Unit)))lk.anko.extensions/android.support.design.widget.-text-input-layout/text-input-edit-text.html
+$dokka.location:lk.anko.extensions$themedTextInputEditText(android.support.design.widget.TextInputLayout, kotlin.Int, kotlin.Function1((android.support.design.widget.TextInputEditText, kotlin.Unit)))lk.anko.extensions/android.support.design.widget.-text-input-layout/themed-text-input-edit-text.html
+$dokka.location:lk.anko.extensions$verticalGridRecyclerView(android.view.ViewManager, kotlin.Int, kotlin.Function1((android.support.v7.widget.RecyclerView, kotlin.Unit)))lk.anko.extensions/android.view.-view-manager/vertical-grid-recycler-view.html
+$dokka.location:lk.anko.extensions$verticalRecyclerView(android.view.ViewManager, kotlin.Function1((android.support.v7.widget.RecyclerView, kotlin.Unit)))lk.anko.extensions/android.view.-view-manager/vertical-recycler-view.html
+lk.anko.extensions

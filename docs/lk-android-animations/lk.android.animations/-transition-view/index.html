@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TransitionView - animations</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">animations</a>&nbsp;/&nbsp;<a href="../index.html">lk.android.animations</a>&nbsp;/&nbsp;<a href="./index.html">TransitionView</a><br/>
+<br/>
+<h1>TransitionView</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">TransitionView</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/widget/FrameLayout.html"><span class="identifier">FrameLayout</span></a></code>
+<p>A container view that transitions between the child views.
+Use this class Anko-style, and append the views with the <a href="tag.html">tag</a> function.
+Created by jivie on 8/26/15.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-animation-info/index.html">AnimationInfo</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AnimationInfo</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">TransitionView</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations.TransitionView$<init>(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">)</span></code>
+<p>A container view that transitions between the child views.
+Use this class Anko-style, and append the views with the <a href="tag.html">tag</a> function.
+Created by jivie on 8/26/15.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="animate-out-to-visibility-state.html">animateOutToVisibilityState</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">animateOutToVisibilityState</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="default-animation.html">defaultAnimation</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">defaultAnimation</span><span class="symbol">: </span><a href="../-animation-set/index.html"><span class="identifier">AnimationSet</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-view-change.html">onViewChange</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">onViewChange</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><a href="-animation-info/index.html"><span class="identifier">AnimationInfo</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add-view.html">addView</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addView</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations.TransitionView$addView(android.view.View)/child">child</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="animate.html">animate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">animate</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations.TransitionView$animate(kotlin.String, lk.android.animations.AnimationSet)/tag">tag</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.animations.TransitionView$animate(kotlin.String, lk.android.animations.AnimationSet)/set">set</span><span class="symbol">:</span>&nbsp;<a href="../-animation-set/index.html"><span class="identifier">AnimationSet</span></a>&nbsp;<span class="symbol">=</span>&nbsp;defaultAnimation<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Animates using <a href="animate.html#lk.android.animations.TransitionView$animate(kotlin.String, lk.android.animations.AnimationSet)/set">set</a> to the view designated by <a href="animate.html#lk.android.animations.TransitionView$animate(kotlin.String, lk.android.animations.AnimationSet)/tag">tag</a>.</p>
+<code><span class="keyword">fun </span><span class="identifier">animate</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations.TransitionView$animate(kotlin.Int, lk.android.animations.AnimationSet)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.animations.TransitionView$animate(kotlin.Int, lk.android.animations.AnimationSet)/set">set</span><span class="symbol">:</span>&nbsp;<a href="../-animation-set/index.html"><span class="identifier">AnimationSet</span></a>&nbsp;<span class="symbol">=</span>&nbsp;defaultAnimation<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><code><span class="keyword">fun </span><span class="identifier">animate</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations.TransitionView$animate(android.view.View, lk.android.animations.AnimationSet)/newView">newView</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.animations.TransitionView$animate(android.view.View, lk.android.animations.AnimationSet)/set">set</span><span class="symbol">:</span>&nbsp;<a href="../-animation-set/index.html"><span class="identifier">AnimationSet</span></a>&nbsp;<span class="symbol">=</span>&nbsp;defaultAnimation<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Animates using <a href="animate.html#lk.android.animations.TransitionView$animate(android.view.View, lk.android.animations.AnimationSet)/set">set</a> to the given view.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="animate-height.html">animateHeight</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">animateHeight</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="generate-default-layout-params.html">generateDefaultLayoutParams</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">generateDefaultLayoutParams</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/FrameLayout/LayoutParams.html"><span class="identifier">LayoutParams</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="jump.html">jump</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">jump</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations.TransitionView$jump(android.view.View)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">jump</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations.TransitionView$jump(kotlin.String)/tag">tag</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">jump</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations.TransitionView$jump(kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="tag.html">tag</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">&gt;</span> <a href="tag.html#T"><span class="identifier">T</span></a><span class="symbol">.</span><span class="identifier">tag</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations.TransitionView$tag(lk.android.animations.TransitionView.tag.T, kotlin.String)/myTag">myTag</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="tag.html#T"><span class="identifier">T</span></a></code>
+<p>Tags a view with <a href="tag.html#lk.android.animations.TransitionView$tag(lk.android.animations.TransitionView.tag.T, kotlin.String)/myTag">myTag</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../android.view.-view/height-animator.html">heightAnimator</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">.</span><span class="identifier">heightAnimator</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations$heightAnimator(android.view.View, kotlin.Int)/toHeight">toHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-typed-value-animator/-int-animator/index.html"><span class="identifier">IntAnimator</span></a></code>
+<p>Creates an animator that will animate from the current height to a new height.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../android.view.-view/width-animator.html">widthAnimator</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">.</span><span class="identifier">widthAnimator</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations$widthAnimator(android.view.View, kotlin.Int)/toWidth">toWidth</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-typed-value-animator/-int-animator/index.html"><span class="identifier">IntAnimator</span></a></code>
+<p>Creates an animator that will animate from the current width to a new width.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

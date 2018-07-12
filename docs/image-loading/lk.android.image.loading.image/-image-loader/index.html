@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ImageLoader - image-loading</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">image-loading</a>&nbsp;/&nbsp;<a href="../index.html">lk.android.image.loading.image</a>&nbsp;/&nbsp;<a href="./index.html">ImageLoader</a><br/>
+<br/>
+<h1>ImageLoader</h1>
+<code><span class="keyword">class </span><span class="identifier">ImageLoader</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/io/Closeable.html"><span class="identifier">Closeable</span></a></code>
+<p>Loads images with a cache.
+Created by joseph on 8/3/17.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ImageLoader</span><span class="symbol">(</span><span class="identifier" id="lk.android.image.loading.image.ImageLoader$<init>(okhttp3.Request.Builder, kotlin.Int, kotlin.Int, kotlin.Int)/baseRequest">baseRequest</span><span class="symbol">:</span>&nbsp;<a href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/Request/Builder.html"><span class="identifier">Builder</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Request.Builder()<span class="symbol">, </span><span class="identifier" id="lk.android.image.loading.image.ImageLoader$<init>(okhttp3.Request.Builder, kotlin.Int, kotlin.Int, kotlin.Int)/imageMaxWidth">imageMaxWidth</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;2048<span class="symbol">, </span><span class="identifier" id="lk.android.image.loading.image.ImageLoader$<init>(okhttp3.Request.Builder, kotlin.Int, kotlin.Int, kotlin.Int)/imageMaxHeight">imageMaxHeight</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;2048<span class="symbol">, </span><span class="identifier" id="lk.android.image.loading.image.ImageLoader$<init>(okhttp3.Request.Builder, kotlin.Int, kotlin.Int, kotlin.Int)/maxCachedImages">maxCachedImages</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;100<span class="symbol">)</span></code>
+<p>Loads images with a cache.
+Created by joseph on 8/3/17.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="base-request.html">baseRequest</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">baseRequest</span><span class="symbol">: </span><a href="http://square.github.io/okhttp/3.x/okhttp/okhttp3/Request/Builder.html"><span class="identifier">Builder</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="image-max-height.html">imageMaxHeight</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">imageMaxHeight</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="image-max-width.html">imageMaxWidth</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">imageMaxWidth</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="max-cached-images.html">maxCachedImages</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">maxCachedImages</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="clear-cache-down-to.html">clearCacheDownTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">clearCacheDownTo</span><span class="symbol">(</span><span class="identifier" id="lk.android.image.loading.image.ImageLoader$clearCacheDownTo(kotlin.Int)/count">count</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="close.html">close</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">close</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-image.html">getImage</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getImage</span><span class="symbol">(</span><span class="identifier" id="lk.android.image.loading.image.ImageLoader$getImage(android.content.Context, kotlin.String, kotlin.Function1((lk.kotlin.okhttp.TypedResponse((android.graphics.Bitmap)), kotlin.Unit)))/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.image.loading.image.ImageLoader$getImage(android.content.Context, kotlin.String, kotlin.Function1((lk.kotlin.okhttp.TypedResponse((android.graphics.Bitmap)), kotlin.Unit)))/input">input</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.image.loading.image.ImageLoader$getImage(android.content.Context, kotlin.String, kotlin.Function1((lk.kotlin.okhttp.TypedResponse((android.graphics.Bitmap)), kotlin.Unit)))/callback">callback</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://lightningkite.github.io/lk-kotlin/okhttp/lk.kotlin.okhttp/-typed-response/index.html"><span class="identifier">TypedResponse</span></a><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/graphics/Bitmap.html"><span class="identifier">Bitmap</span></a><span class="symbol">&gt;</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,6 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.android.observable.validation$bindError(android.support.design.widget.TextInputLayout, lk.kotlin.observable.property.ObservableProperty((kotlin.Any)))lk.android.observable.validation/android.support.design.widget.-text-input-layout/bind-error.html
+$dokka.location:lk.android.observable.validation$bindError(android.widget.TextView, lk.kotlin.observable.property.ObservableProperty((kotlin.Any)))lk.android.observable.validation/android.widget.-text-view/bind-error.html
+$dokka.location:lk.android.observable.validation$validation#lk.kotlin.observable.property.ObservableProperty((lk.android.observable.validation.validation.T))lk.android.observable.validation/lk.kotlin.observable.property.-observable-property/validation.html
+lk.android.observable.validation

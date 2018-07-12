@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ViewSwapManager - animations</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">animations</a>&nbsp;/&nbsp;<a href="../index.html">lk.android.animations</a>&nbsp;/&nbsp;<a href="./index.html">ViewSwapManager</a><br/>
+<br/>
+<h1>ViewSwapManager</h1>
+<code><span class="keyword">class </span><span class="identifier">ViewSwapManager</span><span class="symbol">&lt;</span><span class="identifier">VG</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">&gt;</span></code>
+<p>Helps one swap views in and out of a container.</p>
+<p>Created by joseph on 1/19/18.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ViewSwapManager</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations.ViewSwapManager$<init>(lk.android.animations.ViewSwapManager.VG, kotlin.Function0((android.view.ViewGroup.LayoutParams)))/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="index.html#VG"><span class="identifier">VG</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.animations.ViewSwapManager$<init>(lk.android.animations.ViewSwapManager.VG, kotlin.Function0((android.view.ViewGroup.LayoutParams)))/generateLayoutParams">generateLayoutParams</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup/LayoutParams.html"><span class="identifier">LayoutParams</span></a><span class="symbol">)</span></code>
+<p>Helps one swap views in and out of a container.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="current-view.html">currentView</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">currentView</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="generate-layout-params.html">generateLayoutParams</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">generateLayoutParams</span><span class="symbol">: </span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup/LayoutParams.html"><span class="identifier">LayoutParams</span></a></code>
+<p>A lambda that generates the default layout parameters for views being swapped in.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="parent.html">parent</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">parent</span><span class="symbol">: </span><a href="index.html#VG"><span class="identifier">VG</span></a></code>
+<p>The parent view to manage.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="swap.html">swap</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">swap</span><span class="symbol">(</span><span class="identifier" id="lk.android.animations.ViewSwapManager$swap(android.view.View, lk.android.animations.AnimationSet)/newView">newView</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="lk.android.animations.ViewSwapManager$swap(android.view.View, lk.android.animations.AnimationSet)/animation">animation</span><span class="symbol">:</span>&nbsp;<a href="../-animation-set/index.html"><span class="identifier">AnimationSet</span></a>&nbsp;<span class="symbol">=</span>&nbsp;AnimationSet.fade<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

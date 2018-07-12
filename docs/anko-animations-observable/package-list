@@ -1,0 +1,5 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.anko.animations.observable$progressLayout(android.view.ViewManager, lk.kotlin.observable.property.MutableObservableProperty((kotlin.Boolean)), kotlin.Int, kotlin.Function2((lk.anko.animations._TransitionView, lk.kotlin.observable.property.MutableObservableProperty((kotlin.Boolean)), android.view.View)))lk.anko.animations.observable/android.view.-view-manager/progress-layout.html
+$dokka.location:lk.anko.animations.observable$progressLayoutReadOnly(android.view.ViewManager, lk.kotlin.observable.property.ObservableProperty((kotlin.Boolean)), kotlin.Function1((lk.anko.animations._TransitionView, android.view.View)))lk.anko.animations.observable/android.view.-view-manager/progress-layout-read-only.html
+lk.anko.animations.observable

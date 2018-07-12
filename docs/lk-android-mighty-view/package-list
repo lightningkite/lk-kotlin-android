@@ -1,0 +1,6 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:lk.android.mighty.view$bind(lk.android.animations.SwapView, lk.android.activity.access.ActivityAccess, lk.kotlin.observable.property.ObservableProperty((lk.android.mighty.view.bind.T)), kotlin.Function1((lk.android.mighty.view.bind.T, lk.android.animations.AnimationSet)))lk.android.mighty.view/lk.android.animations.-swap-view/bind.html
+$dokka.location:lk.android.mighty.view$bind(lk.android.animations.SwapView, lk.android.activity.access.ActivityAccess, lk.kotlin.observable.property.StackObservableProperty((lk.android.mighty.view.bind.T)), lk.android.animations.AnimationSet, lk.android.animations.AnimationSet, lk.android.animations.AnimationSet)lk.android.mighty.view/lk.android.animations.-swap-view/bind.html
+$dokka.location:lk.android.mighty.view$stackDialog(android.content.Context, kotlin.Boolean, kotlin.Function1((android.view.Window, kotlin.Unit)), kotlin.Function1((android.view.WindowManager.LayoutParams, kotlin.Unit)), lk.kotlin.observable.property.StackObservableProperty((kotlin.Function1((lk.android.activity.access.ActivityAccess, android.view.View)))))lk.android.mighty.view/android.content.-context/stack-dialog.html
+lk.android.mighty.view
