@@ -14,24 +14,24 @@ Each piece of the library is built to be read - in other words, you should be ab
 
 This includes the following packages:
 
-[mighty-view](mighty-view/README.md) - My favorite package, personally.  While it, of itself, contains only four extension functions, it represents an entirely new, clean way of making Android apps.  It has dependencies on several other packages in this library.
-[activity-access](activity-access/README.md) -
-[animations](animations/README.md) -
-[animations-observable](animations-observable/README.md) -
-[design-extensions](design-extensions/README.md) -
-[dialogs](dialogs/README.md) -
-[extensions](extensions/README.md) -
-[image-loading](image-loading/README.md) -
-[image-loading-observable](image-loading-observable/README.md) -
-[lifecycle](lifecycle/README.md) -
-[observable](observable/README.md) -
-[observable-validation](observable-validation/README.md) -
-[ui-thread](ui-thread/README.md) -
-[anko-adapters-observable](anko-adapters-observable/README.md) -
-[anko-adapters](anko-adapters/README.md) -
-[anko-animations-observable](anko-animations-observable/README.md) -
-[anko-animations](anko-animations/README.md) -
-[anko-extensions](anko-extensions/README.md) -
+- [mighty-view](mighty-view/README.md) - My favorite package, personally.  While it, of itself, contains only four extension functions, it represents an entirely new, clean way of making Android apps.  It has dependencies on several other packages in this library.
+- [activity-access](activity-access/README.md) - Defines and implements an interface for accessing the activity lifecycle more easily.
+- [animations](animations/README.md) - Various animation tools
+- [animations-observable](animations-observable/README.md) - Various animation tools that use [observables](https://github.com/lightningkite/lk-kotlin)
+- [design-extensions](design-extensions/README.md) - Various extensions for using the 'design' elements from the compat libraries.
+- [dialogs](dialogs/README.md) - Uses `activity-access` to show very sturdy dialogs.
+- [extensions](extensions/README.md) - Various Kotlin extensions to make Android more usable.
+- [image-loading](image-loading/README.md) - Various stuff for loading images.
+- [image-loading-observable](image-loading-observable/README.md) - Various stuff for loading images using [observables](https://github.com/lightningkite/lk-kotlin).
+- [lifecycle](lifecycle/README.md) - Exposes the view's lifecycle using [observables](https://github.com/lightningkite/lk-kotlin).
+- [observable](observable/README.md) - Various Android things that can be done with [observables](https://github.com/lightningkite/lk-kotlin).
+- [observable-validation](observable-validation/README.md) - A system for validating forms using [observables](https://github.com/lightningkite/lk-kotlin).
+- [ui-thread](ui-thread/README.md) - Exposes a [Executor] that represents the UI thread.
+- [anko-adapters](anko-adapters/README.md) - Tools for building adapters in Anko.
+- [anko-adapters-observable](anko-adapters-observable/README.md) - Tools for building adapters in Anko combined with [observables](https://github.com/lightningkite/lk-kotlin).
+- [anko-animations](anko-animations/README.md) - More animation tools, specifically for Anko.
+- [anko-animations-observable](anko-animations-observable/README.md) - Same as above with additional things for [observables](https://github.com/lightningkite/lk-kotlin).
+- [anko-extensions](anko-extensions/README.md) - Various extensions to Anko.
 
 
 ## Gradle Inclusion
@@ -52,6 +52,31 @@ Include the desired libraries:
 
 ```
 dependencies {
+    implementation "com.lightningkite.kotlin.android:activity-access:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:animations:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:animations-observable:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:design-extensions:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:dialogs:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:extensions:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:image-loading:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:image-loading-observable:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:lifecycle:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:observable:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:observable-validation:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:ui-thread:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:mighty-view:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:anko-adapters-observable:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:anko-adapters:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:anko-animations-observable:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:anko-animations:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin.android:anko-extensions:${rootProject.libraryKotlinVersion}"
+    
+    implementation "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin:jackson:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin:okhttp:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin:okhttp-jackson:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
+    implementation "com.lightningkite.kotlin:observable-list:${rootProject.libraryKotlinVersion}"
 }
 ```
 

@@ -58,18 +58,19 @@ fun ImageView.bindUri(
         } else setImageDrawable(null)
 
         if (uri == null || uri.isEmpty()) {
+            loadingObs.value = false
             //set to default image
             if (noImageResource != null) {
                 setImageResource(noImageResource)
             }
             onLoadComplete(ImageViewBindUriState.STATE_NO_IMAGE)
         } else {
-            loadingObs.value = (true)
+            loadingObs.value = true
             imageLoader.getImage(context, uri) {
                 //cancel if changed already
                 if (uri != uriObservable.value) return@getImage
 
-                loadingObs.value = (false)
+                loadingObs.value = false
                 if (it.result == null) {
                     //set to default image or broken image
                     if (brokenImageResource != null) {

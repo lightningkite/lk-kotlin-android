@@ -11,6 +11,7 @@ class ViewGeneratorPreview(context: Context) : FrameLayout(context) {
 
     //Create an ActivityAccess object that's a placeholder for a real one
     val access = object : ActivityAccess {
+        override val savedInstanceState: Bundle? = null
         override val activity: Activity? = null
         override val context: Context = context
         override val onResume: MutableCollection<() -> Unit> = ArrayList()

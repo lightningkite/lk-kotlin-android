@@ -17,6 +17,7 @@ import android.os.Bundle
 interface ActivityAccess {
     val activity: Activity?
     val context: Context
+    val savedInstanceState: Bundle?
 
     val onResume: MutableCollection<() -> Unit>
     val onPause: MutableCollection<() -> Unit>

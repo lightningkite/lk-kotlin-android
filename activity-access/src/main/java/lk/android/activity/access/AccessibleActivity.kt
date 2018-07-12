@@ -26,7 +26,7 @@ abstract class AccessibleActivity : AppCompatActivity(), ActivityAccess {
     override val context: Context
         get() = this
 
-    var savedInstanceState: Bundle? = null
+    override var savedInstanceState: Bundle? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

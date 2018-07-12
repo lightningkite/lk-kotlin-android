@@ -37,9 +37,9 @@ class ImageLoader(
             if (!requests.contains(input)) {
                 requests.add(input)
 
-                val request = if (input.startsWith("http")) {
+                val request: () -> TypedResponse<Bitmap> = if (input.startsWith("http")) {
                     baseRequest.url(input).lambdaBitmapExif(context, imageMaxWidth, imageMaxHeight)
-                } else {
+                } else if (input.isNotEmpty()) {
                     {
                         try {
                             TypedResponse(
@@ -47,8 +47,12 @@ class ImageLoader(
                                     context.getBitmapFromUri(Uri.parse(input), imageMaxWidth, imageMaxHeight)!!
                             )
                         } catch (e: Exception) {
-                            TypedResponse(0, exception = e)
+                            TypedResponse<Bitmap>(0, exception = e)
                         }
+                    }
+                } else {
+                    {
+                        TypedResponse<Bitmap>(0, null)
                     }
                 }
 
