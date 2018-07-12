@@ -1,4 +1,4 @@
-# LK Kotlin
+# LK Kotlin Android
 
 [ ![Download](https://api.bintray.com/packages/lightningkite/com.lightningkite.kotlin.android/extensions/images/download.svg) ](https://bintray.com/lightningkite/com.lightningkite.kotlin.android/extensions/_latestVersion)
 
