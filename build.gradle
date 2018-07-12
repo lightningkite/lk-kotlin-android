@@ -4,8 +4,8 @@
 buildscript {
     ext.repositoryGroupName = 'com.lightningkite.kotlin.android'
     ext.kotlinVersion = '1.2.31'
-    ext.libraryVersion = '0.5.0'
-    ext.libraryKotlinVersion = '0.5.0'
+    ext.libraryVersion = '0.5.1'
+    ext.libraryKotlinVersion = '0.5.1'
     ext.ankoVersion = '0.10.4'
     ext.compatVersion = '27.1.1'
     ext.androidMavenPublishPluginVersion = '3.1.1'
@@ -28,6 +28,7 @@ apply plugin: 'com.jfrog.bintray'
 allprojects {
     repositories {
         mavenLocal()
+        url "https://dl.bintray.com/lightningkite/com.lightningkite.kotlin"
         google()
         jcenter()
     }
