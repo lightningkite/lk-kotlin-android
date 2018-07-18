@@ -3,6 +3,7 @@ package lk.android.extensions
 
 
 import android.content.Context
+import android.support.v7.widget.AppCompatSpinner
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
@@ -14,7 +15,7 @@ import android.widget.SpinnerAdapter
  * A spinner that can have a hint.
  * Created by jivie on 8/25/15.
  */
-class HintSpinner(context: Context, mode: Int, val hint: View) : Spinner(context, mode) {
+class HintSpinner(context: Context, mode: Int, val hint: View) : AppCompatSpinner(context, mode) {
 
     private var wrapper: AdapterWrapper? = null
 

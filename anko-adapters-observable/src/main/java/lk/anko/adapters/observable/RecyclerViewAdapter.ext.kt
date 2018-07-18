@@ -11,6 +11,7 @@ import lk.kotlin.observable.list.ObservableListListenerSet
 import lk.kotlin.observable.list.addListenerSet
 import lk.kotlin.observable.list.removeListenerSet
 import lk.kotlin.observable.property.ObservableProperty
+import lk.kotlin.observable.property.lifecycle.Lifecycle
 import lk.kotlin.observable.property.lifecycle.openCloseBinding
 import java.util.*
 
@@ -63,7 +64,7 @@ fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.detatchAnimati
 /**
  * Attaches updates from an [ObservableList] to the adapter for the duration of the lifecycle.
  */
-fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.attachAnimations(lifecycle: ObservableProperty<Boolean>, list: ObservableList<ITEM>) {
+fun <ITEM, VH : RecyclerView.ViewHolder> RecyclerView.Adapter<VH>.attachAnimations(lifecycle: Lifecycle, list: ObservableList<ITEM>) {
     lifecycle.openCloseBinding(
             onOpen = {
                 notifyDataSetChanged()

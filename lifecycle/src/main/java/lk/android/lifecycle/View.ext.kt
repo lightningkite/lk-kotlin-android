@@ -10,6 +10,7 @@ import android.support.v4.view.ViewCompat
 import android.view.View
 import android.view.ViewGroup
 import lk.kotlin.observable.property.ObservableProperty
+import lk.kotlin.observable.property.lifecycle.Lifecycle
 import lk.kotlin.utils.lambda.invokeAll
 import java.util.*
 
@@ -20,7 +21,7 @@ private val View_lifecycleListener = WeakHashMap<View, ViewLifecycleListener>()
 /**
  * A lifecycle for a view, that starts when the view is attached and ends when it is detatched.
  */
-class ViewLifecycleListener(val view: View) : View.OnAttachStateChangeListener, ObservableProperty<Boolean> {
+class ViewLifecycleListener(val view: View) : View.OnAttachStateChangeListener, Lifecycle {
 
     override var value = ViewCompat.isAttachedToWindow(view)
         private set
