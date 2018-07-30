@@ -64,6 +64,7 @@ class DemoGroupSelectorVG(val stack: StackObservableProperty<ViewGenerator>) : V
                 lk.kotlin.android.example.random.NetImageTestVG::class.default(),
                 lk.kotlin.android.example.random.NetworkListVG::class.default(),
                 lk.kotlin.android.example.random.ObservableListVG::class.default(),
+                lk.kotlin.android.example.random.TransitionVG::class.default(),
                 lk.kotlin.android.example.random.ObservableList2VG::class.default { ObservableList2VG(it) }
         )
                 .groupBy { it.groupName }

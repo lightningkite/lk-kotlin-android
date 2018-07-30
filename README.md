@@ -12,6 +12,8 @@ All of them use a combination of Android and Kotlin, and possibly other language
 
 Each piece of the library is built to be read - in other words, you should be able to look at the source of anything in it and understand it pretty much immediately.  If not, please make a GitHub issue for it so that it can be better written or at least better documented.
 
+**WARNING**:  While these projects are kept up to date because they are actively used in published projects, the documentation on these packages is still being worked on.  Please add GitHub issues about spots that need more.
+
 This includes the following packages:
 
 - [mighty-view](mighty-view/README.md) - My favorite package, personally.  While it, of itself, contains only four extension functions, it represents an entirely new, clean way of making Android apps.  It has dependencies on several other packages in this library.
