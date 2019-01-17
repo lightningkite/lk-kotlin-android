@@ -7,6 +7,62 @@
 <BODY>
 <a href="./index.html">lifecycle</a><br/>
 <br/>
+<p><a href="../">Return to Index</a></p>
+<h2>Package description</h2>
+<p>Adds an observable property to every view called <code>lifecycle</code> that is <code>true</code> when the view is attached and <code>false</code> otherwise.</p>
+<p>This turns out to be super useful in ensuring there are no event listener leaks, adding a listener when the view is attached and removing it when it is detached.</p>
+<p>There are some convenient functions for using this functionality:</p>
+<pre><code class="lang-kotlin">val event = HashSet&lt;(Input)-&gt;Unit&gt;()
+
+...
+
+
+view {
+    lifecycle.listen(event){ it:Input -&gt;
+        //Do something with the view.
+    }
+}
+
+</code></pre>
+<p>Also, when using with observable properties, you can use <code>bind</code> to call the listener immediately as well.</p>
+<pre><code class="lang-kotlin">val currentNum = StandardObservableProperty(0)
+
+...
+
+
+textView {
+    lifecycle.bind(currentNum){ it:Int -&gt;
+        text = it.toString()
+    }
+    setOnClickListener {
+        currentNum.value++
+    }
+}
+
+</code></pre>    
+<h2>Dependencies</h2>
+<p>This package depends upon:</p>
+<ul><li>AppCompatV7 </li>
+<li><a href="../ui-thread">ui-thread</a></li>
+<li><a href="https://github.com/lightningkite/lk-kotlin/tree/master/observable-property">Observable properties</a></li>
+</ul>
+<h2>Gradle Inclusion</h2>
+<p>Add the repository:</p>
+<pre><code>repositories {
+    maven {
+        url "https://dl.bintray.com/lightningkite/com.lightningkite.kotlin"
+        url "https://dl.bintray.com/lightningkite/com.lightningkite.kotlin.android"
+    }
+}
+</code></pre>
+<p>Include the desired libraries:</p>
+<pre><code>dependencies {
+    implementation "com.lightningkite.kotlin.android:ui-thread:[version]"
+    implementation "com.lightningkite.kotlin.android:lifecycle:[version]"
+    implementation "com.lightningkite.kotlin:observable-property:[version]"
+}
+</code></pre>
+<h2>Resources</h2>
 <h3>Packages</h3>
 <table>
 <tbody>

@@ -7,6 +7,39 @@
 <BODY>
 <a href="./index.html">observable</a><br/>
 <br/>
+<p><a href="../">Return to Index</a></p>
+<h2>Package description</h2>
+<p>Adds a ton of convenience function for binding the values of observable properties to views.</p>
+<p>Some examples:</p>
+<ul><li><code>EditText.bindString</code> allows you to keep the value of the observable and the value in the EditText always the same.</li>
+<li><code>CompoundButton.bindBoolean</code> allows you to keep the checked/unchecked state of the component matching the value of the observable property.</li>
+</ul>
+    
+<h2>Dependencies</h2>
+<p>This package depends upon:</p>
+<ul><li>AppCompatV7 </li>
+<li><a href="../ui-thread">ui-thread</a></li>
+<li><a href="../lifecycle">lifecycle</a></li>
+<li><a href="https://github.com/lightningkite/lk-kotlin/tree/master/observable-property">Observable properties</a></li>
+</ul>
+<h2>Gradle Inclusion</h2>
+<p>Add the repository:</p>
+<pre><code>repositories {
+    maven {
+        url "https://dl.bintray.com/lightningkite/com.lightningkite.kotlin"
+        url "https://dl.bintray.com/lightningkite/com.lightningkite.kotlin.android"
+    }
+}
+</code></pre>
+<p>Include the desired libraries:</p>
+<pre><code>dependencies {
+    implementation "com.lightningkite.kotlin.android:ui-thread:[version]"
+    implementation "com.lightningkite.kotlin.android:lifecycle:[version]"
+    implementation "com.lightningkite.kotlin.android:observable:[version]"
+    implementation "com.lightningkite.kotlin:observable-property:[version]"
+}
+</code></pre>
+<h2>Resources</h2>
 <h3>Packages</h3>
 <table>
 <tbody>

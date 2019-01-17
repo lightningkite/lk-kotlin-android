@@ -7,6 +7,61 @@
 <BODY>
 <a href="./index.html">anko-adapters-observable</a><br/>
 <br/>
+<p><a href="../">Return to Index</a></p>
+<h2>Package description</h2>
+<p>Contains some useful implementations of RecyclerView adapters to be used with Anko and observables.</p>
+<p>The most important of this is <code>ListRecyclerViewAdapter</code>, which can be used to show a list of items in a very convenient syntax like this:</p>
+<pre><code class="lang-kotlin">val myObservableList = ObservableListWrapper&lt;Int&gt;()
+
+myObservableList.add(1)
+myObservableList.add(2)
+myObservableList.add(3)
+
+verticalRecyclerView {
+
+    //Sets a list adapter with animation bindings.
+    adapter = listAdapter(myObservableList) { itemObs -&gt;
+        //itemObs is an observable property with whatever item the view is supposed to show.
+        
+        //Here we insert the code to create a view that displays it
+        
+        textView {
+            
+            lifecycle.bind(itemObs){
+                text = it.toString()
+            }
+            
+        }.lparams(matchParent, wrapContent)
+    
+    }
+
+}
+
+</code></pre>    
+<h2>Dependencies</h2>
+<p>This package depends upon:</p>
+<ul><li>AppCompatV7 </li>
+<li><a href="https://github.com/Kotlin/anko/wiki/Anko-Layouts">Anko</a>.</li>
+<li><a href="https://github.com/lightningkite/lk-kotlin/tree/master/observable-property">Observable properties</a></li>
+<li><a href="https://github.com/lightningkite/lk-kotlin/tree/master/observable-list">Observable lists</a></li>
+</ul>
+<h2>Gradle Inclusion</h2>
+<p>Add the repository:</p>
+<pre><code>repositories {
+    maven {
+        url "https://dl.bintray.com/lightningkite/com.lightningkite.kotlin"
+        url "https://dl.bintray.com/lightningkite/com.lightningkite.kotlin.android"
+    }
+}
+</code></pre>
+<p>Include the desired libraries:</p>
+<pre><code>dependencies {
+    implementation "com.lightningkite.kotlin.android:anko-adapters-observable:[version]"
+    implementation "com.lightningkite.kotlin:observable-property:[version]"
+    implementation "com.lightningkite.kotlin:observable-list:[version]"
+}
+</code></pre>
+<h2>Resources</h2>
 <h3>Packages</h3>
 <table>
 <tbody>

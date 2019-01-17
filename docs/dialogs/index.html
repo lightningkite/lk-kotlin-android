@@ -7,6 +7,46 @@
 <BODY>
 <a href="./index.html">dialogs</a><br/>
 <br/>
+<p><a href="../">Return to Index</a></p>
+<h2>Package description</h2>
+<p>Functionality for creating dialogs very quickly but in a very stable manner (i.e. they're activities so they don't disappear on rotation).</p>
+<p>This does depend on the <a href="../activity-access">activity-access</a> package to launch and use the dialogs.</p>
+<p>Here are some quick examples of the functionality:</p>
+<pre><code class="lang-kotlin">val access: ActivityAccess
+
+access.infoDialog(
+    title = "Hello!",
+    message = "This is some important information."
+)
+
+access.confirmationDialog(
+    title = "Confirmation",
+    message = "Are you sure you want to do this?"
+){
+    //do the thing
+}
+
+</code></pre>    
+<h2>Dependencies</h2>
+<p>This package depends upon:</p>
+<ul><li>AppCompatV7 </li>
+<li><a href="../activity-access">activity-access</a></li>
+</ul>
+<h2>Gradle Inclusion</h2>
+<p>Add the repository:</p>
+<pre><code>repositories {
+    maven {
+        url "https://dl.bintray.com/lightningkite/com.lightningkite.kotlin.android"
+    }
+}
+</code></pre>
+<p>Include the desired libraries:</p>
+<pre><code>dependencies {
+    implementation "com.lightningkite.kotlin.android:dialogs:[version]"
+    implementation "com.lightningkite.kotlin.android:activity-access:[version]"
+}
+</code></pre>
+<h2>Resources</h2>
 <h3>Packages</h3>
 <table>
 <tbody>

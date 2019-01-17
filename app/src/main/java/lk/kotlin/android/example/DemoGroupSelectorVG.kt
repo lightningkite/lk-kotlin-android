@@ -47,6 +47,7 @@ class DemoGroupSelectorVG(val stack: StackObservableProperty<ViewGenerator>) : V
                 lk.kotlin.android.example.activity.access.ActivityAccessVG::class.default(),
                 lk.kotlin.android.example.animations.HeightAnimatorVG::class.default(),
                 lk.kotlin.android.example.animations.TransitionViewVG::class.default(),
+                lk.kotlin.android.example.animations.ChaosIssueVG::class.default(),
                 lk.kotlin.android.example.animations.SwapViewVG::class.default(),
                 lk.kotlin.android.example.animations.observable.ExpandingExampleVG::class.default(),
                 lk.kotlin.android.example.design.extensions.DesignExtensionsVG::class.default(),

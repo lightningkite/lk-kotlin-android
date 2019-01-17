@@ -74,14 +74,11 @@ open class ListRecyclerViewAdapter<T>(
         var viewHolder: ViewHolder<T>? = null
         val position get() = viewHolder?.adapterPosition?.takeUnless { it == -1 } ?: backupPosition
         var backupPosition: Int = 0
+        var lastValue: T = parent.default as T
 
         @Suppress("UNCHECKED_CAST")
         override var value: T
-            get() {
-                if (position >= 0 && position < parent.list.size) {
-                    return parent.list[position]
-                } else return parent.default as T
-            }
+            get() = lastValue as T
             set(value) {
                 if (position < 0 || position >= parent.list.size) return
                 val list = parent.list as? MutableList<T> ?: throw IllegalAccessException()
@@ -91,7 +88,10 @@ open class ListRecyclerViewAdapter<T>(
 
         override fun update() {
             if (position >= 0 && position < parent.list.size) {
+                lastValue = parent.list[position]
                 super.update()
+            } else {
+                lastValue = parent.default as T
             }
         }
     }
@@ -100,6 +100,8 @@ open class ListRecyclerViewAdapter<T>(
         init {
             adapterPosition
         }
+
+
     }
 
     fun update(position: Int) {

@@ -18,7 +18,6 @@
       <module fileurl="file://$PROJECT_DIR$/image-loading-observable/image-loading-observable.iml" filepath="$PROJECT_DIR$/image-loading-observable/image-loading-observable.iml" />
       <module fileurl="file://$PROJECT_DIR$/lifecycle/lifecycle.iml" filepath="$PROJECT_DIR$/lifecycle/lifecycle.iml" />
       <module fileurl="file://$PROJECT_DIR$/lk-kotlin-android.iml" filepath="$PROJECT_DIR$/lk-kotlin-android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/lk-kotlin-android.iml" filepath="$PROJECT_DIR$/.idea/lk-kotlin-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/mighty-view/mighty-view.iml" filepath="$PROJECT_DIR$/mighty-view/mighty-view.iml" />
       <module fileurl="file://$PROJECT_DIR$/observable/observable.iml" filepath="$PROJECT_DIR$/observable/observable.iml" />
       <module fileurl="file://$PROJECT_DIR$/observable-validation/observable-validation.iml" filepath="$PROJECT_DIR$/observable-validation/observable-validation.iml" />
