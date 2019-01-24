@@ -50,7 +50,7 @@ open class ListRecyclerViewAdapter<T>(
         val holder = ViewHolder(newView, observable)
         observable.viewHolder = holder
         itemHolders.add(holder)
-        holder.view.lifecycle.setAlwaysOnRecursive() //Necessary because Android is broke
+        holder.view.lifecycle.setAlwaysMatchRecursive(parent.lifecycle) //Necessary because Android is broke
         return holder
     }
 

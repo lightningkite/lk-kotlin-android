@@ -15,6 +15,7 @@ import lk.anko.adapters.swipeToDismiss
 import lk.anko.extensions.anko
 import lk.anko.extensions.stickyHeaders
 import lk.anko.extensions.verticalRecyclerView
+import lk.kotlin.android.example.CentralLeakTestObservable
 import lk.kotlin.android.example.R
 import lk.kotlin.observable.list.ObservableListWrapper
 import lk.kotlin.observable.property.lifecycle.bind
@@ -36,6 +37,9 @@ class ObservableListVG() : ViewGenerator {
 
                 adapter = listAdapter(items) { obs ->
                     textView {
+                        lifecycle.bind(CentralLeakTestObservable){
+                            tag
+                        }
                         lifecycle.bind(obs) {
                             text = it + " (position: ${obs.position})"
                         }

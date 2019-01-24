@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import com.lightningkite.lk_android_lifecycle.R
 import lk.kotlin.observable.property.ObservableProperty
 import lk.kotlin.observable.property.StandardObservableProperty
+import lk.kotlin.observable.property.addAndInvoke
 import lk.kotlin.observable.property.lifecycle.Lifecycle
 import lk.kotlin.utils.lambda.invokeAll
 import java.util.*
@@ -50,18 +51,25 @@ class ViewLifecycleListener(val view: View) : View.OnAttachStateChangeListener, 
         listeners.invokeAll(value)
     }
 
-    fun setAlwaysOn() {
-        view.removeOnAttachStateChangeListener(this)
-        if (!value) {
-            value = true
-            listeners.invokeAll(value)
+    var matchingRoot: Lifecycle? = null
+    val matchListener = { it:Boolean ->
+        value = it
+        listeners.invokeAll(value)
+    }
+
+    fun setAlwaysMatch(root: Lifecycle) {
+        if(matchingRoot != root) {
+            matchingRoot?.remove(matchListener)
+            matchingRoot = root
+            view.removeOnAttachStateChangeListener(this)
+            root.addAndInvoke(matchListener)
         }
     }
 
-    fun setAlwaysOnRecursive() {
-        setAlwaysOn()
+    fun setAlwaysMatchRecursive(root: Lifecycle) {
+        setAlwaysMatch(root)
         view.forThisAndAllChildrenRecursive {
-            it.lifecycle.setAlwaysOn()
+            it.lifecycleOrNull?.setAlwaysMatch(root)
         }
     }
 }
@@ -87,3 +95,9 @@ val View.lifecycle: ViewLifecycleListener
         setTag(R.id.lk_lifecycle, listener)
         return listener
     }
+
+/**
+ * Gets this view's lifecycle object for events to connect with.
+ */
+val View.lifecycleOrNull: ViewLifecycleListener?
+    get() = getTag(R.id.lk_lifecycle) as? ViewLifecycleListener
