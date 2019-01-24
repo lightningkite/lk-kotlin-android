@@ -142,7 +142,7 @@ fun <T> RecyclerView.listAdapter(
         makeView: ListRecyclerViewAdapter.SRVAContext<T>.(ListRecyclerViewAdapter.ItemObservable<T>) -> Unit
 ): ListRecyclerViewAdapter<T> {
     val newAdapter = ListRecyclerViewAdapter(context, list, makeView)
-    newAdapter.attachAnimations(lifecycle, list)
+    newAdapter.attachAnimations(lifecycle, list, this)
     return newAdapter
 }
 
@@ -157,19 +157,19 @@ fun <T> RecyclerView.listAdapterObservable(
     lifecycle.listen(listObs) {
         newAdapter.list = it
         if (it is ObservableList<T>) {
-            newAdapter.attachAnimations(it)
+            newAdapter.attachAnimations(it, this)
         }
     }
     addOnAttachStateChangeListener(object : View.OnAttachStateChangeListener {
         override fun onViewAttachedToWindow(v: View?) {
             val list = listObs.value
             if (list is ObservableList<T>) {
-                newAdapter.attachAnimations(list)
+                newAdapter.attachAnimations(list, this@listAdapterObservable)
             }
         }
 
         override fun onViewDetachedFromWindow(v: View?) {
-            newAdapter.detatchAnimations<T, ListRecyclerViewAdapter.ViewHolder<T>>()
+            newAdapter.detatchAnimations<T, ListRecyclerViewAdapter.ViewHolder<T>>(this@listAdapterObservable)
         }
 
     })

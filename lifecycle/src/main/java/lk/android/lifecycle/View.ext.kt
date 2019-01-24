@@ -9,14 +9,14 @@ package lk.android.lifecycle
 import android.support.v4.view.ViewCompat
 import android.view.View
 import android.view.ViewGroup
+import com.lightningkite.lk_android_lifecycle.R
 import lk.kotlin.observable.property.ObservableProperty
+import lk.kotlin.observable.property.StandardObservableProperty
 import lk.kotlin.observable.property.lifecycle.Lifecycle
 import lk.kotlin.utils.lambda.invokeAll
 import java.util.*
 
 //View lifecycle stuff
-
-private val View_lifecycleListener = WeakHashMap<View, ViewLifecycleListener>()
 
 /**
  * A lifecycle for a view, that starts when the view is attached and ends when it is detatched.
@@ -61,7 +61,7 @@ class ViewLifecycleListener(val view: View) : View.OnAttachStateChangeListener, 
     fun setAlwaysOnRecursive() {
         setAlwaysOn()
         view.forThisAndAllChildrenRecursive {
-            View_lifecycleListener[it]?.setAlwaysOn()
+            it.lifecycle.setAlwaysOn()
         }
     }
 }
@@ -79,8 +79,11 @@ private fun View.forThisAndAllChildrenRecursive(action: (View) -> Unit) {
  * Gets this view's lifecycle object for events to connect with.
  */
 val View.lifecycle: ViewLifecycleListener
-    get() = View_lifecycleListener.getOrPut(this) {
+    get() {
+        val old = getTag(R.id.lk_lifecycle)
+        if(old is ViewLifecycleListener) return old
         val listener = ViewLifecycleListener(this)
         addOnAttachStateChangeListener(listener)
-        listener
+        setTag(R.id.lk_lifecycle, listener)
+        return listener
     }

@@ -51,6 +51,7 @@ class ChaosIssueVG() : ViewGenerator {
                         6 -> Gravity.BOTTOM or Gravity.LEFT
                         7 -> Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL
                         8 -> Gravity.BOTTOM or Gravity.RIGHT
+                        else -> Gravity.BOTTOM or Gravity.RIGHT
                     }
                 }
                 fun randomViewGenerator(): ViewGenerator =  { it.context.anko().textView("CHAOS ${Math.random()}").apply { gravity = randomGravity() } }

@@ -151,7 +151,7 @@ fun <T : Any> RecyclerView.multiTypeListAdapter(
         makeViews: Map<Class<out T>, MultiTypeListRecyclerViewAdapter.SRVAContext<T>.(MultiTypeListRecyclerViewAdapter.ItemObservable<T>) -> Unit>
 ): MultiTypeListRecyclerViewAdapter<T> {
     val newAdapter = MultiTypeListRecyclerViewAdapter(context, list, makeViews)
-    newAdapter.attachAnimations(lifecycle, list)
+    newAdapter.attachAnimations(lifecycle, list, this)
     return newAdapter
 }
 
@@ -168,19 +168,19 @@ fun <T : Any> RecyclerView.multiTypeListAdapterObservable(
     lifecycle.listen(listObs) {
         newAdapter.list = it
         if (it is ObservableList<T>) {
-            newAdapter.attachAnimations(it)
+            newAdapter.attachAnimations(it, this)
         }
     }
     addOnAttachStateChangeListener(object : View.OnAttachStateChangeListener {
         override fun onViewAttachedToWindow(v: View?) {
             val list = listObs.value
             if (list is ObservableList<T>) {
-                newAdapter.attachAnimations(list)
+                newAdapter.attachAnimations(list, this@multiTypeListAdapterObservable)
             }
         }
 
         override fun onViewDetachedFromWindow(v: View?) {
-            newAdapter.detatchAnimations<T, MultiTypeListRecyclerViewAdapter.ViewHolder<T>>()
+            newAdapter.detatchAnimations<T, MultiTypeListRecyclerViewAdapter.ViewHolder<T>>(this@multiTypeListAdapterObservable)
         }
 
     })

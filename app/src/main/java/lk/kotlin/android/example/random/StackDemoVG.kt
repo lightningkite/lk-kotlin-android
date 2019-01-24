@@ -3,6 +3,8 @@ package lk.kotlin.android.example.random
 import android.view.Gravity
 import android.view.View
 import lk.android.activity.access.ActivityAccess
+import lk.android.lifecycle.ViewLifecycleListener
+import lk.android.lifecycle.lifecycle
 import lk.android.mighty.view.ViewGenerator
 import lk.anko.extensions.anko
 import lk.kotlin.android.example.styleDefault
@@ -11,6 +13,7 @@ import lk.kotlin.observable.property.StackObservableProperty
 import org.jetbrains.anko.button
 import org.jetbrains.anko.textView
 import org.jetbrains.anko.verticalLayout
+import java.util.*
 
 /**
  * Created as a dummy VC to test out the stack.
@@ -24,6 +27,8 @@ class StackDemoVG(val stack: StackObservableProperty<ViewGenerator>, val depth: 
 
             textView("This view controller has a depth of $depth.") {
                 styleDefault()
+
+                lifecycle
             }
 
             button("Go deeper") {
