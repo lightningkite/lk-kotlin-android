@@ -5,7 +5,7 @@ package lk.anko.adapters.observable
 
 
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import lk.android.lifecycle.lifecycle
 import lk.anko.adapters.SingleRecyclerViewAdapter
 import lk.anko.adapters.TransitionRecyclerViewAdapter

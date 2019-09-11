@@ -26,8 +26,8 @@ repositories {
 }
 
 dependencies {
-    androidTestCompile "com.android.support:support-annotations:${rootProject.compatVersion}"
-    androidTestCompile 'com.android.support.test:runner:1.0.1'
+    androidTestCompile 'androidx.annotation:annotation:1.1.0'
+    androidTestCompile 'androidx.test:runner:1.2.0'
     testImplementation 'junit:junit:4.12'
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
 
@@ -35,8 +35,8 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
 
-    implementation "com.android.support:design:${rootProject.compatVersion}"
-    implementation "com.android.support:appcompat-v7:${rootProject.compatVersion}"
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
 //    implementation project
 
 //    implementation "com.android.support:cardview-v7:${rootProject.compatVersion}"

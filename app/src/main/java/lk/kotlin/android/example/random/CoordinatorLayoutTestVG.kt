@@ -2,8 +2,8 @@ package lk.kotlin.android.example.random
 
 import android.graphics.Color
 import android.graphics.PorterDuff
-import android.support.design.widget.AppBarLayout
-import android.support.design.widget.CollapsingToolbarLayout
+import com.google.android.material.appbar.AppBarLayout
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import android.view.Gravity
 import android.view.View
 import android.widget.ImageView

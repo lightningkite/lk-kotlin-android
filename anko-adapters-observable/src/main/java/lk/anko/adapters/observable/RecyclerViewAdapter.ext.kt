@@ -5,7 +5,7 @@ package lk.anko.adapters.observable
 
 
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import com.lightningkite.lk_android_lifecycle.R
 import lk.kotlin.observable.list.ObservableList

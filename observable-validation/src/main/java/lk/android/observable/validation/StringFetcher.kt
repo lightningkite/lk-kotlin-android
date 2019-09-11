@@ -6,7 +6,7 @@ package lk.android.observable.validation
 
 
 import android.content.res.Resources
-import android.support.annotation.StringRes
+import androidx.annotation.StringRes
 
 /**
  * Abstraction for handling string fetching, as for unit tests we don't have access to [Resources].

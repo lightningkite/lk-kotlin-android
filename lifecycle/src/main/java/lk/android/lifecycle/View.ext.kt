@@ -6,7 +6,7 @@ package lk.android.lifecycle
 
 
 
-import android.support.v4.view.ViewCompat
+import androidx.core.view.ViewCompat
 import android.view.View
 import android.view.ViewGroup
 import com.lightningkite.lk_android_lifecycle.R

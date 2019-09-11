@@ -1,8 +1,8 @@
 package lk.anko.extensions
 
-import android.support.annotation.StyleRes
-import android.support.design.widget.TextInputEditText
-import android.support.design.widget.TextInputLayout
+import androidx.annotation.StyleRes
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import org.jetbrains.anko.custom.ankoView
 
 /**

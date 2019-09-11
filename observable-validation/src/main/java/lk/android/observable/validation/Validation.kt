@@ -3,8 +3,8 @@
 
 package lk.android.observable.validation
 
-import android.support.annotation.StringRes
-import android.support.design.widget.TextInputLayout
+import androidx.annotation.StringRes
+import com.google.android.material.textfield.TextInputLayout
 import android.widget.TextView
 import lk.android.lifecycle.lifecycle
 import lk.kotlin.observable.property.ObservableProperty

@@ -9,9 +9,9 @@ import android.app.Activity
 import android.content.Context
 import android.content.ContextWrapper
 import android.graphics.Color
-import android.support.design.widget.CoordinatorLayout
-import android.support.design.widget.Snackbar
-import android.support.v4.widget.NestedScrollView
+import androidx.coordinatorlayout.widget.CoordinatorLayout
+import com.google.android.material.snackbar.Snackbar
+import androidx.core.widget.NestedScrollView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
@@ -119,13 +119,13 @@ fun Context.snackbar(text: Int, duration: Int = Snackbar.LENGTH_LONG, init: Snac
 /**
  * DSL for adding listeners to a snackbar.
  */
-fun android.support.design.widget.Snackbar.callback(init: _Snackbar_Callback.() -> Unit) {
+fun Snackbar.callback(init: _Snackbar_Callback.() -> Unit) {
     val callback = _Snackbar_Callback()
     callback.init()
     setCallback(callback)
 }
 
-class _Snackbar_Callback : android.support.design.widget.Snackbar.Callback() {
+class _Snackbar_Callback : Snackbar.Callback() {
 
     private var _onShown: ((Snackbar?) -> Unit)? = null
     private var _onDismissed: ((Snackbar?, Int) -> Unit)? = null

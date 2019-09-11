@@ -6,7 +6,7 @@ package lk.android.design.extensions
 
 
 import android.graphics.Typeface
-import android.support.design.widget.TextInputLayout
+import com.google.android.material.textfield.TextInputLayout
 import java.util.*
 
 /**

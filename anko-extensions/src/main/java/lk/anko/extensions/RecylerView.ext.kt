@@ -1,6 +1,6 @@
 package lk.anko.extensions
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import lk.android.extensions.StickyHeadersItemDecorator
 import org.jetbrains.anko.AnkoContext
 import org.jetbrains.anko.AnkoContextImpl

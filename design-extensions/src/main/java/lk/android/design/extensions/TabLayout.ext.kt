@@ -5,7 +5,7 @@ package lk.android.design.extensions
 
 
 
-import android.support.design.widget.TabLayout
+import com.google.android.material.tabs.TabLayout
 
 /**
  * Various functions that are missing from TabLayout to use it programmatically.

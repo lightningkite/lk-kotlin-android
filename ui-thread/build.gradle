@@ -5,7 +5,7 @@ buildscript {
     }
     dependencies {
         classpath "digital.wup:android-maven-publish:${rootProject.androidMavenPublishPluginVersion}"
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${rootProject.kotlinVersion}"
         classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:${rootProject.dokkaVersion}"
     }
@@ -26,12 +26,12 @@ repositories {
 }
 
 dependencies {
-    androidTestCompile 'com.android.support.test:runner:1.0.1'
+    androidTestCompile 'androidx.test:runner:1.2.0'
     testImplementation 'junit:junit:4.12'
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:${rootProject.kotlinVersion}"
 
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
-    implementation "com.android.support:support-compat:${rootProject.compatVersion}"
+    implementation 'androidx.core:core:1.1.0'
 }

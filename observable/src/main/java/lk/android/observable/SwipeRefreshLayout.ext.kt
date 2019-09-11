@@ -5,7 +5,7 @@ package lk.android.observable
 
 
 
-import android.support.v4.widget.SwipeRefreshLayout
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import lk.android.lifecycle.lifecycle
 import lk.kotlin.observable.property.MutableObservableProperty
 import lk.kotlin.observable.property.StandardObservableProperty

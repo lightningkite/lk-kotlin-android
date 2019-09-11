@@ -8,7 +8,7 @@ package lk.android.extensions
 import android.content.res.ColorStateList
 import android.content.res.Resources
 import android.graphics.drawable.Drawable
-import android.support.v4.content.res.ResourcesCompat
+import androidx.core.content.res.ResourcesCompat
 
 /**
  * Compat wrappers

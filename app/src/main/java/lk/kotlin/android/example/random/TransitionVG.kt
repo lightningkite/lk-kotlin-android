@@ -1,8 +1,8 @@
 package lk.kotlin.android.example.random
 
-import android.support.transition.AutoTransition
-import android.support.transition.Scene
-import android.support.transition.TransitionManager
+import androidx.transition.AutoTransition
+import androidx.transition.Scene
+import androidx.transition.TransitionManager
 import android.view.Gravity
 import android.view.View
 import lk.android.activity.access.ActivityAccess

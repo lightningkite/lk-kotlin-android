@@ -3,7 +3,7 @@ package lk.android.extensions
 
 
 import android.content.Context
-import android.support.v7.widget.AppCompatSpinner
+import androidx.appcompat.widget.AppCompatSpinner
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
