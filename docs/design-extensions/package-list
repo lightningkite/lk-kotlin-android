@@ -1,13 +1,13 @@
 $dokka.format:html
 $dokka.linkExtension:html
-$dokka.location:lk.android.design.extensions$callback(android.support.design.widget.Snackbar, kotlin.Function1((lk.android.design.extensions._Snackbar_Callback, kotlin.Unit)))lk.android.design.extensions/android.support.design.widget.-snackbar/callback.html
-$dokka.location:lk.android.design.extensions$errorResource#android.support.design.widget.TextInputLayoutlk.android.design.extensions/android.support.design.widget.-text-input-layout/error-resource.html
-$dokka.location:lk.android.design.extensions$hintResource#android.support.design.widget.TextInputLayoutlk.android.design.extensions/android.support.design.widget.-text-input-layout/hint-resource.html
-$dokka.location:lk.android.design.extensions$setFont(android.support.design.widget.TextInputLayout, kotlin.String)lk.android.design.extensions/android.support.design.widget.-text-input-layout/set-font.html
-$dokka.location:lk.android.design.extensions$setTabBackgroundResource(android.support.design.widget.TabLayout, kotlin.Int)lk.android.design.extensions/android.support.design.widget.-tab-layout/set-tab-background-resource.html
-$dokka.location:lk.android.design.extensions$setTabTextSize(android.support.design.widget.TabLayout, kotlin.Float)lk.android.design.extensions/android.support.design.widget.-tab-layout/set-tab-text-size.html
-$dokka.location:lk.android.design.extensions$snackbar(android.content.Context, kotlin.CharSequence, kotlin.Int, kotlin.Function1((android.support.design.widget.Snackbar, kotlin.Unit)))lk.android.design.extensions/android.content.-context/snackbar.html
-$dokka.location:lk.android.design.extensions$snackbar(android.content.Context, kotlin.Int, kotlin.Int, kotlin.Function1((android.support.design.widget.Snackbar, kotlin.Unit)))lk.android.design.extensions/android.content.-context/snackbar.html
-$dokka.location:lk.android.design.extensions$snackbar(android.view.View, kotlin.CharSequence, kotlin.Int, kotlin.Function1((android.support.design.widget.Snackbar, kotlin.Unit)))lk.android.design.extensions/android.view.-view/snackbar.html
-$dokka.location:lk.android.design.extensions$snackbar(android.view.View, kotlin.Int, kotlin.Int, kotlin.Function1((android.support.design.widget.Snackbar, kotlin.Unit)))lk.android.design.extensions/android.view.-view/snackbar.html
+$dokka.location:lk.android.design.extensions$callback(com.google.android.material.snackbar.Snackbar, kotlin.Function1((lk.android.design.extensions._Snackbar_Callback, kotlin.Unit)))lk.android.design.extensions/com.google.android.material.snackbar.-snackbar/callback.html
+$dokka.location:lk.android.design.extensions$errorResource#com.google.android.material.textfield.TextInputLayoutlk.android.design.extensions/com.google.android.material.textfield.-text-input-layout/error-resource.html
+$dokka.location:lk.android.design.extensions$hintResource#com.google.android.material.textfield.TextInputLayoutlk.android.design.extensions/com.google.android.material.textfield.-text-input-layout/hint-resource.html
+$dokka.location:lk.android.design.extensions$setFont(com.google.android.material.textfield.TextInputLayout, kotlin.String)lk.android.design.extensions/com.google.android.material.textfield.-text-input-layout/set-font.html
+$dokka.location:lk.android.design.extensions$setTabBackgroundResource(com.google.android.material.tabs.TabLayout, kotlin.Int)lk.android.design.extensions/com.google.android.material.tabs.-tab-layout/set-tab-background-resource.html
+$dokka.location:lk.android.design.extensions$setTabTextSize(com.google.android.material.tabs.TabLayout, kotlin.Float)lk.android.design.extensions/com.google.android.material.tabs.-tab-layout/set-tab-text-size.html
+$dokka.location:lk.android.design.extensions$snackbar(android.content.Context, kotlin.CharSequence, kotlin.Int, kotlin.Function1((com.google.android.material.snackbar.Snackbar, kotlin.Unit)))lk.android.design.extensions/android.content.-context/snackbar.html
+$dokka.location:lk.android.design.extensions$snackbar(android.content.Context, kotlin.Int, kotlin.Int, kotlin.Function1((com.google.android.material.snackbar.Snackbar, kotlin.Unit)))lk.android.design.extensions/android.content.-context/snackbar.html
+$dokka.location:lk.android.design.extensions$snackbar(android.view.View, kotlin.CharSequence, kotlin.Int, kotlin.Function1((com.google.android.material.snackbar.Snackbar, kotlin.Unit)))lk.android.design.extensions/android.view.-view/snackbar.html
+$dokka.location:lk.android.design.extensions$snackbar(android.view.View, kotlin.Int, kotlin.Int, kotlin.Function1((com.google.android.material.snackbar.Snackbar, kotlin.Unit)))lk.android.design.extensions/android.view.-view/snackbar.html
 lk.android.design.extensions

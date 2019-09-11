@@ -18,7 +18,7 @@ $dokka.location:lk.android.extensions$hideSoftInput(android.content.Context)lk.
 $dokka.location:lk.android.extensions$hideSoftInput(android.view.View)lk.android.extensions/android.view.-view/hide-soft-input.html
 $dokka.location:lk.android.extensions$hintTextColorResource#android.widget.TextViewlk.android.extensions/android.widget.-text-view/hint-text-color-resource.html
 $dokka.location:lk.android.extensions$hintTextColorsResource#android.widget.TextViewlk.android.extensions/android.widget.-text-view/hint-text-colors-resource.html
-$dokka.location:lk.android.extensions$horizontalDivider(android.support.v7.widget.RecyclerView, android.graphics.drawable.Drawable, kotlin.Int, kotlin.Int)lk.android.extensions/android.support.v7.widget.-recycler-view/horizontal-divider.html
+$dokka.location:lk.android.extensions$horizontalDivider(androidx.recyclerview.widget.RecyclerView, android.graphics.drawable.Drawable, kotlin.Int, kotlin.Int)lk.android.extensions/androidx.recyclerview.widget.-recycler-view/horizontal-divider.html
 $dokka.location:lk.android.extensions$isAttachedToWindowCompat(android.view.View)lk.android.extensions/android.view.-view/is-attached-to-window-compat.html
 $dokka.location:lk.android.extensions$isInLayoutCompat(android.view.View)lk.android.extensions/android.view.-view/is-in-layout-compat.html
 $dokka.location:lk.android.extensions$measureDesiredSize(android.view.View, kotlin.Int, kotlin.Int)lk.android.extensions/android.view.-view/measure-desired-size.html
@@ -50,7 +50,7 @@ $dokka.location:lk.android.extensions$textChanger(android.widget.EditText, kotli
 $dokka.location:lk.android.extensions$textColorsResource#android.widget.TextViewlk.android.extensions/android.widget.-text-view/text-colors-resource.html
 $dokka.location:lk.android.extensions$textListener(android.widget.EditText, kotlin.Function1((lk.android.extensions.EditTextChangeData, kotlin.Unit)))lk.android.extensions/android.widget.-edit-text/text-listener.html
 $dokka.location:lk.android.extensions$timePicker(android.content.Context, java.util.Calendar, kotlin.Function1((java.util.Calendar, kotlin.Unit)))lk.android.extensions/android.content.-context/time-picker.html
-$dokka.location:lk.android.extensions$verticalDivider(android.support.v7.widget.RecyclerView, android.graphics.drawable.Drawable, kotlin.Int, kotlin.Int)lk.android.extensions/android.support.v7.widget.-recycler-view/vertical-divider.html
+$dokka.location:lk.android.extensions$verticalDivider(androidx.recyclerview.widget.RecyclerView, android.graphics.drawable.Drawable, kotlin.Int, kotlin.Int)lk.android.extensions/androidx.recyclerview.widget.-recycler-view/vertical-divider.html
 $dokka.location:lk.android.extensions.files$fileSize(android.content.ContentResolver, android.net.Uri)lk.android.extensions.files/android.content.-content-resolver/file-size.html
 $dokka.location:lk.android.extensions.files$getDataColumn(android.content.Context, android.net.Uri, kotlin.String, kotlin.Array((kotlin.String)))lk.android.extensions.files/android.content.-context/get-data-column.html
 $dokka.location:lk.android.extensions.files$getRealPath(android.net.Uri, android.content.Context)lk.android.extensions.files/android.net.-uri/get-real-path.html

@@ -34,29 +34,29 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
 
-    implementation "com.lightningkite.kotlin:observable-list:${rootProject.libraryKotlinVersion}"
-    implementation project(':anko-extensions')
-    implementation project(':lifecycle')
-    implementation project(':anko-adapters')
-    implementation "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
-    implementation project(':extensions')
+    api "com.lightningkite.kotlin:observable-list:${rootProject.libraryKotlinVersion}"
+    api project(':anko-extensions')
+    api project(':lifecycle')
+    api project(':anko-adapters')
+    api "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
+    api "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
+    api project(':extensions')
 
     ext.ankoVersion = rootProject.ankoVersion
-    implementation "org.jetbrains.anko:anko-sdk15:$ankoVersion"
+    api "org.jetbrains.anko:anko-sdk15:$ankoVersion"
 
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation "org.jetbrains.anko:anko-appcompat-v7:$ankoVersion"
+    api 'androidx.appcompat:appcompat:1.1.0'
+    api "org.jetbrains.anko:anko-appcompat-v7:$ankoVersion"
 
-    implementation 'androidx.cardview:cardview:1.0.0'
-    implementation "org.jetbrains.anko:anko-cardview-v7:$ankoVersion"
+    api 'androidx.cardview:cardview:1.0.0'
+    api "org.jetbrains.anko:anko-cardview-v7:$ankoVersion"
 
-    implementation 'androidx.gridlayout:gridlayout:1.0.0'
-    implementation "org.jetbrains.anko:anko-gridlayout-v7:$ankoVersion"
+    api 'androidx.gridlayout:gridlayout:1.0.0'
+    api "org.jetbrains.anko:anko-gridlayout-v7:$ankoVersion"
 
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
-    implementation "org.jetbrains.anko:anko-recyclerview-v7:$ankoVersion"
+    api 'androidx.recyclerview:recyclerview:1.0.0'
+    api "org.jetbrains.anko:anko-recyclerview-v7:$ankoVersion"
 
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation "org.jetbrains.anko:anko-design:$ankoVersion"
+    api 'com.google.android.material:material:1.0.0'
+    api "org.jetbrains.anko:anko-design:$ankoVersion"
 }

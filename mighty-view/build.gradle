@@ -35,12 +35,12 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
 
-    implementation project(':animations')
-    implementation "com.lightningkite.kotlin:observable-list:${rootProject.libraryKotlinVersion}"
-    implementation project(':lifecycle')
-    implementation project(':animations-observable')
-    implementation "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
-    implementation project(':dialogs')
-    implementation "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
-    implementation project(':activity-access')
+    api project(':animations')
+    api "com.lightningkite.kotlin:observable-list:${rootProject.libraryKotlinVersion}"
+    api project(':lifecycle')
+    api project(':animations-observable')
+    api "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
+    api project(':dialogs')
+    api "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
+    api project(':activity-access')
 }

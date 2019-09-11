@@ -35,14 +35,13 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
 
-    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
-    implementation project(':lifecycle')
-    implementation "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
-    implementation project(':extensions')
-    implementation project(':ui-thread')
-    implementation "com.lightningkite.kotlin:okhttp:${rootProject.libraryKotlinVersion}"
-    implementation project(':image-loading')
+    api project(':lifecycle')
+    api "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
+    api "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
+    api project(':extensions')
+    api project(':ui-thread')
+    api "com.lightningkite.kotlin:okhttp:${rootProject.libraryKotlinVersion}"
+    api project(':image-loading')
 }
 
 

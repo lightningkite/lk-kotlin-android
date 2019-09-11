@@ -33,7 +33,7 @@ dependencies {
 
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation project(':activity-access')
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    api project(':activity-access')
+    api 'androidx.appcompat:appcompat:1.1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
 }

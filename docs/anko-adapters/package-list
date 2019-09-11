@@ -1,8 +1,8 @@
 $dokka.format:html
 $dokka.linkExtension:html
-$dokka.location:lk.anko.adapters$basicAdapter(android.support.v4.view.ViewPager, kotlin.Int, kotlin.Function2((android.view.ViewGroup, kotlin.Int, android.view.View)))lk.anko.adapters/android.support.v4.view.-view-pager/basic-adapter.html
-$dokka.location:lk.anko.adapters$singleAdapter(android.support.v7.widget.RecyclerView, kotlin.Function1((lk.anko.adapters.SingleRecyclerViewAdapter.SRVAContext, kotlin.Unit)))lk.anko.adapters/android.support.v7.widget.-recycler-view/single-adapter.html
-$dokka.location:lk.anko.adapters$swipe(android.support.v7.widget.RecyclerView, lk.anko.adapters.SwipeActionListener.SwipeAction, lk.anko.adapters.SwipeActionListener.SwipeAction, kotlin.Int)lk.anko.adapters/android.support.v7.widget.-recycler-view/swipe.html
-$dokka.location:lk.anko.adapters$swipeToDismiss(android.support.v7.widget.RecyclerView, kotlin.Function1((kotlin.Int, kotlin.Boolean)), kotlin.Function1((kotlin.Int, kotlin.Unit)))lk.anko.adapters/android.support.v7.widget.-recycler-view/swipe-to-dismiss.html
-$dokka.location:lk.anko.adapters$transitionAdapter(android.support.v7.widget.RecyclerView, kotlin.Function1((lk.anko.adapters.TransitionRecyclerViewAdapter, kotlin.Unit)))lk.anko.adapters/android.support.v7.widget.-recycler-view/transition-adapter.html
+$dokka.location:lk.anko.adapters$basicAdapter(androidx.viewpager.widget.ViewPager, kotlin.Int, kotlin.Function2((android.view.ViewGroup, kotlin.Int, android.view.View)))lk.anko.adapters/androidx.viewpager.widget.-view-pager/basic-adapter.html
+$dokka.location:lk.anko.adapters$singleAdapter(androidx.recyclerview.widget.RecyclerView, kotlin.Function1((lk.anko.adapters.SingleRecyclerViewAdapter.SRVAContext, kotlin.Unit)))lk.anko.adapters/androidx.recyclerview.widget.-recycler-view/single-adapter.html
+$dokka.location:lk.anko.adapters$swipe(androidx.recyclerview.widget.RecyclerView, lk.anko.adapters.SwipeActionListener.SwipeAction, lk.anko.adapters.SwipeActionListener.SwipeAction, kotlin.Int)lk.anko.adapters/androidx.recyclerview.widget.-recycler-view/swipe.html
+$dokka.location:lk.anko.adapters$swipeToDismiss(androidx.recyclerview.widget.RecyclerView, kotlin.Function1((kotlin.Int, kotlin.Boolean)), kotlin.Function1((kotlin.Int, kotlin.Unit)))lk.anko.adapters/androidx.recyclerview.widget.-recycler-view/swipe-to-dismiss.html
+$dokka.location:lk.anko.adapters$transitionAdapter(androidx.recyclerview.widget.RecyclerView, kotlin.Function1((lk.anko.adapters.TransitionRecyclerViewAdapter, kotlin.Unit)))lk.anko.adapters/androidx.recyclerview.widget.-recycler-view/transition-adapter.html
 lk.anko.adapters

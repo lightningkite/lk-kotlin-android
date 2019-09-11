@@ -35,10 +35,10 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${rootProject.kotlinVersion}"
 
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
-    implementation "com.lightningkite.kotlin:observable-list:${rootProject.libraryKotlinVersion}"
-    implementation project(':lifecycle')
-    implementation "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
-    implementation "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
+    api 'androidx.appcompat:appcompat:1.1.0'
+    api 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+    api "com.lightningkite.kotlin:observable-list:${rootProject.libraryKotlinVersion}"
+    api project(':lifecycle')
+    api "com.lightningkite.kotlin:utils:${rootProject.libraryKotlinVersion}"
+    api "com.lightningkite.kotlin:observable-property:${rootProject.libraryKotlinVersion}"
 }
