@@ -17,7 +17,7 @@ import com.google.android.material.tabs.TabLayout
  * Sets the tab text size.
  */
 fun TabLayout.setTabTextSize(sp: Float) {
-    val field = TabLayout::class.java.getDeclaredField("mTabTextSize")
+    val field = TabLayout::class.java.getDeclaredField("tabTextSize")
     field.isAccessible = true
     field.set(this, (sp * resources.displayMetrics.scaledDensity).toInt())
 }
@@ -26,7 +26,7 @@ fun TabLayout.setTabTextSize(sp: Float) {
  * Sets the tab background resource.
  */
 fun TabLayout.setTabBackgroundResource(res: Int) {
-    val field = TabLayout::class.java.getDeclaredField("mTabBackgroundResId")
+    val field = TabLayout::class.java.getDeclaredField("tabBackgroundResId")
     field.isAccessible = true
     field.set(this, res)
 }

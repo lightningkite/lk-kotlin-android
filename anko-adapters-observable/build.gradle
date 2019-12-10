@@ -54,7 +54,7 @@ dependencies {
     api 'androidx.gridlayout:gridlayout:1.0.0'
     api "org.jetbrains.anko:anko-gridlayout-v7:$ankoVersion"
 
-    api 'androidx.recyclerview:recyclerview:1.0.0'
+    api 'androidx.recyclerview:recyclerview:1.1.0'
     api "org.jetbrains.anko:anko-recyclerview-v7:$ankoVersion"
 
     api 'com.google.android.material:material:1.0.0'
